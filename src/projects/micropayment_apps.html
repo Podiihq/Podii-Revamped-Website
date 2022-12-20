@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/assets/podii_logo.svg" sizes="40x40" type="image/png/svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/base.min.css" 
+    integrity="sha512-TbSbl7LIRNEKzATRyVAfAPIfRmd/2lMmh3YtkMELfpGSkUJP8CDxebT1XDw9LBU1N5vK+So58Goia0XlztByug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" 
+    integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Forum&family=Jura:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/main.css">
+
+
+
+  <title>podiihq</title>
+
+</head>
+<body class="antialiased" style="background-color: #F4FBF8;">
+
+  <!-- Navigation bar -->
+  <nav class="fixed top-0 z-50 w-full flex flex-wrap items-center justify-between pt-8" id="header">
+    <div class="container lg:px-4 lg:mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start px-2">
+        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
+          href="/"><img src="/assets/podii_logo.svg" alt="" class="h-10 w-10"></a>
+          <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button"
+          onclick="toggleNavbar('example-collapse-navbar')">
+          <i class="text-black fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden h-screen lg:h-0" id="example-collapse-navbar" style="background-color: #F4FBF8 ;">
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl" href="/index.html">
+              <span class="ml-2" style="font-family: 'Forum', cursive; ">Home</span></a>
+              
+          </li>
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"href="/src/teams.html">
+              <span class="inline-block ml-2" style="font-family: 'Forum', cursive;">Teams</span></a>
+              <div class="h-2 rounded w-7 flex flex-grow items-center justify-start ml-10"></div>
+          </li>
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"href="/src/portfolio.html">
+              <span class="inline-block ml-2 " style="font-family: 'Forum', cursive;">Portfolio</span></a>
+          </li>
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"href="/src/blog.html">
+              <span class="inline-block ml-2" style="font-family: 'Forum', cursive;">Blog</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 lg:py-20 mt-8">
+          <div class="flex flex-col items-center justify-center">
+            <div class="lg:w-1/4">
+              <img class="object-cover w-full" src="/assets/smart 1.svg" alt="" />
+            </div>
+               
+          </div>
+        </div>
+        </section>
+
+        <section style="background-color:#ffffff ;">
+          <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-10">
+            <h2 class="py-16 mb-6 font-sans text-3xl lg:text-5xl font-bold leading-none tracking-wider text-gray-900 md:mx-auto" style="font-family: 'Jura', sans-serif;color:#307457;">
+                Micropayment Apps
+              </h2>
+            <div class="flex flex-col lg:items-center justify-between lg:flex-row">
+                <div class="mb-6 md:mt-16 lg:mt-0">
+                    <h2 class="mb-6 font-sans lg:text-4xl tracking-tight text-gray-900 text-xl sm:leading-none" style="font-family: 'Jura', sans-serif;">
+                        Case study
+                    </h2>
+                    <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                        A mobile application with offline capabilities that enables field officers to record any cash payments that have been made. The mobile application generates receipt numbers that can later be used to identify each payment. It encourages accountability as the total amount of payments received from the field that day are clearly shown along with other payment details, which should match the amount handed over to the organization at the end of the day.
+                    </p>
+                    <p class="text-base text-gray-700 md:text-lg mt-4" style="font-family: 'Forum', cursive;">
+                        A web portal that is used by our client’s employees to manage and visualize data related to a farmer such as orders, farmer details, orders and repayments. The web portal also allows the client to generate reports and view trends within certain periods of time. It allows for offline capabilities whereby the portal can be used even in areas with poor network connectivity                        
+                    </p>
+                </div>
+              <div class="mb-10 lg:pr-5 lg:mb-0 mt-6 w-full md:ml-16">
+                <div class="mb-6 mt-16 lg:mt-0">
+                  <h2 class="mb-2 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none" style="font-family: 'Jura', sans-serif; color:#307457;">
+                   Client
+                  </h2>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    Vibrant Village Foundation
+                  </p>
+                </div>
+                <div class="mb-6">
+                  <h2 class="mb-6 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none" style="font-family: 'Jura', sans-serif; color:#307457;">
+                    Tags
+                  </h2>
+                  <div style="font-family: 'Forum';" class="flex flex-row md:flex-col justify-start">
+                        <div class="flex items-center justify-center md:justify-start py-2">
+                            <span class="w-2 h-8 rounded mr-4" style="background-color: #FF5E0E;"></span>
+                            <div class="mr-4" >Web</div>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start py-2">
+                            <span class="w-2 h-8 rounded mr-4" style="background-color: #FF5E0E;"></span>
+                            <div class="mr-4">Mobile App</div>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start py-2">
+                            <span class="w-2 h-8 rounded mr-4" style="background-color: #FF5E0E;"></span>
+                            <div class="mr-4">USSD</div>
+                        </div>
+                    
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-10">
+            <h2 class="font-sans text-3xl lg:text-5xl leading-none tracking-wider text-gray-900 md:mx-auto" style="font-family: 'Jura', sans-serif;">
+                Solution(S)
+              </h2>
+          </div>
+
+          <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-screen-lg lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-10">
+            <div class="flex flex-col items-center justify-between lg:flex-row">
+              <div class="relative lg:w-1/2">
+                <img class="sm:h-96" src="/assets/smart 1.svg" alt="" />
+              </div>
+              <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 mt-6">
+                <div class="max-w-xl mb-6 mt-16 lg:mt-0">
+                  <h2 class="max-w-lg mb-6 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none" style="font-family: 'Jura', sans-serif; color:#307457; ">
+                    01 Ussd
+                  </h2>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    A mobile application with offline capabilities that enables field officers to record any cash payments that have been made. The mobile application generates receipt numbers that can later be used to identify each payment. It encourages accountability as the total amount of payments received from the field that day are clearly shown along with other payment details, which should match the amount handed over to the organization at the end of the day.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-screen-lg lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-10">
+            <div class="flex flex-col items-center justify-between lg:flex-row">
+              <div class="relative lg:w-1/2">
+                <img class="sm:h-96" src="/assets/smart 2.svg" alt="" />
+              </div>
+              <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 mt-6">
+                <div class="max-w-xl mb-6 mt-16 lg:mt-0">
+                  <h2 class="max-w-lg mb-6 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none" style="font-family: 'Jura', sans-serif; color:#307457; ">
+                    02 Web Application
+                  </h2>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    A mobile application with offline capabilities that enables field officers to record any cash payments that have been made. The mobile application generates receipt numbers that can later be used to identify each payment. It encourages accountability as the total amount of payments received from the field that day are clearly shown along with other payment details, which should match the amount handed over to the organization at the end of the day.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-screen-lg lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-10">
+            <div class="flex flex-col items-center justify-between lg:flex-row">
+              <div class="relative lg:w-1/2">
+                <img class="sm:h-96" src="/assets/smart 3.svg" alt="" />
+              </div>
+              <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 mt-6">
+                <div class="max-w-xl mb-6 mt-16 lg:mt-0">
+                  <h2 class="max-w-lg mb-6 font-sans text-xl font-bold tracking-tight text-gray-900 sm:text-xl sm:leading-none" style="font-family: 'Jura', sans-serif; color:#307457; ">
+                    03 Mobile Application
+                  </h2>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    A mobile application with offline capabilities that enables field officers to record any cash payments that have been made. The mobile application generates receipt numbers that can later be used to identify each payment. It encourages accountability as the total amount of payments received from the field that day are clearly shown along with other payment details, which should match the amount handed over to the organization at the end of the day.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-screen-lg lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-10">
+            <div class="flex flex-col items-center justify-between lg:flex-row">
+              <div class="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 mt-6">
+                <div class="mb-6 md:mt-16 lg:mt-0">
+                  <h2 class="mb-6 font-sans text-5xl tracking-tight text-gray-900 sm:leading-none" style="font-family: 'Jura', sans-serif; ">
+                    Impact
+                  </h2>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    A mobile application with offline capabilities that enables field officers to record any cash payments that have been made. The mobile application generates receipt numbers that can later be used to identify each payment. It encourages accountability as the total amount of payments received from the field that day are clearly shown along with other payment details, which should match the amount handed over to the organization at the end of the day.
+                  </p>
+                </div>
+              </div>
+              <div class="relative lg:w-1/2">
+                <p style="font-family: 'Jura', sans-serif; color:#307457; " class="text-9xl">50%</p>
+                <p style="font-family: 'Jura', sans-serif; color:#307457; " class="text-xl ml-8">Lorem Ipsum dolor</p>
+              </div>
+            </div>
+          </div>
+          </section>
+
+    <section  style="background-color: #F4FBF8;">
+    <div class="flex flex-col items-center md:flex-row mb-1 md:mx-auto sm:text-center lg:max-w-4xl md:py-24">
+        <h2 class="pt-8 mb-6 font-sans text-6xl font-bold leading-none tracking-wide md:mx-auto pr-8 text-center" style=" font-family: 'Forum', cursive; color:#307457; ">
+          Let’s create together 
+        </h2>
+        <div class="flex flex-col items-center md:flex-row pt-8 ">
+          <a href="/src/client.html" class="inline-flex items-center justify-left w-full h-14 mb-3 font-medium tracking-wide text-black my-btns">
+          <span class="w-4 h-14 rounded mr-4" style="background-color: #FF5E0E;"></span>
+            <span class="mr-3 font-bold" style="font-family: 'Jura';">Tell us about your project</span>
+            <img class="h-5 w-5 mr-4" src="/assets/next-right-arrow.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      </section>
+
+
+      
+
+
+</main>
+<footer>
+    <div style="background-color:#0F241B ; font-family: 'Forum', cursive;">
+      <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid row-gap-10 mb-8 lg:grid-cols-4">
+          <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p class="tracking-wide font-bold" style="color: #FFF5F0;">Home Links</p>
+              <ul class="mt-2 space-y-2" style="color: #FFF5F0;">
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Home</a>
+                </li>
+                <li>
+                  <a href="/" class="-colors duration-300 hover:text-deep-purple-accent-200">Our services</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Our Approach to Work</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Featured Work</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="tracking-wide font-bold" style="color: #FFF5F0;">Page Links</p>
+              <ul class="mt-2 space-y-2" style="color: #FFF5F0;">
+                <li>
+                  <a href="/src/blog.html" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Blog</a>
+                </li>
+                <li>
+                  <a href="/src/portfolio.html" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Teams</a>
+                </li>
+                <li>
+                  <a href="/src/portfolio.html" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Portfolio</a>
+                </li>
+                
+              </ul>
+            </div>
+            <div>
+              <p class="tracking-wide font-bold" style="color: #FFF5F0;">Contact</p>
+              <ul class="mt-2 space-y-2" style="color: #FFF5F0;">
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">+254 572041 122</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">podii@podiihq.com</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200" >Lutheran Kisumu, Kenya</a>
+                </li>
+                
+              </ul>
+            </div>
+            <div>
+              <div class="flex items-center pb-4">
+                <img src="/assets/podii_logo.svg" alt="">
+                <h1 style="font-family: 'Chewy', cursive; color:#FF5E0E" class="text-4xl pl-4">Podii</h1>
+              </div>
+              <ul class="mt-2 space-y-2">
+                <div class="flex items-center mt-4 space-x-4 sm:mt-0" style="color: #FFF5F0;">
+                  <a href="/" class="transition-colors duration-300 hover:text-teal-accent-400">
+                    <i class="fa-brands fa-twitter-square text-3xl"></i>
+                  </a>
+                  <a href="/" class="transition-colors duration-300 hover:text-teal-accent-400">
+                    <i class="fa-brands fa-linkedin text-3xl"></i>
+                  </a>
+                  <a href="/" class="transition-colors duration-300 hover:text-teal-accent-400 w-25 h-25">
+                    <i class="fa-brands fa-facebook-square text-3xl"></i>
+                  </a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class=" pb-10 border-t border-gray-800">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+  <script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+  
+    document.addEventListener("scroll", function () {
+      /*Apply classes for slide in bar*/
+      scrollpos = window.scrollY;
+  
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        navaction.classList.remove("bg-red");
+        navaction.classList.add("gradient");
+        navaction.classList.remove("text-gray-800");
+        navaction.classList.add("text-white");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-gray-800");
+          toToggle[i].classList.remove("text-white");
+        }
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+        navaction.classList.remove("gradient");
+        navaction.classList.add("bg-white");
+        navaction.classList.remove("text-white");
+        navaction.classList.add("text-gray-800");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-white");
+          toToggle[i].classList.remove("text-gray-800");
+        }
+  
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
+      }
+    });
+  </script>
+</html>

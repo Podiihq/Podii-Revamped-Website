@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="/assets/podii_logo.svg" sizes="40x40" type="image/png/svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/base.min.css" 
+    integrity="sha512-TbSbl7LIRNEKzATRyVAfAPIfRmd/2lMmh3YtkMELfpGSkUJP8CDxebT1XDw9LBU1N5vK+So58Goia0XlztByug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" 
+    integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Forum&family=Jura:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/main.css">
+
+  <title>podiihq</title>
+</head>
+<body class="antialiased">
+
+  <!-- Navigation bar -->
+  <nav class="fixed top-0 z-50 w-full flex flex-wrap items-center justify-between pt-8" id="header">
+    <div class="container lg:px-4 lg:mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start px-2">
+        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
+          href="/index.html"><img src="/assets/podii_logo.svg" alt="" class="h-10 w-10"></a>
+          <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          type="button"
+          onclick="toggleNavbar('example-collapse-navbar')">
+          <i class="text-black fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden h-screen lg:h-0" id="example-collapse-navbar" style="background-color: #Ffffff ;">
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl" href="/index.html">
+              <span class="ml-2" style="font-family: 'Forum', cursive; ">Home</span></a>
+              
+          </li>
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"href="/src/teams.html">
+              <span class="inline-block ml-2" style="font-family: 'Forum', cursive; ">Teams</span></a>
+              
+          </li>
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"href="/src/portfolio.html">
+              <span class="inline-block ml-2 " style="font-family: 'Forum', cursive; color:#FF5E0E">Portfolio</span></a>
+              <div class="h-2 rounded w-7 flex flex-grow items-center justify-start ml-10" style="background-color: #FF5E0E;"></div>
+          </li>
+          <li class="my-4">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"href="/src/blog.html">
+              <span class="inline-block ml-2" style="font-family: 'Forum', cursive;">Blog</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+        <div class="flex flex-col items-center justify-center max-w-2xl px-4 pt-16 mx-auto sm:max-w-xl md:max-w-4xl lg:pt-32 md:px-2">
+            <div class="max-w-4xl mb-2 md:mx-auto text-center lg:max-w-4xl md:mb-2">
+              <h2 class="max-w-4xl mb-2 font-sans text-3xl lg:text-5xl font-bold leading-none tracking-wider text-gray-900 md:mx-auto" style="font-family: 'Jura', sans-serif;color:#307457;">
+                 Portfolio
+              </h2>
+            </div>
+            <p class="text-sm text-gray-800 text-center pt-2 px-8">In my other world, I would be driving a trailer from Indian Ocean to Atlantic Ocean</p>
+          </div>
+
+
+          <!-- Item 1 -->
+          <div class="px-4 mx-auto sm:max-w-xl lg:max-w-screen-xl md:px-28 lg:px-32 lg:py-20 mt-8">
+            <div class="flex flex-col items-center justify-between lg:flex-row">
+              <div class="relative lg:w-2/3">
+                <img class="object-cover w-full" src="/assets/portfolio_1.svg" alt="" />
+              </div>
+              <div class="mb-10 lg:max-w-md lg:pr-5 lg:mb-0">
+                <div class="max-w-xl mb-6 mt-4 md:mt-4 text-center md:text-left"> 
+                  <div>
+                    <p class="inline-block py-px mb-4 md:mb-4 text-md md:text-xl font-semibold tracking-widest text-teal-900 uppercase" style="font-family: 'Jura', sans-serif;">
+                        Micropayments Apps
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    Micropayment Management Mobile App, Web Portal and USSD  Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget.
+                  </p>
+                </div>
+                <div style="font-family: 'Forum';">
+                    <ul class="flex items-center flex-row justify-center md:justify-start">
+                    <li class="mr-4" style="color:#307457;">Web</li>
+                    <li class="mr-4" style="color:#307457;">Mobile App</li>
+                    <li class="mr-4" style="color:#307457;">USSD</li>
+                    </ul>
+                </div>
+                <div class="md:pl-0 pt-6">
+                  <a href="/src/projects/micropayment_apps.html" class="flex items-center justify-center md:justify-start mb-3 font-medium tracking-wide text-black lg:w-1/2 my-btns">
+                  <span class="w-4 h-14 rounded mr-6" style="background-color: #FF5E0E;"></span>
+                    <span class="mr-6 font-bold" style="font-family: 'Jura';">View Project</span>
+                    <img class="h-5 w-5" src="/assets/next-right-arrow.svg" alt="" />
+                  </a>
+                </div>
+              </div>    
+            </div> 
+          </div>
+
+          <!-- Item 2 -->
+          <div class="px-4 mx-auto sm:max-w-xl lg:max-w-screen-xl md:px-28 lg:px-32 lg:py-2 mt-8">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between">
+              <div class="mb-10 lg:max-w-md lg:pr-5 lg:mb-0 text-right swap-item-1">
+                <div class="max-w-xl mb-6 mt-4 md:mt-4 text-center md:text-right"> 
+                  <div>
+                    <p class="inline-block py-px mb-4 md:mb-4 text-md md:text-xl font-semibold tracking-widest text-teal-900 uppercase" style="font-family: 'Jura', sans-serif;">
+                        Spidlite Andriod App
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    Micropayment Management Mobile App, Web Portal and USSD  Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget.
+                  </p>
+                </div>
+                <div style="font-family: 'Forum';">
+                    <ul class="flex flex-row items-center justify-center md:justify-end md:text-right">
+                    <li class="" style="color:#307457;">Mobile App</li>
+                    </ul>
+                </div>
+                <div class="md:pl-0 pt-6">
+                  <a href="/" class="flex items-center justify-center md:justify-end mb-3 font-medium tracking-wide text-black lg:ml-60 my-btns">
+                    <img class="h-5 w-5 mr-2" src="/assets/left-arrow.svg" alt="" />
+                    <span class="mr-6 font-bold" style="font-family: 'Jura';">View Project</span>
+                  <span class="w-4 h-14 rounded" style="background-color: #FF5E0E;"></span>
+
+                  </a>
+                </div>
+              </div>   
+              <div class="relative lg:w-2/3 swap-item-2">
+                <img class="object-cover w-full" src="/assets/portfolio+2.svg" alt="" />
+              </div> 
+            </div> 
+          </div>
+
+          <!-- Item 3 -->
+          <div class="px-4 mx-auto sm:max-w-xl lg:max-w-screen-xl md:px-28 lg:px-36 lg:py-20 mt-8">
+            <div class="flex flex-col items-center justify-between lg:flex-row">
+              <div class="relative lg:w-1/4">
+                <img class="object-cover w-full" src="/assets/portfolio_3.svg" alt="" />
+              </div>
+              <div class="mb-10 lg:max-w-md lg:pr-5 lg:mb-0">
+                <div class="max-w-xl mb-6 mt-4 md:mt-4 text-center md:text-left"> 
+                  <div>
+                    <p class="inline-block py-px mb-4 md:mb-4 text-md md:text-xl font-semibold tracking-widest text-teal-900 uppercase" style="font-family: 'Jura', sans-serif;">
+                        iCut Android Application
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    Micropayment Management Mobile App, Web Portal and USSD  Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget.
+                  </p>
+                </div>
+                <div style="font-family: 'Forum';">
+                    <ul class="flex items-center flex-row justify-center md:justify-start ">
+                    <li class="" style="color:#307457;">Mobile App</li>
+                    </ul>
+                </div>
+                <div class="md:pl-0 pt-6">
+                  <a href="/" class="flex items-center justify-center md:justify-start mb-3 font-medium tracking-wide text-black lg:w-1/2 my-btns">
+                  <span class="w-4 h-14 rounded mr-6" style="background-color: #FF5E0E;"></span>
+                    <span class="mr-6 font-bold" style="font-family: 'Jura';">View Project</span>
+                    <img class="h-5 w-5" src="/assets/next-right-arrow.svg" alt="" />
+                  </a>
+                </div>
+              </div>    
+            </div> 
+          </div>
+
+          <!-- Item 4 -->
+          <div class="px-4 pb-8 mx-auto sm:max-w-xl lg:max-w-screen-xl md:px-28 lg:px-32 lg:py-2 mt-8">
+            <div class="flex flex-col-reverse items-center justify-between lg:flex-row">
+              <div class="mb-10 lg:max-w-md lg:pr-5 lg:mb-0 text-right">
+                <div class="max-w-xl mb-6 mt-4 md:mt-4 text-center md:text-right"> 
+                  <div>
+                    <p class="inline-block py-px mb-4 md:mb-4 text-md md:text-xl font-semibold tracking-widest text-teal-900 uppercase" style="font-family: 'Jura', sans-serif;">
+                        Property management system
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 md:text-lg" style="font-family: 'Forum', cursive;">
+                    Micropayment Management Mobile App, Web Portal and USSD  Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam condimentum tempus diam, ultricies sollicitudin erat facilisis eget.
+                  </p>
+                </div>
+                <div style="font-family: 'Forum';">
+                    <ul class="flex items-center justify-center md:justify-end flex-row md:text-right">
+                    <li class="" style="color:#307457;">Web</li>
+                    </ul>
+                </div>
+                <div class="md:pl-0 pt-6">
+                  <a href="/" class="flex items-center justify-center md:justify-end mb-3 font-medium tracking-wide text-black my-btns lg:ml-60">
+                    <img class="h-5 w-5 mr-2" src="/assets/left-arrow.svg" alt="" />
+                    <span class="mr-6 font-bold" style="font-family: 'Jura';">View Project</span>
+                  <span class="w-4 h-14 rounded" style="background-color: #FF5E0E;"></span>
+                  </a>
+                </div>
+              </div>   
+              <div class="relative lg:w-1/3">
+                <img class="object-cover w-full" src="/assets/portfolio_4.svg" alt="" />
+              </div> 
+            </div> 
+          </div>
+        </section>
+
+
+    <section style="background-color: #F4FBF8;" class="md:mt-16">
+    <div class="flex flex-col items-center lg:flex-row md:mx-auto sm:text-center lg:max-w-4xl md:py-24">
+        <h2 class="pt-8 mb-6 font-sans text-6xl font-bold leading-none tracking-wide md:mx-auto pr-8 text-center" style=" font-family: 'Forum', cursive; color:#307457">
+          Let’s create together 
+        </h2>
+        <div class="flex flex-col items-center md:flex-row pt-8 ">
+          <a href="/src/client.html" class="inline-flex items-center justify-left w-full h-14 mb-3 font-medium tracking-wide text-black my-btns">
+          <span class="w-4 h-14 rounded mr-4" style="background-color: #FF5E0E;"></span>
+            <span class="mr-6 font-bold" style="font-family: 'Jura';">Tell us about your project</span>
+            <img class="h-5 w-5 mr-4" src="/assets/next-right-arrow.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      </section>
+
+
+
+
+</main>
+<footer>
+    <div style="background-color:#0F241B ; font-family: 'Forum', cursive;">
+      <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid row-gap-10 mb-8 lg:grid-cols-4">
+          <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p class="tracking-wide font-bold" style="color: #FFF5F0;">Home Links</p>
+              <ul class="mt-2 space-y-2" style="color: #FFF5F0;">
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Home</a>
+                </li>
+                <li>
+                  <a href="/" class="-colors duration-300 hover:text-deep-purple-accent-200">Our services</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Our Approach to Work</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Featured Work</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p class="tracking-wide font-bold" style="color: #FFF5F0;">Page Links</p>
+              <ul class="mt-2 space-y-2" style="color: #FFF5F0;">
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Blog</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Teams</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">Portfolio</a>
+                </li>
+                
+              </ul>
+            </div>
+            <div>
+              <p class="tracking-wide font-bold" style="color: #FFF5F0;">Contact</p>
+              <ul class="mt-2 space-y-2" style="color: #FFF5F0;">
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">+254 572041 122</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200">podii@podiihq.com</a>
+                </li>
+                <li>
+                  <a href="/" class="transition-colors duration-300 hover:text-deep-purple-accent-200" >Lutheran Kisumu, Kenya</a>
+                </li>
+                
+              </ul>
+            </div>
+            <div>
+              <div class="flex items-center pb-4">
+                <img src="/assets/podii_logo.svg" alt="">
+                <h1 style="font-family: 'Chewy', cursive; color:#FF5E0E" class="text-4xl pl-4">Podii</h1>
+              </div>
+              <ul class="mt-2 space-y-2">
+                <div class="flex items-center mt-4 space-x-4 sm:mt-0" style="color: #FFF5F0;">
+                  <a href="/" class="transition-colors duration-300 hover:text-teal-accent-400">
+                    <i class="fa-brands fa-twitter-square text-3xl"></i>
+                  </a>
+                  <a href="/" class="transition-colors duration-300 hover:text-teal-accent-400">
+                    <i class="fa-brands fa-linkedin text-3xl"></i>
+                  </a>
+                  <a href="/" class="transition-colors duration-300 hover:text-teal-accent-400 w-25 h-25">
+                    <i class="fa-brands fa-facebook-square text-3xl"></i>
+                  </a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class=" pb-10 border-t border-gray-800">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+  <script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+  
+    document.addEventListener("scroll", function () {
+      /*Apply classes for slide in bar*/
+      scrollpos = window.scrollY;
+  
+      if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        navaction.classList.remove("bg-red");
+        navaction.classList.add("gradient");
+        navaction.classList.remove("text-gray-800");
+        navaction.classList.add("text-white");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-gray-800");
+          toToggle[i].classList.remove("text-white");
+        }
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+      } else {
+        header.classList.remove("bg-white");
+        navaction.classList.remove("gradient");
+        navaction.classList.add("bg-white");
+        navaction.classList.remove("text-white");
+        navaction.classList.add("text-gray-800");
+        //Use to switch toggleColour colours
+        for (var i = 0; i < toToggle.length; i++) {
+          toToggle[i].classList.add("text-white");
+          toToggle[i].classList.remove("text-gray-800");
+        }
+  
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
+      }
+    });
+  </script>
+</html>
