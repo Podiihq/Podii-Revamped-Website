@@ -7,6 +7,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "aos": "^2.3.4",
+    "fullpage.js": "^4.0.18",
     "swup": "^2.0.15"
   }
 }

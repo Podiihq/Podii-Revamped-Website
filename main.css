@@ -28,3 +28,7 @@ ul.transition li{
     color: white;
     transition: ease-out 500ms;
 }
+
+.section {
+    height: 100vh;
+  }
