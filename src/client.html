@@ -65,16 +65,38 @@
           <label for="forms-labelLeftInputCode">Hi, I'm</label>
         </div>
         <div class="">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="Your name" id="forms-labelLeftInputCode"/>
+          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="First name" id="forms-labelLeftInputCode"/>
+        </div>
+        <div class="ml-6">
+          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="Last name" id="forms-labelLeftInputCode"/>
+        </div>
+      </div>
+      <div class="text-gray-700 flex flex-col lg:flex-row text-3xl mt-8">
+        <div class="mb-1 md:mb-0 mr-8">
+          <label for="forms-labelLeftInputCode">My email address is</label>
+        </div>
+        <div class="flex flex-col lg:flex-row">
+          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="email@gmail.com" id="forms-labelLeftInputCode"/>
         </div>
       </div>
       <div class="text-gray-700 flex flex-col lg:flex-row text-3xl mt-8">
         <div class="mb-1 md:mb-0 mr-8">
           <label for="forms-labelLeftInputCode">My project requires</label>
         </div>
-        <div class="flex flex-col lg:flex-row">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="Web/Android services" id="forms-labelLeftInputCode"/>
-          <label for="forms-labelLeftInputCode">services.</label>
+        <div class="relative inline-block text-left">
+          <button id="dropdown-button" class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+            <span>Select an option</span>
+            <i class="fa-solid fa-angle-down ml-4"></i>
+          </button>
+          <div id="dropdown-menu" class="hidden absolute z-50 mt-2 rounded-md shadow-lg w-48">
+            <div class="bg-white rounded-md shadow-xs">
+              <ul>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-base">App development</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-base">Web development</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-base">Other</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="text-gray-700  flex flex-col lg:flex-row text-3xl mt-8">
@@ -82,7 +104,7 @@
           <label for="forms-labelLeftInputCode">My budget is</label>
         </div>
         <div class="flex">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="300 Dollars" id="forms-labelLeftInputCode"/>
+          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="$1500" id="forms-labelLeftInputCode"/>
           <label for="forms-labelLeftInputCode">.</label>
         </div>
       </div>
@@ -97,7 +119,7 @@
       </div>
       
       </div>
-      <div class=" relative max-w-4xl sm:mx-auto sm:max-w-4xl md:max-w-4xl mt-10" >
+      <div class="relative sm:mx-auto sm:max-w-4xl md:max-w-4xl mt-10" >
         <a style="background-color: #FF5E0E; font-family: 'Jura';" href="/" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
           Send
         </a>
@@ -156,4 +178,40 @@
       }
     });
   </script>
+
+
+  <!-- Dropdown-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownButton = document.getElementById('dropdown-button');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+  
+      dropdownButton.addEventListener('click', function (e) {
+      e.stopPropagation(); // Prevent the click event from propagating to the document
+      dropdownMenu.classList.toggle('hidden');
+      });
+  
+      // Close the dropdown when clicking outside of it
+      document.addEventListener('click', function () {
+      dropdownMenu.classList.add('hidden');
+      });
+  
+      // Prevent closing the dropdown when clicking inside it
+      dropdownMenu.addEventListener('click', function (e) {
+      e.stopPropagation();
+      });
+  
+      // Handle item selection
+      dropdownMenu.addEventListener('click', function (e) {
+      if (e.target && e.target.nodeName === 'A') {
+          const selectedText = e.target.textContent;
+          dropdownButton.textContent = selectedText; // Update the button text with the selected item
+          dropdownMenu.classList.add('hidden'); // Close the dropdown
+      }
+      });
+  });
+
+    
+
+</script>
 </html>
