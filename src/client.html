@@ -21,7 +21,7 @@
 
       <!-- Post Css -->
       <link rel="stylesheet" href="/main.css">
-    <title>Document</title>
+    <title>Your Project</title>
 </head>
 <body style="background-color: #F4FBF8;">
     <nav class="fixed top-0 z-50 w-full flex flex-wrap items-center justify-between pt-8" id="header">
@@ -58,73 +58,90 @@
 
 
 <main>
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20 mt-16 lg:mt-24" style="font-family: 'Forum';">
-    <div class="relative max-w-4xl sm:mx-auto sm:max-w-4xl md:max-w-4xl sm:text-center">
-    <div class="text-gray-700 flex flex-col lg:flex-row text-3xl">
-        <div class="mb-1 md:mb-0 mr-8">
-          <label for="forms-labelLeftInputCode">Hi, I'm</label>
-        </div>
-        <div class="">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="First name" id="forms-labelLeftInputCode"/>
-        </div>
-        <div class="ml-6">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="Last name" id="forms-labelLeftInputCode"/>
-        </div>
-      </div>
-      <div class="text-gray-700 flex flex-col lg:flex-row text-3xl mt-8">
-        <div class="mb-1 md:mb-0 mr-8">
-          <label for="forms-labelLeftInputCode">My email address is</label>
-        </div>
-        <div class="flex flex-col lg:flex-row">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="email@gmail.com" id="forms-labelLeftInputCode"/>
-        </div>
-      </div>
-      <div class="text-gray-700 flex flex-col lg:flex-row text-3xl mt-8">
-        <div class="mb-1 md:mb-0 mr-8">
-          <label for="forms-labelLeftInputCode">My project requires</label>
-        </div>
-        <div class="relative inline-block text-left">
-          <button id="dropdown-button" class="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-            <span>Select an option</span>
-            <i class="fa-solid fa-angle-down ml-4"></i>
-          </button>
-          <div id="dropdown-menu" class="hidden absolute z-50 mt-2 rounded-md shadow-lg w-48">
-            <div class="bg-white rounded-md shadow-xs">
-              <ul>
-                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-base">App development</a></li>
-                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-base">Web development</a></li>
-                <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-base">Other</a></li>
-              </ul>
+    
+
+
+<section class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20 mt-16 lg:mt-24">
+  <div class="text-center flex justify-center mb-16">
+    <p class="text-2xl g:text-4xl lg:w-1/2">"We're excited to work with you. Your project will shine with our expertise. Tell us about it."</p>
+  </div>
+<div class="space-y-10 divide-y divide-gray-900/10">
+  <div class="flex justify-center">
+    <form class="shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 bg-white">
+      <div class="px-4 py-6 sm:p-8">
+        <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+
+          <div class="col-span-full">
+            <label for="about" class="block text-lg leading-6 text-gray-900">What can we help you with? *</label>
+            <div class="mt-2">
+              <textarea id="about" name="about" rows="3" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+            </div>
+            <p class="mt-1 text-xs leading-6 text-red-600">This is a required field</p>
+          </div>
+
+            <div class="sm:col-span-3">
+              <label for="first-name" class="block text-lg leading-6 text-gray-900">What is your name? *</label>
+              <div class="mt-2">
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+              <p class="mt-1 text-xs leading-6 text-red-600">This is a required field</p>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label for="first-name" class="block text-lg leading-6 text-gray-900">Your Corporate email? *</label>
+              <div class="mt-2">
+                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+              <p class="mt-1 text-xs leading-6 text-red-600">This is a required field</p>
+            </div>
+
+
+          <div class="sm:col-span-5">
+            <label for="country" class="block text-lg leading-6 text-gray-900">Please shaere the estimated budget you have alocated to this project.</label>
+            <div class="mt-2">
+              <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
+                <option>$5000 and below</option>
+                <option>$10,000</option>
+                <option>$20,000 and above</option>
+              </select>
             </div>
           </div>
         </div>
-      </div>
-      <div class="text-gray-700  flex flex-col lg:flex-row text-3xl mt-8">
-        <div class="mb-1 md:mb-0 mr-8">
-          <label for="forms-labelLeftInputCode">My budget is</label>
+        <div class="mt-8">
+          <p class="font-bold">Communication preference: 
+            <span class="text-gray-700 font-normal">Learn our</span>
+            <a href="#"><span class="text-red-700 underline font-normal"> Privacy Policy</span></a></p>
         </div>
-        <div class="flex">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="$1500" id="forms-labelLeftInputCode"/>
-          <label for="forms-labelLeftInputCode">.</label>
+
+        <div class="sm:col-span-4 mt-4">
+        <fieldset>
+          <div class="mt-6 space-y-6">
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input id="comments" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              </div>
+              <div class="text-sm leading-6">
+                <p class="text-gray-500">Yes, I agree to continue recieving email messages from Podii.</p>
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input id="candidates" name="candidates" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+              </div>
+              <div class="text-sm leading-6">
+                <p class="text-gray-500">No thanks, please unsubscribe me.</p>
+              </div>
+            </div>
+            
+          </div>
+        </fieldset>
         </div>
       </div>
-      <div class="text-gray-700 flex flex-col lg:flex-row text-3xl mt-8">
-        <div class="mb-1 md:mb-0 mr-8">
-          <label for="forms-labelLeftInputCode">I would love it completed in</label>
-        </div>
-        <div class="flex">
-          <input class="w-full h-10 px-3 text-base placeholder-gray-600 border-b-2 border-t-0 border-l-0 border-r-0 focus:shadow-outline" type="text" placeholder="7 Months" id="forms-labelLeftInputCode"/>
-          <label for="forms-labelLeftInputCode">.</label>
-        </div>
-      </div>
-      
-      </div>
-      <div class="relative sm:mx-auto sm:max-w-4xl md:max-w-4xl mt-10" >
-        <a style="background-color: #FF5E0E; font-family: 'Jura';" href="/" class="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
-          Send
-        </a>
-      </div>
-      </div>
+    </form>
+  </div>
+</div>
+
+      </section>
 
     </main>
 </body>
@@ -210,8 +227,6 @@
       }
       });
   });
-
-    
 
 </script>
 </html>
