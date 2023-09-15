@@ -19,6 +19,15 @@
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function(){
+            emailjs.init("_su5rzwBk-LUIbTdL");
+        })();
+      </script>
+
       <!-- Post Css -->
       <link rel="stylesheet" href="/main.css">
     <title>Contact Us</title>
@@ -75,7 +84,7 @@
             <div class="sm:col-span-3">
               <label for="first-name" class="block text-lg leading-6 text-gray-900">What is your name? *</label>
               <div class="mt-2">
-                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input type="text" required id="name" name="name" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               </div>
               <p class="mt-1 text-xs leading-6 text-red-600">This is a required field</p>
             </div>
@@ -83,15 +92,15 @@
             <div class="sm:col-span-3">
               <label for="first-name" class="block text-lg leading-6 text-gray-900">Your email? *</label>
               <div class="mt-2">
-                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input type="email" required name="email" id="email" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               </div>
               <p class="mt-1 text-xs leading-6 text-red-600">This is a required field</p>
             </div>
 
             <div class="sm:col-span-5 mb-8">
-              <label for="country" class="block text-lg leading-6 text-gray-900">What services do you need?*</label>
+              <label for="service" class="block text-lg leading-6 text-gray-900">What services do you need?*</label>
               <div class="mt-2">
-                <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
+                <select id="service" name="service" autocomplete="our-services" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
                   <option>Please select</option>
                   <option>Mobile App Development</option> 
                   <option>Web App Development</option>
@@ -104,17 +113,17 @@
           </div>
 
           <div class="col-span-full">
-            <label for="about" class="block text-lg leading-6 text-gray-900">If other, please explain brifely below</label>
+            <label for="other" class="block text-lg leading-6 text-gray-900">If other, please explain brifely below</label>
             <div class="mt-2">
-              <textarea id="about" name="about" rows="3" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+              <textarea id="other" name="other" rows="3" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
             </div>
           </div>
 
 
           <div class="sm:col-span-5 mt-6">
-            <label for="country" class="block text-lg leading-6 text-gray-900">Please share the estimated budget you have alocated to this project.</label>
+            <label for="budget" class="block text-lg leading-6 text-gray-900">Please share the estimated budget you have alocated to this project.</label>
             <div class="mt-2">
-              <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
+              <select id="budget" name="budget" autocomplete="budget-amount" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
                 <option>Please select</option>
                 <option>$5000 and below</option>
                 <option>$10,000</option>
@@ -129,22 +138,27 @@
           <div class="mt-2">
             <p class="text-xl lg:w-2/3 text-[#307457] font-bold">Expect to hear from us as soon as possible! Thank You.</p>
           </div>
-          <div class="flex justify-center items-center md:flex-row pt-8 ">
+          <!--<div class="flex justify-center items-center md:flex-row pt-8 ">
             <a href="#" class="rounded inline-flex items-center justify-center h-14 mb-3 font-medium tracking-wide text-white my-btns bg-[#FF5E0E] w-40 hover:bg-[#307457]" >
               <span class="mx-3 font-bold" style="font-family: 'Jura';">Let's have a talk</span>
             </a>
-          </div>
+          </div>-->
+          <button type="submit" id="loaderButton" onclick="sendMail(); reset(); return false;" 
+            class="relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md md:w-auto bg-[#FF5E0E] hover:bg-[#307457]">
+                <span id="buttonText"> Let's have a talk</span>
+                <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
+                  <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
+                </div>
+          </button>
         </div>
 
       </div>
     </form>
   </div>
 </div>
+</section>
 
-      </section>
-
-    </main>
-
+</main>
     <footer>
       <div style="background-color:#0F241B ; font-family: 'Forum', cursive;">
         <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -223,6 +237,53 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      
+      function sendMail() {
+        var params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          service: document.getElementById("service").value,
+          other: document.getElementById("other").value,
+          budget: document.getElementById("budget").value,
+        };
+
+
+        const serviceID = "service_po7iqqm";
+        const templateID = "template_ea0686g";
+    
+        emailjs.send(serviceID, templateID, params)
+        .then(res=>{
+            document.getElementById("name").required=true;
+            document.getElementById("email").required=true;
+            document.getElementById("service").required = true;
+            document.getElementById("other").value = "";
+            document.getElementById("budget").required =true;
+            console.log(res);
+            alert("Your message sent successfully!!")
+    
+        })
+        .catch(err=>console.log(err));
+    
+    }
+
+    const loaderButton = document.getElementById('loaderButton');
+    const loader = document.getElementById('loader');
+    const buttonText = document.getElementById('buttonText');
+    const textInput = document.getElementById('email')
+
+    loaderButton.addEventListener('click', function() {
+      loader.classList.remove('hidden');
+      buttonText.classList.add('hidden');
+
+      // Simulating an asynchronous action
+      setTimeout(function() {
+        loader.classList.add('hidden');
+        buttonText.classList.remove('hidden');
+      }, 1000); 
+    });
+    </script>
 </body>
 <script>
     function toggleNavbar(collapseID) {
@@ -306,6 +367,7 @@
       }
       });
   });
+
 
 </script>
 </html>
