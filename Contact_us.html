@@ -78,13 +78,13 @@
   </div>
 <div class="space-y-10 divide-y divide-gray-900/10">
   <div class="flex justify-center">
-    <form class="shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 bg-white">
+    <form class="shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 bg-white" id="myForm">
       <div class="px-4 py-6 sm:p-8">
         <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-3">
-              <label for="first-name" class="block text-lg leading-6 text-gray-900">What is your name? *</label>
+              <label for="user-name" class="block text-lg leading-6 text-gray-900">What is your name? *</label>
               <div class="mt-2">
-                <input type="text" required id="name" name="name" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <input type="text" required id="userName" name="userName" autocomplete="given-name" class="block w-full rounded-md border-0 py-2 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               </div>
               <p class="mt-1 text-xs leading-6 text-red-600">This is a required field</p>
             </div>
@@ -100,8 +100,8 @@
             <div class="sm:col-span-5 mb-8">
               <label for="service" class="block text-lg leading-6 text-gray-900">What services do you need?*</label>
               <div class="mt-2">
-                <select id="service" name="service" autocomplete="our-services" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
-                  <option>Please select</option>
+                <select id="service" name="service" required autocomplete="our-services" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
+                  <option value="" disabled selected>Please select</option>
                   <option>Mobile App Development</option> 
                   <option>Web App Development</option>
                   <option>Cloud Computing Services</option>
@@ -113,7 +113,7 @@
           </div>
 
           <div class="col-span-full">
-            <label for="other" class="block text-lg leading-6 text-gray-900">If other, please explain brifely below</label>
+            <label for="other" class="block text-lg leading-6 text-gray-900">If other, please explain brifely below.(Optional)</label>
             <div class="mt-2">
               <textarea id="other" name="other" rows="3" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
             </div>
@@ -121,10 +121,10 @@
 
 
           <div class="sm:col-span-5 mt-6">
-            <label for="budget" class="block text-lg leading-6 text-gray-900">Please share the estimated budget you have alocated to this project.</label>
+            <label for="budget" class="block text-lg leading-6 text-gray-900">Please share the estimated budget you have alocated to this project.*</label>
             <div class="mt-2">
-              <select id="budget" name="budget" autocomplete="budget-amount" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
-                <option>Please select</option>
+              <select id="budget" name="budget" required autocomplete="budget-amount" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
+                <option disabled selected value="">Please select</option>
                 <option>$5000 and below</option>
                 <option>$10,000</option>
                 <option>$20,000 and above</option>
@@ -133,7 +133,8 @@
           </div>
         </div>
 
-      
+        <div id="error" style="color: red;" class="px-8"></div>
+
         <div class="lg:flex items-center justify-between px-8 pb-6">
           <div class="mt-2">
             <p class="text-xl lg:w-2/3 text-[#307457] font-bold">Expect to hear from us as soon as possible! Thank You.</p>
@@ -143,7 +144,7 @@
               <span class="mx-3 font-bold" style="font-family: 'Jura';">Let's have a talk</span>
             </a>
           </div>-->
-          <button type="submit" id="loaderButton" onclick="sendMail(); reset(); return false;" 
+          <button type="submit" id="loaderButton" onclick="sendMail(); return false;" 
             class="relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md md:w-auto bg-[#FF5E0E] hover:bg-[#307457]">
                 <span id="buttonText"> Let's have a talk</span>
                 <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
@@ -154,6 +155,55 @@
 
       </div>
     </form>
+
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 flex items-center justify-center hidden">
+      <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
+        <div class="p-8">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+            <svg class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </div>
+          <div class="mt-3 text-center sm:mt-5">
+            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Sent Successful</h3>
+            <div class="mt-2">
+              <p class="text-md text-gray-500">We have recieved your information. Expect to hear from us very soon. Thanks for choosing Podii.</p>
+            </div>
+          </div>
+          <div class="mt-5 sm:mt-6" onclick="closeSuccessModal()">
+            <button type="button" class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="errorModal" class="fixed inset-0 flex items-center justify-center hidden">
+      <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+      <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
+        <div class="p-8">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
+            <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+          </div>
+          <div class="mb-3 text-center sm:mt-5">
+            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Not Sent!!</h3>
+            <div class="mt-2">
+              <p class="text-lg text-gray-700">Please fill out all required fields. <br>Thank You.</p>
+            </div>
+          </div>
+          <div class="mt-5 sm:mt-6" onclick="closeErrorModal()">
+            <button type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>
 </section>
@@ -238,35 +288,78 @@
       </div>
     </footer>
 
+
     <script>
       
       function sendMail() {
+        // Get input field values
+        var userName = document.getElementById("userName").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var service = document.getElementById("service").value.trim();
+        var budget = document.getElementById("budget").value.trim();
+    
+        // Check if any required field is empty
+        if (userName === "" || email === "" || service === "" || budget === "") {
+            // alert("Please fill out all required fields.");
+            openErrorModal();
+            return; // Exit the function if any field is empty
+        }
+    
         var params = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          service: document.getElementById("service").value,
-          other: document.getElementById("other").value,
-          budget: document.getElementById("budget").value,
+            name: userName,
+            email: email,
+            service: service,
+            other: document.getElementById("other").value.trim(),
+            budget: budget,
         };
-
-
+    
         const serviceID = "service_po7iqqm";
         const templateID = "template_ea0686g";
     
         emailjs.send(serviceID, templateID, params)
-        .then(res=>{
-            document.getElementById("name").required=true;
-            document.getElementById("email").required=true;
-            document.getElementById("service").required = true;
-            document.getElementById("other").value = "";
-            document.getElementById("budget").required =true;
-            console.log(res);
-            alert("Your message sent successfully!!")
-    
-        })
-        .catch(err=>console.log(err));
-    
+            .then(res => {
+                // Clear the input fields and display success message
+                document.getElementById("userName").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("service").value = "";
+                document.getElementById("other").value = "";
+                document.getElementById("budget").value = "";
+                // alert("Your message sent successfully!!");
+                openSuccessModal();
+                resetForm();
+            })
+            .catch(err => console.log(err));
     }
+
+
+    function openSuccessModal() {
+      document.getElementById("successModal").classList.remove("hidden");
+    }
+
+    function closeSuccessModal() {
+        document.getElementById("successModal").classList.add("hidden");
+    }
+
+    function openErrorModal() {
+        document.getElementById("errorModal").classList.remove("hidden");
+    }
+
+    function closeErrorModal() {
+        document.getElementById("errorModal").classList.add("hidden");
+    }
+
+    document.getElementById("successModal").addEventListener("click", function(event) {
+      if (event.target === this) {
+          closeSuccessModal();
+        }
+    });
+
+    document.getElementById("errorModal").addEventListener("click", function(event) {
+      if (event.target === this) {
+          closeErrorModal();
+      }
+    });
+      
 
     const loaderButton = document.getElementById('loaderButton');
     const loader = document.getElementById('loader');
