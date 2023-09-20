@@ -19,6 +19,13 @@
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <script>
+        function onSubmit(token) {
+          document.getElementById("contact_form").submit();
+        }
+      </script>
+
       <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
       </script>
@@ -78,7 +85,7 @@
   </div>
 <div class="space-y-10 divide-y divide-gray-900/10">
   <div class="flex justify-center">
-    <form class="shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 bg-white" id="myForm">
+    <form class="shadow-sm ring-1 ring-gray-900/5 sm:rounded-xl md:col-span-2 bg-white" id="contact_form">
       <div class="px-4 py-6 sm:p-8">
         <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-3">
@@ -144,8 +151,8 @@
               <span class="mx-3 font-bold" style="font-family: 'Jura';">Let's have a talk</span>
             </a>
           </div>-->
-          <button type="submit" id="loaderButton" onclick="sendMail(); return false;" 
-            class="relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md md:w-auto bg-[#FF5E0E] hover:bg-[#307457]">
+          <button type="submit" id="loaderButton" onclick="sendMail(); return false;" data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
+            class="g-recaptcha relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md md:w-auto bg-[#FF5E0E] hover:bg-[#307457]">
                 <span id="buttonText"> Let's have a talk</span>
                 <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
                   <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
@@ -313,8 +320,8 @@
             budget: budget,
         };
     
-        const serviceID = "service_po7iqqm";
-        const templateID = "template_ea0686g";
+        const serviceID = "service_15dz7io";
+        const templateID = "template_kl4mi9m";
     
         emailjs.send(serviceID, templateID, params)
             .then(res => {
