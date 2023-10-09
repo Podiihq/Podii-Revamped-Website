@@ -31,3 +31,14 @@ toggleButton3.addEventListener('click', () => {
     }
 });
 
+
+const toggleButton4 = document.getElementById('toggleButton4');
+const collapsibleContent4 = document.getElementById('collapsibleContent4');
+
+toggleButton4.addEventListener('click', () => {
+    if (collapsibleContent4.style.display === 'none' || collapsibleContent4.style.display === '') {
+        collapsibleContent4.style.display = 'block';
+    } else {
+        collapsibleContent4.style.display = 'none';
+    }
+});
