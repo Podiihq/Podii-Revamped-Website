@@ -42,3 +42,47 @@ toggleButton4.addEventListener('click', () => {
         collapsibleContent4.style.display = 'none';
     }
 });
+
+const toggleButton5 = document.getElementById('toggleButton5');
+const collapsibleContent5 = document.getElementById('collapsibleContent5');
+
+toggleButton5.addEventListener('click', () => {
+    if (collapsibleContent5.style.display === 'none' || collapsibleContent5.style.display === '') {
+        collapsibleContent5.style.display = 'block';
+    } else {
+        collapsibleContent5.style.display = 'none';
+    }
+});
+
+const toggleButton6 = document.getElementById('toggleButton6');
+const collapsibleContent6 = document.getElementById('collapsibleContent6');
+
+toggleButton6.addEventListener('click', () => {
+    if (collapsibleContent6.style.display === 'none' || collapsibleContent6.style.display === '') {
+        collapsibleContent6.style.display = 'block';
+    } else {
+        collapsibleContent6.style.display = 'none';
+    }
+});
+
+const toggleButton7 = document.getElementById('toggleButton7');
+const collapsibleContent7 = document.getElementById('collapsibleContent7');
+
+toggleButton7.addEventListener('click', () => {
+    if (collapsibleContent7.style.display === 'none' || collapsibleContent7.style.display === '') {
+        collapsibleContent7.style.display = 'block';
+    } else {
+        collapsibleContent7.style.display = 'none';
+    }
+});
+
+const toggleButton8 = document.getElementById('toggleButton8');
+const collapsibleContent8 = document.getElementById('collapsibleContent8');
+
+toggleButton8.addEventListener('click', () => {
+    if (collapsibleContent8.style.display === 'none' || collapsibleContent8.style.display === '') {
+        collapsibleContent8.style.display = 'block';
+    } else {
+        collapsibleContent8.style.display = 'none';
+    }
+});
