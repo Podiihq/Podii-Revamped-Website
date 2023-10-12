@@ -149,7 +149,10 @@
               </div>
             </div>
           </div>
-          <img src="./assets/updated/Heros/vibrant.svg" class="object-cover w-full hidden lg:block" alt=""/>
+          <div class="image-container">
+            <img src="./assets/updated/Heros/vibrant.svg" class="object-cover w-full hidden lg:block" alt=""/>
+            <img src="./assets/updated/Heros/smart-farm.svg" class="object-cover w-full hidden lg:block" alt=""/>
+          </div>
       </div>
     </section>
 
@@ -549,6 +552,28 @@
     document.getElementById(collapseID).classList.toggle("hidden");
     document.getElementById(collapseID).classList.toggle("block");
   }
+</script>
+<script>
+  const images = document.querySelectorAll('.image-container img');
+  let currentImageIndex = 0;
+
+  function showImage(index) {
+      images.forEach((image, i) => {
+          if (i === index) {
+              image.style.display = 'block';
+          } else {
+              image.style.display = 'none';
+          }
+      });
+  }
+
+  function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+  }
+
+  showImage(currentImageIndex);
+  setInterval(nextImage, 3000); // Change image every 3 seconds (3000 milliseconds)
 </script>
 <script>
   var scrollpos = window.scrollY;
