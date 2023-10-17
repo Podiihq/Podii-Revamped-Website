@@ -224,14 +224,69 @@
             </div>
         </section>
 
-        <section class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20">
-          <div class="lg:flex justify-between lg:mb-12">
-            <h3 class="text-3xl lg:text-[48px] font-medium mb-4 lg:mb-0" style="font-family: 'Montserrat';">Featured Work</h3>
-            <a href="" class="flex items-center gap-4 text-[#307457] hover:text-orange-600 py-4 lg:py-0 hidden lg:block">
-              <span class="text-xl">DISCOVER ALL</span>
-              <i class="fa-solid fa-arrow-right text-xl"></i>
-            </a>
+        <div class="bg-white">
+          <div class="px-4 py-6 lg:pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-8">
+            <section class="min-h-screen flex justify-center items-center">
+              <div class="w-full">
+                <div class="px-4 py-10 bg-white sm:rounded-3xl sm:p-20 border border-[#307457] border-2">
+                  <div>
+                    <h1 class="text-[32px] text-left" style="font-family: 'Montserrat';">Let our ideas shine too !</h1>
+                  </div>
+                  <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                    <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 flex items-center gap-20">
+                      <div class="relative mt-4 w-full">
+                        <input autocomplete="off" id="name" name="name" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-[#307457] text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
+                        <label for="name" class="absolute left-0 -top-3.5 text-[#A7B8B1] text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Full Name</label>
+                      </div>
+                      <div class="relative w-full">
+                        <input autocomplete="off" id="name" name="email" type="email" class="peer placeholder-transparent h-10 w-full border-b-2 border-[#307457] text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
+                        <label for="email" class="absolute left-0 -top-3.5 text-[#A7B8B1] text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
+                      </div>
+                    </div>
+                    <div class="flex gap-20">
+                      <div class="relative w-full">
+                        <select id="customSelect" name="customSelect" class="peer h-10 w-full border-b-2 border-[#307457] bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
+                          <option value="" disabled selected>Services</option>
+                          <option>Mobile App Development</option> 
+                          <option>Web App Development</option>
+                          <option>Cloud Computing Services</option>
+                          <option>Testing & Quality Assuarance</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+                      <div class="relative w-full">
+                        <select id="customSelect" name="customSelect" class="peer h-10 w-full border-b-2 border-[#307457] bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
+                          <option value="" disabled selected class="text-[#A7B8B1]">Budget</option>
+                          <option>$5000 and below</option>
+                          <option>$10,000</option>
+                          <option>$20,000 and above</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button type="submit" id="loaderButton"
+                      class="g-recaptcha-response w-full relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md md:w-auto bg-[#FF5E0E] hover:bg-[#307457]">
+                          <span id="buttonText"> Let's have a talk</span>
+                          <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
+                            <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
+                          </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
+        </div>
+
+        <div class="bg-">
+
+        </div>
+
+            
+         
+
+        <section class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:pb-20">
+          <p>Cases</p>
+
           <div class="grid lg:grid-cols-2 gap-10">
             <div>
               <img src="../assets/updated/featured/1.svg" alt="" class="object-cover w-full">
@@ -243,7 +298,7 @@
             </div>
             <div>
               <img src="../assets/updated/featured/2.svg" alt="" class="object-cover w-full">
-              <p class="text-base lg:text-2xl font-light mt-4"><span class="font-semibold">ERP -</span>  Enterprise resource managing system for an NGO in western Kenya</p>
+              <p class="text-base lg:text-2xl font-light mt-4"><span class="font-semibold">ERP -</span> Enterprise resource managing system for an NGO in western Kenya</p>
               <a href="" class="flex items-center gap-2 lg:gap-4 text-[#307457] hover:text-orange-600 mt-4">
                 <span class="text-base lg:text-xl underline">Read the case study</span>
                 <i class="fa-solid fa-arrow-right text-base lg:text-xl"></i>
@@ -252,24 +307,6 @@
           </div>
         </section>
 
-        <section class="bg-[F4FBF8]">
-          <div class="flex flex-col items-center md:flex-row mb-1 md:mx-auto sm:text-center lg:max-w-6xl md:py-24 py-10">
-              <h2 class="pt-8 mb-6 font-sans text-3xl lg:text-5xl font-medium leading-none tracking-wide mx-12 text-center text-[#0F241B]" style="font-family: 'Montserrat', sans-serif;">
-                Start Exploring Our Solutions
-              </h2>
-              <div class="flex flex-col items-center md:flex-row pt-8 ">
-                <a href="./contact-us.html" class="inline-flex items-center justify-left w-full h-14 mb-3 font-medium tracking-wide text-black my-btns">
-                <span class="w-4 h-14 rounded-tr-md rounded-br-md mr-4" style="background-color: #FF5E0E;"></span>
-                  <span class="mr-6 uppercase" style="font-family: 'Montserrat', sans-serif;">Talk to Us</span>
-                  <i class="fa-solid fa-arrow-right mr-4"></i>
-                </a>
-              </div>
-            </div>
-            </section>
-
-            
-
-     
       
       <footer>
           <div style="background-color:#0F241B">
