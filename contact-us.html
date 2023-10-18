@@ -113,11 +113,11 @@
       <div class="flex justify-center">
         <form class="md:col-span-2 bg-white" id="contact_form">
           <div class="px-4 py-6 sm:p-8">
-            <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-8">
+            <div class="flex flex-col gap-5">
               <div class="sm:col-span-8">
                 <label for="company-name" class="block text-lg leading-6 text-gray-900">What is your company name?*</label>
                 <div class="mt-2">
-                  <input type="text" required id="companyName" name="userName" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <input type="text" required id="companyName" name="companyName" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
               </div>
                 <div class="sm:col-span-8">
@@ -126,65 +126,50 @@
                     <input type="text" required id="userName" name="userName" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                   </div>
                 </div>
-    
+
                 <div class="sm:col-span-8">
-                  <label for="first-name" class="block text-lg leading-6 text-gray-900">Your email? *</label>
+                  <label for="email" class="block text-lg leading-6 text-gray-900">Your email? *</label>
                   <div class="mt-2">
                     <input type="email" required name="email" id="email" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                   </div>
                 </div>
 
                 <div class="sm:col-span-8">
-                  <label for="first-name" class="block text-lg leading-6 text-gray-900 mb-6">What solutions do you need today?*</label>
+                  <label for="services" class="block text-lg leading-6 text-gray-900 mb-6">What solutions do you need today?*</label>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox1" name="checkbox1" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox1" name="checkbox1" value="Web-app-development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox1" class="text-base lg:text-xl font-light">Web app development</label>
+                    <input type="hidden" name="checkbox1" value="false"  />
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox2" name="checkbox2" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox2" name="checkbox2" value="Mobile app development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox2" class="text-base lg:text-xl font-light">Mobile app development</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox3" name="checkbox3" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox3" name="checkbox3" value="Intuitive User Experiences(UI/UX)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox3" class="ttext-base lg:text-xl font-light">Intuitive User Experiences(UI/UX)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox3" name="checkbox3" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
-                    <label for="checkbox3" class="text-base lg:text-xl font-light">Bulletproof Software (Testing and QA)</label>
+                    <input type="checkbox" id="checkbox4" name="checkbox4" value="Bulletproof Software (Testing and QA)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <label for="checkbox4" class="text-base lg:text-xl font-light">Bulletproof Software (Testing and QA)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox4" name="checkbox3" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
-                    <label for="checkbox3" class="text-base lg:text-xl font-light">Efficient Data Management (Cloud Computing)</label>
+                    <input type="checkbox" id="checkbox5" name="checkbox5" value="Efficient Data Management (Cloud Computing)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <label for="checkbox5" class="text-base lg:text-xl font-light">Efficient Data Management (Cloud Computing)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox5" name="checkbox3" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
-                    <label for="checkbox3" class="text-base lg:text-xl font-light">Smart Data Organization (DB Design)</label>
+                    <input type="checkbox" id="checkbox6" name="checkbox6" value="Smart Data Organization (DB Design)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <label for="checkbox6" class="text-base lg:text-xl font-light">Smart Data Organization (DB Design)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox6" name="checkbox3" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
-                    <label for="checkbox3" class="text-base lg:text-xl font-light">Streamlined Software Delivery (DevOps)</label>
+                    <input type="checkbox" id="checkbox7" name="checkbox7" value="treamlined Software Delivery (DevOps)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <label for="checkbox7" class="text-base lg:text-xl font-light">Streamlined Software Delivery (DevOps)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox3" name="checkbox3" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
-                    <label for="checkbox3" class="text-base lg:text-xl font-light">Other (Your Unique Software)</label>
+                    <input type="checkbox" id="checkbox8" name="checkbox8" value="Other (Your Unique Software)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <label for="checkbox8" class="text-base lg:text-xl font-light">Other (Your Unique Software)</label>
                   </div>
-                </div>
-    
-                <!-- <div class="sm:col-span-5 mb-8">
-                  <label for="service" class="block text-lg leading-6 text-gray-900">Please describe your projects in a few words?*</label>
-                  <div class="mt-2">
-                    <select id="service" name="service" required autocomplete="our-services" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
-                      <option value="" disabled selected>Please select</option>
-                      <option>Mobile App Development</option> 
-                      <option>Web App Development</option>
-                      <option>Cloud Computing Services</option>
-                      <option>Testing & Quality Assuarance</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                </div>
-              </div>-->
-    
+                </div>  
               <div class="col-span-8">
                 <label for="other" class="block text-xl leading-6 text-gray-900">Please describe your projects in a few words?*</label>
                 <div class="mt-4">
@@ -197,39 +182,13 @@
                 <select id="budget" name="budget" class="px-2 rounded-md text-xl h-10 w-full border-2 border-gray-300 bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
                   <option value="" disabled selected>Select your budget range </option>
                   <option>$5000 and below</option>
-                    <option>$10,000</option>
-                    <option>$20,000 and above</option>
+                  <option>$10,000</option>
+                  <option>$20,000 and above</option>
                 </select>
               </div>
-    
-              <!--<div class="col-span-8 my-6">
-                <label for="budget" class="block text-xl leading-6 text-gray-900">What is your estimated budget for this project?*</label>
-                <div class="mt-2 w-full">
-                  <select id="budget" name="budget" required autocomplete="budget-amount" class="block w-full rounded-md border-0 py-2 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-lg sm:leading-6">
-                    <option disabled selected value="">Select your budget range</option>
-                    <option>$5000 and below</option>
-                    <option>$10,000</option>
-                    <option>$20,000 and above</option>
-                  </select>
-                </div>
-              </div>
-            </div>-->
-    
             <div id="error" style="color: red;" class="px-8"></div>
     
             <div class="l:px-8 col-span-8">
-              <!--<div class="flex justify-center items-center md:flex-row pt-8 ">
-                <a href="#" class="rounded inline-flex items-center justify-center h-14 mb-3 font-medium tracking-wide text-white my-btns bg-[#FF5E0E] w-40 hover:bg-[#307457]" >
-                  <span class="mx-3 font-bold" style="font-family: 'Jura';">Let's have a talk</span>
-                </a>
-              </div>-->
-             <!-- <button type="submit" id="loaderButton" onclick="sendMail(); return false;" data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
-                class="g-recaptcha-response relative text-white w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md md:w-auto bg-[#FF5E0E] hover:bg-[#307457]">
-                    <span id="buttonText"> Submit</span>
-                    <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
-                      <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
-                    </div>
-              </button> -->
               <button type="submit" id="loaderButton" onclick="sendMail(); return false;" data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
                 class="g-recaptcha-response w-full relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-[#FF5E0E] hover:bg-[#307457]">
                     <span id="buttonText"> Talk to Us</span>
@@ -291,7 +250,7 @@
       </div>
     </div>
     </section>
-</div>
+  </div>
 
 
 </main>
@@ -379,24 +338,46 @@
       
       function sendMail() {
         // Get input field values
+        var companyName = document.getElementById("companyName").value.trim();
         var userName = document.getElementById("userName").value.trim();
         var email = document.getElementById("email").value.trim();
-        var service = document.getElementById("service").value.trim();
         var budget = document.getElementById("budget").value.trim();
+
+        var checkbox1 = document.getElementById("checkbox1").value;
+        var checkbox2 = document.getElementById("checkbox2").value;
+        var checkbox3 = document.getElementById("checkbox3").value;
+        var checkbox4 = document.getElementById("checkbox4").value;
+        var checkbox5 = document.getElementById("checkbox5").value;
+        var checkbox6 = document.getElementById("checkbox6").value;
+        var checkbox7 = document.getElementById("checkbox7").value;
+        var checkbox8 = document.getElementById("checkbox8").value;
     
         // Check if any required field is empty
-        if (userName === "" || email === "" || service === "" || budget === "") {
+        if (companyName === "" || userName === "" || email === "" || budget === "") {
             // alert("Please fill out all required fields.");
             openErrorModal();
             return; // Exit the function if any field is empty
         }
-    
+        
+        if(checkbox1 === true && checkbox2 === true && checkbox3 === true && checkbox4 === true && checkbox5 === true && checkbox6 === true && checkbox7 === true && checkbox8===true){
+          openErrorModal();
+          return;
+        }
+
         var params = {
+            companyName: companyName,
             userName: userName,
             email: email,
-            service: service,
             other: document.getElementById("other").value.trim(),
             budget: budget,
+            checkbox1: document.getElementById("checkbox1").value,
+            checkbox2: document.getElementById("checkbox2").value,
+            checkbox3: document.getElementById("checkbox3").value,
+            checkbox4: document.getElementById("checkbox4").value,
+            checkbox5: document.getElementById("checkbox5").value,
+            checkbox6: document.getElementById("checkbox6").value,
+            checkbox7: document.getElementById("checkbox7").value,
+            checkbox8: document.getElementById("checkbox8").value,
         };
     
         const serviceID = "service_15dz7io";
@@ -405,11 +386,21 @@
         emailjs.send(serviceID, templateID, params)
             .then(res => {
                 // Clear the input fields and display success message
+                document.getElementById("companyName").value = "";
                 document.getElementById("userName").value = "";
                 document.getElementById("email").value = "";
-                document.getElementById("service").value = "";
                 document.getElementById("other").value = "";
                 document.getElementById("budget").value = "";
+                document.getElementById("checkbox1").value;
+                document.getElementById("checkbox2").value;
+                document.getElementById("checkbox3").value;
+                document.getElementById("checkbox4").value;  
+                document.getElementById("checkbox5").value;
+                document.getElementById("checkbox6").value;
+                document.getElementById("checkbox7").value;
+                document.getElementById("checkbox8").value;
+
+
                 // alert("Your message sent successfully!!");
                 openSuccessModal();
                 resetForm();
