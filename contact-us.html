@@ -91,9 +91,9 @@
   <section class="lg:pt-8 ">
     <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-8 lg:pt-32">
       <div class="flex items-center justify-center lg:flex-row">
-        <div class="mb-4 lg:mb-10 lg:max-w-7xl lg:pr-5 lg:mb-0">
-          <div class="max-w-5xl mb-6 mt-16 md:mt-4 text-center md:text-left"> 
-            <h2 class="text-center mb-8 font-sans text-5xl lg:text-7xl md:text-8xl font-semibold tracking-wide sm:leading-none text-[#307457]" style="font-family: 'Montserrat', sans-serif;">
+        <div class="mb-4 lg:mb-10 lg:max-w-2xl lg:pr-5 lg:mb-0">
+          <div class="max-w-2xl mb-6 mt-16 md:mt-4 text-center md:text-left"> 
+            <h2 class="text-center mb-8 font-sans text-3xl lg:text-[48px] font-semibold tracking-wide sm:leading-none text-[#307457]" style="font-family: 'Montserrat', sans-serif;">
               Tell us about your project
             </h2>
             
@@ -255,7 +255,7 @@
 
 </main>
     <footer>
-      <div style="background-color:#0F241B ; font-family: 'Forum', cursive;">
+      <div style="background-color:#0F241B ;">
         <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div class="grid row-gap-10 mb-8 lg:grid-cols-4">
             <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
@@ -308,8 +308,7 @@
               </div>
               <div>
                 <div class="flex items-center pb-4">
-                  <img src="/assets/podii_logo.svg" alt="">
-                  <h1 style="font-family: 'Chewy', cursive; color:#FF5E0E" class="text-4xl pl-4">Podii</h1>
+                  <img src="/assets/updated/logo.png" alt="">
                 </div>
                 <ul class="mt-2 space-y-2">
                   <div class="flex items-center mt-4 space-x-4 sm:mt-0" style="color: #FFF5F0;">
@@ -402,40 +401,55 @@
 
 
                 // alert("Your message sent successfully!!");
-                openSuccessModal();
-                resetForm();
+                // openSuccessModal();
+                // resetForm();
+                window.location.href = 'success.html';
             })
             .catch(err => console.log(err));
     }
 
-
-    function openSuccessModal() {
-      document.getElementById("successModal").classList.remove("hidden");
-    }
-
-    function closeSuccessModal() {
-        document.getElementById("successModal").classList.add("hidden");
-    }
-
     function openErrorModal() {
-        document.getElementById("errorModal").classList.remove("hidden");
+      document.getElementById("errorModal").classList.remove("hidden");
     }
-
+    
     function closeErrorModal() {
         document.getElementById("errorModal").classList.add("hidden");
     }
-
-    document.getElementById("successModal").addEventListener("click", function(event) {
-      if (event.target === this) {
-          closeSuccessModal();
+    
+    document.getElementById("errorModal").addEventListener("click", function(event) {
+        if (event.target === this) {
+            closeErrorModal();
         }
     });
 
-    document.getElementById("errorModal").addEventListener("click", function(event) {
-      if (event.target === this) {
-          closeErrorModal();
-      }
-    });
+
+    // function openSuccessModal() {
+    //   document.getElementById("successModal").classList.remove("hidden");
+    // }
+
+    // function closeSuccessModal() {
+    //     document.getElementById("successModal").classList.add("hidden");
+    // }
+
+    // function openErrorModal() {
+    //     document.getElementById("errorModal").classList.remove("hidden");
+    // }
+
+    // function closeErrorModal() {
+    //     document.getElementById("errorModal").classList.add("hidden");
+    // }
+
+    // document.getElementById("successModal").addEventListener("click", function(event) {
+    //   if (event.target === this) {
+    //       closeSuccessModal();
+    //     }
+    // });
+
+    // document.getElementById("errorModal").addEventListener("click", function(event) {
+    //   if (event.target === this) {
+    //       closeErrorModal();
+    //   }
+    // });
       
 
     const loaderButton = document.getElementById('loaderButton');
