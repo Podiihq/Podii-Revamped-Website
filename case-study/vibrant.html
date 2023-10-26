@@ -265,10 +265,15 @@
                           <div class="relative mt-8 lg:mt-4 w-full">
                             <input autocomplete="off" id="userName" required name="userName" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-[#307457] text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
                             <label for="name" class="absolute left-0 -top-3.5 text-[#A7B8B1] text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Full Name</label>
+                            <div id="nameError" class="error-message text-red-500"></div>
+                          
                           </div>
                           <div class="relative w-full mt-8">
                             <input autocomplete="off" id="email" required name="email" type="email" class="peer placeholder-transparent h-10 w-full border-b-2 border-[#307457] text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
                             <label for="email" class="absolute left-0 -top-3.5 text-[#A7B8B1] text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
+                            <span id="emailError" style="color: red;"></span>
+                            <div id="emailError" class="error-message text-red-500"></div>
+                            
                           </div>
                         </div>
                         <div class="lg:flex gap-20">
@@ -284,6 +289,8 @@
                               <option>Streamlined Software Delivery (DevOps)</option>
                               <option>Other (Your Unique Software)</option>
                             </select>
+                            <div id="servicesError" class="error-message text-red-500"></div>
+  
                           </div>
                           <div class="relative w-full mb-6 mt-4 lg:mt-0">
                             <select id="budget" name="budget" required class="peer h-10 w-full border-b-2 border-[#307457] bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
@@ -292,6 +299,8 @@
                               <option>$10,000</option>
                               <option>$20,000 and above</option>
                             </select>
+                            <div id="budgetError" class="error-message text-red-500"></div>
+  
                           </div>
                         </div>
                         <button type="submit" id="loaderButton" onclick="sendMail(); return false;" data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
@@ -466,6 +475,14 @@
 
 </body>
 <script>
+
+  function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+  
+
   function sendMail() {
     // Get input field values
     var userName = document.getElementById("userName").value.trim();
@@ -474,11 +491,54 @@
     var budget = document.getElementById("budget").value.trim();
 
     // Check if any required field is empty
-    if (userName === "" || services === "" || email === "" || budget === "") {
-        // alert("Please fill out all required fields.");
-        openErrorModal();
-        return; // Exit the function if any field is empty
+    // if (userName === "" || services === "" || email === "" || budget === "") {
+    //     // alert("Please fill out all required fields.");
+    //     // openErrorModal();
+    //     document.getElementById("ErrorText").textContent = "This field is required";
+    //     return; // Exit the function if any field is empty
+    // }
+    var error = false;
+    
+    if (userName === "") {
+      document.getElementById("nameError").textContent = "Name is a required field.";
+      error = true;
+    } else {
+        document.getElementById("nameError").textContent = "";
     }
+
+    if (email === "") {
+        document.getElementById("emailError").textContent = "Email is a required field.";
+        error = true;
+    } else {
+        document.getElementById("emailError").textContent = "";
+    }
+
+    if (services === "") {
+        document.getElementById("servicesError").textContent = "Services is a required field.";
+        error = true;
+    } else {
+        document.getElementById("servicesError").textContent = "";
+    }
+
+    if (budget === "") {
+        document.getElementById("budgetError").textContent = "Budget is a required field.";
+        error = true;
+    } else {
+        document.getElementById("budgetError").textContent = "";
+    }
+
+    if (error) {
+        // If any required field is empty, exit the function
+        return;
+    }
+
+    
+    if (!validateEmail(email)) {
+      document.getElementById("emailError").textContent = "Please enter a valid email address!";
+      return; // Exit the function if the email is invalid
+    }
+
+    document.getElementById("emailError").textContent = "";
     
 
     var params = {
@@ -502,8 +562,9 @@
 
 
             // alert("Your message sent successfully!!");
-            openSuccessModal();
-            resetForm();
+            // openSuccessModal();
+            // resetForm();
+            window.location.href = '../success.html';
         })
         .catch(err => console.log(err));
 }
@@ -540,7 +601,6 @@ document.getElementById("errorModal").addEventListener("click", function(event) 
 const loaderButton = document.getElementById('loaderButton');
 const loader = document.getElementById('loader');
 const buttonText = document.getElementById('buttonText');
-const textInput = document.getElementById('email')
 
 loaderButton.addEventListener('click', function() {
   loader.classList.remove('hidden');
