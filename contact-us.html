@@ -168,8 +168,9 @@
               <div class="col-span-8">
                 <label for="other" class="block text-xl leading-6 text-gray-900">Please describe your projects in a few words?*</label>
                 <div class="mt-4">
-                  <textarea id="other" name="other" rows="5" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                  <textarea id="other" required name="other" rows="5" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                 </div>
+                <div id="otherError" class="error-message text-red-500"></div>
               </div>
     
               <div class="col-span-8 relative w-full">
@@ -333,6 +334,7 @@
         var userName = document.getElementById("userName").value.trim();
         var email = document.getElementById("email").value.trim();
         var budget = document.getElementById("budget").value.trim();
+        var other = document.getElementById("other").value.trim();
 
         var checkbox1 = document.getElementById("checkbox1").value;
         var checkbox2 = document.getElementById("checkbox2").value;
@@ -363,6 +365,13 @@
             error = true;
         } else {
             document.getElementById("emailError").textContent = "";
+        }
+
+        if (other === "") {
+          document.getElementById("otherError").textContent = "Please add a few details about your project ";
+          error = true;
+        } else {
+            document.getElementById("otherError").textContent = "";
         }
        
         if (budget === "") {
