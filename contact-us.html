@@ -130,40 +130,40 @@
                 </div>
 
                 <div class="sm:col-span-8">
-                  <label for="services" class="block text-lg leading-6 text-gray-900 mb-6">What solutions do you need today?*</label>
+                  <label for="checkboxGroup" class="block text-lg leading-6 text-gray-900 mb-6">What solutions do you need today?*</label>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox1" name="checkbox1" value="Web-app-development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox1" name="checkboxGroup" value="Web-app-development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox1" class="text-base lg:text-xl font-light">Web app development</label>
-                    <input type="hidden" name="checkbox1" value="false"  />
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox2" name="checkbox2" value="Mobile app development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox2" name="checkboxGroup" value="Mobile app development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox2" class="text-base lg:text-xl font-light">Mobile app development</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox3" name="checkbox3" value="Intuitive User Experiences(UI/UX)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox3" name="checkboxGroup" value="Intuitive User Experiences(UI/UX)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox3" class="ttext-base lg:text-xl font-light">Intuitive User Experiences(UI/UX)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox4" name="checkbox4" value="Bulletproof Software (Testing and QA)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox4" name="checkboxGroup" value="Bulletproof Software (Testing and QA)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox4" class="text-base lg:text-xl font-light">Bulletproof Software (Testing and QA)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox5" name="checkbox5" value="Efficient Data Management (Cloud Computing)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox5" name="checkboxGroup" value="Efficient Data Management (Cloud Computing)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox5" class="text-base lg:text-xl font-light">Efficient Data Management (Cloud Computing)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox6" name="checkbox6" value="Smart Data Organization (DB Design)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox6" name="checkboxGroup" value="Smart Data Organization (DB Design)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox6" class="text-base lg:text-xl font-light">Smart Data Organization (DB Design)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox7" name="checkbox7" value="treamlined Software Delivery (DevOps)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" required id="checkbox7" name="checkboxGroup" value="treamlined Software Delivery (DevOps)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox7" class="text-base lg:text-xl font-light">Streamlined Software Delivery (DevOps)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" id="checkbox8" name="checkbox8" value="Other (Your Unique Software)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox"  required id="checkbox8" name="checkboxGroup" value="Other (Your Unique Software)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox8" class="text-base lg:text-xl font-light">Other (Your Unique Software)</label>
                   </div>
+                  <div id="checkboxGroupError" class="error-message text-red-500"></div>
                 </div>  
               <div class="col-span-8">
                 <label for="other" class="block text-xl leading-6 text-gray-900">Please describe your projects in a few words?*</label>
@@ -375,6 +375,24 @@
         if (error) {
             // If any required field is empty, exit the function
             return;
+        }
+
+
+        var checkboxes = document.getElementsByName("checkboxGroup");
+        var isChecked = false;
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+
+        if (!isChecked) {
+            document.getElementById("checkboxGroupError").textContent = "Select at least one option.";
+            return;
+        } else {
+            document.getElementById("checkboxGroupError").textContent = "";
         }
 
 
