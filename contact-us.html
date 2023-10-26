@@ -119,16 +119,14 @@
                   <div class="mt-2">
                     <input type="text" required id="userName" name="userName" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                   </div>
-                  <span id="inputError" style="color: red;"></span>
-
+                    <div id="nameError" class="error-message text-red-500"></div>
                 </div>
 
                 <div class="sm:col-span-8">
-                  <label for="email" class="block text-lg leading-6 text-gray-900">Your email? *</label>
-                  <div class="mt-2">
-                    <input type="email" required name="email" id="email" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                  </div>
+                  <label for="email" class="block mb-2 text-lg leading-6 text-gray-900">Your email? *</label>
+                  <input type="email" required name="email" id="email" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                   <span id="emailError" style="color: red;"></span>
+                  <div id="emailError" class="error-message text-red-500"></div>
                 </div>
 
                 <div class="sm:col-span-8">
@@ -176,15 +174,14 @@
     
               <div class="col-span-8 relative w-full">
                 <label for="budget" class="mb-4 block text-xl leading-6 text-gray-900">What is your estimated budget for this project?*</label>
-                <select id="budget" name="budget" class="px-2 rounded-md text-xl h-10 w-full border-2 border-gray-300 bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
+                <select id="budget" required name="budget" class="px-2 rounded-md text-xl h-10 w-full border-2 border-gray-300 bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
                   <option value="" disabled selected>Select your budget range </option>
                   <option>$5000 and below</option>
                   <option>$10,000</option>
                   <option>$20,000 and above</option>
                 </select>
-                
+                <div id="budgetError" class="error-message text-red-500"></div>
               </div>
-            <div id="error" style="color: red;" class="px-8"></div>
     
             <div class="l:px-8 col-span-8">
               <button type="submit" id="loaderButton" onclick="sendMail(); return false;" data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
@@ -347,11 +344,40 @@
         var checkbox8 = document.getElementById("checkbox8").value;
     
         // Check if any required field is empty
-        if (userName === "" || email === "" || budget === "") {
-            // alert("Please fill out all required fields.");
-            openErrorModal();
-            return; // Exit the function if any field is empty
+        // if (userName === "" || email === "" || budget === "") {
+        //     // alert("Please fill out all required fields.");
+        //     openErrorModal();
+        //     return; // Exit the function if any field is empty
+        // }
+        var error = false;
+
+        if (userName === "") {
+          document.getElementById("nameError").textContent = "Name is a required field.";
+          error = true;
+        } else {
+            document.getElementById("nameError").textContent = "";
         }
+    
+        if (email === "") {
+            document.getElementById("emailError").textContent = "Email is a required field.";
+            error = true;
+        } else {
+            document.getElementById("emailError").textContent = "";
+        }
+       
+        if (budget === "") {
+            document.getElementById("budgetError").textContent = "Budget is a required field.";
+            error = true;
+        } else {
+            document.getElementById("budgetError").textContent = "";
+        }
+    
+        if (error) {
+            // If any required field is empty, exit the function
+            return;
+        }
+
+
 
         if (!validateEmail(email)) {
           document.getElementById("emailError").textContent = "Please enter a valid email address!";
@@ -418,34 +444,6 @@
         }
     });
 
-
-    // function openSuccessModal() {
-    //   document.getElementById("successModal").classList.remove("hidden");
-    // }
-
-    // function closeSuccessModal() {
-    //     document.getElementById("successModal").classList.add("hidden");
-    // }
-
-    // function openErrorModal() {
-    //     document.getElementById("errorModal").classList.remove("hidden");
-    // }
-
-    // function closeErrorModal() {
-    //     document.getElementById("errorModal").classList.add("hidden");
-    // }
-
-    // document.getElementById("successModal").addEventListener("click", function(event) {
-    //   if (event.target === this) {
-    //       closeSuccessModal();
-    //     }
-    // });
-
-    // document.getElementById("errorModal").addEventListener("click", function(event) {
-    //   if (event.target === this) {
-    //       closeErrorModal();
-    //   }
-    // });
       
 
     const loaderButton = document.getElementById('loaderButton');
