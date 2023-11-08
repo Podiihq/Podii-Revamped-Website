@@ -135,35 +135,35 @@
                 <div class="sm:col-span-8">
                   <label for="checkboxGroup" class="block text-lg leading-6 text-gray-900 mb-6">What solutions do you need today?*</label>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox1" name="checkboxGroup1" value="Web-app-development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox1" name="checkboxGroup" value="Web-app-development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox1" class="text-base lg:text-xl font-light">Web app development</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox2" name="checkboxGroup2" value="Mobile app development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox2" name="checkboxGroup" value="Mobile app development" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox2" class="text-base lg:text-xl font-light">Mobile app development</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox3" name="checkboxGroup3" value="Intuitive User Experiences(UI/UX)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
-                    <label for="checkbox3" class="ttext-base lg:text-xl font-light">Intuitive User Experiences(UI/UX)</label>
+                    <input type="checkbox" id="checkbox3" name="checkboxGroup" value="Intuitive User Experiences(UI/UX)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <label for="checkbox3" class="text-base lg:text-xl font-light">Intuitive User Experiences(UI/UX)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox4" name="checkboxGroup4" value="Bulletproof Software (Testing and QA)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox4" name="checkboxGroup" value="Bulletproof Software (Testing and QA)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox4" class="text-base lg:text-xl font-light">Bulletproof Software (Testing and QA)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox5" name="checkboxGroup5" value="Efficient Data Management (Cloud Computing)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox5" name="checkboxGroup" value="Efficient Data Management (Cloud Computing)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox5" class="text-base lg:text-xl font-light">Efficient Data Management (Cloud Computing)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox6" name="checkboxGroup6" value="Smart Data Organization (DB Design)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox6" name="checkboxGroup" value="Smart Data Organization (DB Design)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox6" class="text-base lg:text-xl font-light">Smart Data Organization (DB Design)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox" required id="checkbox7" name="checkboxGroup7" value="treamlined Software Delivery (DevOps)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox7" name="checkboxGroup" value="Streamlined Software Delivery (DevOps)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox7" class="text-base lg:text-xl font-light">Streamlined Software Delivery (DevOps)</label>
                   </div>
                   <div class="flex items-center gap-6 mb-3">
-                    <input type="checkbox"  required id="checkbox8" name="checkboxGroup8" value="Other (Your Unique Software)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
+                    <input type="checkbox" id="checkbox8" name="checkboxGroup" value="Other (Your Unique Software)" class="h-5 w-5 text-[#307457] focus:outline-none focus:ring-2 ring-[#307457]" />
                     <label for="checkbox8" class="text-base lg:text-xl font-light">Other (Your Unique Software)</label>
                   </div>
                   <div id="checkboxGroupError" class="error-message text-red-500"></div>
@@ -180,9 +180,9 @@
                 <label for="budget" class="mb-4 block text-xl leading-6 text-gray-900">What is your estimated budget for this project?*</label>
                 <select id="budget" required name="budget" class="px-2 rounded-md text-xl h-10 w-full border-2 border-gray-300 bg-transparent text-gray-900 focus:outline-none focus:borer-rose-600">
                   <option value="" disabled selected class="text-gray-400">Select your budget range </option>
-                  <option>$5000 and below</option>
-                  <option>$10,000</option>
                   <option>$20,000 and above</option>
+                  <option>$10,000</option>
+                  <option>$5000 and below</option>
                 </select>
                 <div id="budgetError" class="error-message text-red-500"></div>
               </div>
@@ -330,6 +330,8 @@
         return re.test(email);
       }
 
+        
+
      
       
       function sendMail() {
@@ -338,23 +340,26 @@
         var email = document.getElementById("email").value.trim();
         var budget = document.getElementById("budget").value.trim();
         var other = document.getElementById("other").value.trim();
-
-        var checkbox1 = document.getElementById("checkbox1").value;
-        var checkbox2 = document.getElementById("checkbox2").value;
-        var checkbox3 = document.getElementById("checkbox3").value;
-        var checkbox4 = document.getElementById("checkbox4").value;
-        var checkbox5 = document.getElementById("checkbox5").value;
-        var checkbox6 = document.getElementById("checkbox6").value;
-        var checkbox7 = document.getElementById("checkbox7").value;
-        var checkbox8 = document.getElementById("checkbox8").value;
+        var checkboxes = document.querySelectorAll('input[type="checkbox"][name="checkboxGroup"]');
+        var selectedServices = [];
     
-        // Check if any required field is empty
-        // if (userName === "" || email === "" || budget === "") {
-        //     // alert("Please fill out all required fields.");
-        //     openErrorModal();
-        //     return; // Exit the function if any field is empty
-        // }
+
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                selectedServices.push(checkbox.value);
+            }
+        });
+
         var error = false;
+    
+        if (selectedServices.length === 0) {
+            // alert("Please select at least one service.");
+            document.getElementById("checkboxGroupError").textContent = "Select at least one option.";
+            error = true;
+        } else {
+            document.getElementById("checkboxGroupError").textContent = "";
+        }
+    
 
         if (userName === "") {
           document.getElementById("nameError").textContent = "Name is a required field.";
@@ -390,31 +395,10 @@
         }
 
 
-        var checkboxes = document.getElementsByName("checkboxGroup");
-        var isChecked = false;
-
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                isChecked = true;
-                break;
-            }
-        }
-
-        if (!isChecked) {
-            document.getElementById("checkboxGroupError").textContent = "Select at least one option.";
-            return;
-        } else {
-            document.getElementById("checkboxGroupError").textContent = "";
-        }
-
-
-
         if (!validateEmail(email)) {
           document.getElementById("emailError").textContent = "Please enter a valid email address!";
           return; // Exit the function if the email is invalid
       }
-        
-
         document.getElementById("emailError").textContent = "";
 
         var params = {
@@ -422,14 +406,8 @@
             email: email,
             other: document.getElementById("other").value.trim(),
             budget: budget,
-            checkbox1: document.getElementById("checkbox1").value,
-            checkbox2: document.getElementById("checkbox2").value,
-            checkbox3: document.getElementById("checkbox3").value,
-            checkbox4: document.getElementById("checkbox4").value,
-            checkbox5: document.getElementById("checkbox5").value,
-            checkbox6: document.getElementById("checkbox6").value,
-            checkbox7: document.getElementById("checkbox7").value,
-            checkbox8: document.getElementById("checkbox8").value,
+            services: selectedServices.join(",")
+
         };
     
         const serviceID = "service_15dz7io";
