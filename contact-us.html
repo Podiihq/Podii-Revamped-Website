@@ -118,18 +118,25 @@
           <div class="px-4 py-6 sm:p-8">
             <div class="flex flex-col gap-5">
                 <div class="sm:col-span-8">
-                  <label for="user-name" class="block text-lg leading-6 text-gray-900">Your name? *</label>
+                  <label for="user-name" class="block text-lg leading-6 text-gray-900">Your full name? *</label>
                   <div class="mt-2">
-                    <input type="text" required id="userName" name="userName" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                    <input type="text" required id="userName" name="userName" placeholder="John Doe" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                   </div>
                     <div id="nameError" class="error-message text-red-500"></div>
                 </div>
 
                 <div class="sm:col-span-8">
                   <label for="email" class="block mb-2 text-lg leading-6 text-gray-900">Your email? *</label>
-                  <input type="email" required name="email" id="email" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <input type="email" required name="email" id="email" placeholder="email@email.com" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                   <span id="emailError" style="color: red;"></span>
                   <div id="emailError" class="error-message text-red-500"></div>
+                </div>
+
+                <div class="sm:col-span-8">
+                  <label for="country" class="block mb-2 text-lg leading-6 text-gray-900">Your Country? *</label>
+                  <input type="text" required name="country" id="country" placeholder="Kenya" autocomplete="given-name" class="block w-full rounded-md border-0 py-3.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <span id="countryError" style="color: red;"></span>
+                  <div id="countryError" class="error-message text-red-500"></div>
                 </div>
 
                 <div class="sm:col-span-8">
@@ -329,15 +336,12 @@
         const re = /\S+@\S+\.\S+/;
         return re.test(email);
       }
-
-        
-
-     
       
       function sendMail() {
         // Get input field values
         var userName = document.getElementById("userName").value.trim();
         var email = document.getElementById("email").value.trim();
+        var country = document.getElementById("country").value.trim();
         var budget = document.getElementById("budget").value.trim();
         var other = document.getElementById("other").value.trim();
         var checkboxes = document.querySelectorAll('input[type="checkbox"][name="checkboxGroup"]');
@@ -374,6 +378,12 @@
         } else {
             document.getElementById("emailError").textContent = "";
         }
+        if (country === "") {
+          document.getElementById("countryError").textContent = "Email is a required field.";
+          error = true;
+      } else {
+          document.getElementById("countryError").textContent = "";
+      }
 
         if (other === "") {
           document.getElementById("otherError").textContent = "Please add a few details about your project ";
@@ -404,9 +414,10 @@
         var params = {
             userName: userName,
             email: email,
+            country: country,
             other: document.getElementById("other").value.trim(),
             budget: budget,
-            services: selectedServices.join(",")
+            services: selectedServices.join(", ")
 
         };
     
@@ -418,14 +429,9 @@
                 // Clear the input fields and display success message
                 document.getElementById("userName").value = "";
                 document.getElementById("email").value = "";
+                document.getElementById("country").value = "";
                 document.getElementById("other").value = "";
                 document.getElementById("budget").value = "";
-                
-
-
-                // alert("Your message sent successfully!!");
-                // openSuccessModal();
-                // resetForm();
                 window.location.href = 'success.html';
             })
             .catch(err => console.log(err));
