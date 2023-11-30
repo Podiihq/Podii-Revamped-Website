@@ -197,6 +197,7 @@
                 </div>  
               <div class="col-span-8">
                 <label for="other" class="block text-xl leading-6 text-gray-900">Please describe your projects in a few words?*</label>
+                <span class="italic  text-gray-500">(Minimum of 20 words)</span>
                 <div class="mt-4">
                   <textarea id="other" required placeholder="Type something here..." name="other" rows="5" class="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                 </div>
@@ -405,12 +406,20 @@
           document.getElementById("countryError").textContent = "";
       }
 
+
         if (other === "") {
-          document.getElementById("otherError").textContent = "Please add a few details about your project ";
+          document.getElementById("otherError").textContent = "Please add a few details about your project";
           error = true;
-        } else {
-            document.getElementById("otherError").textContent = "";
-        }
+      } else {
+          var wordCount = other.trim().split(/\s+/).length;
+      
+          if (wordCount < 20) {
+              document.getElementById("otherError").textContent = "Please enter at least 20 words.";
+              error = true;
+          } else {
+              document.getElementById("otherError").textContent = "";
+          }
+      }
        
         if (budget === "") {
             document.getElementById("budgetError").textContent = "Budget is a required field.";
@@ -420,14 +429,13 @@
         }
     
         if (error) {
-            // If any required field is empty, exit the function
             return;
         }
 
 
         if (!validateEmail(email)) {
           document.getElementById("emailError").textContent = "Please enter a valid email address!";
-          return; // Exit the function if the email is invalid
+          return;
       }
         document.getElementById("emailError").textContent = "";
 
