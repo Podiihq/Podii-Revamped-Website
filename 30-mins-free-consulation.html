@@ -36,7 +36,7 @@
     <title>30-mins-free-consultation</title>
 </head>
 
-<body style="font-family: 'Epilogue';">
+<body style="font-family: 'Epilogue'; scroll-behavior: smooth;">
     <div>
         <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 mt-8 pt-8">
             <div>
@@ -53,7 +53,7 @@
                         solutions that solve yoursoftware challenges and achieve your goals. Slots available only for 30
                         days.</p>
                     <div class="mt-4 flex justify-center lg:justify-start" style="font-family: 'Montserrat';">
-                        <a href="./contact-us.html"
+                        <a href="#booking"
                             class="py-4 px-8 bg-[#FF5E0E] hover:bg-orange-600 text-white rounded-full text-md lg:text-lg font-bold uppercase">
                             Book Now</a>
                     </div>
@@ -62,9 +62,9 @@
             </div>
         </div>
         <div class="bg-[#F4FBF8] text-[#0F241B]">
-            <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 mt-8 py-20">
+            <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 mt-8 py-8 lg:py-20">
                 <div class="grid lg:grid-cols-2 gap-10 items-center">
-                    <img src="./assets/consutation/consult2.svg" alt="" class="place-self-center">
+                    <img src="./assets/consutation/consult2.svg" alt="" class="place-self-center hidden lg:block">
                     <div>
                         <p class="font-medium text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">We are the
                             tech-pros, we got you for <span class="text-[#FF5E0E]">free</span> if you are:</p>
@@ -95,19 +95,22 @@
                 <div class=" py-6 lg:py-12">
                     <div class="countdown grid grid-cols-3 gap-4" data-date="20-3-2024" data-time="23:00">
                         <div class="day flex flex-col items-center border border-[#E3E0E0]">
-                            <span class="num text-7xl font-bold py-8 text-[#FF5E0E]"
+                            <span class="num text-5xl lg:text-7xl font-bold py-8 text-[#FF5E0E]"
                                 style="font-family: 'Epilogue';"></span>
-                            <span class="word bg-[#FF5E0E] w-full text-center py-2 text-white"></span>
+                            <span class="word bg-[#FF5E0E] w-full text-center py-2 text-white font-semibold"
+                                style="font-family: 'Montserrat';"></span>
                         </div>
                         <div class="hour flex flex-col items-center border border-[#E3E0E0]">
-                            <span class="num text-7xl font-bold py-8 text-[#F49C1F]"
+                            <span class="num text-5xl lg:text-7xl font-bold py-8 text-[#F49C1F]"
                                 style="font-family: 'Epilogue';"></span>
-                            <span class="word w-full text-center py-2 text-white bg-[#F49C1F]"></span>
+                            <span class="word w-full text-center py-2 text-white bg-[#F49C1F] font-semibold"
+                                style="font-family: 'Montserrat';"></span>
                         </div>
                         <div class="min flex flex-col items-center border border-[#E3E0E0]">
-                            <span class="num text-7xl font-bold py-8 text-[#94A545]"
+                            <span class="num text-5xl lg:text-7xl font-bold py-8 text-[#94A545]"
                                 style="font-family: 'Epilogue';"></span>
-                            <span class="word w-full text-center py-2 text-white bg-[#94A545]"></span>
+                            <span class="word w-full text-center py-2 text-white bg-[#94A545] font-semibold"
+                                style="font-family: 'Montserrat';"></span>
                         </div>
                         <!-- <div class="sec flex flex-col items-center border border-[#E3E0E0]">
                             <span class="num text-7xl font-bold px-20 py-8 text-black"
@@ -118,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="pt-16">
+            <div class="pt-6 lg:pt-16">
                 <div class="grid lg:grid-cols-2 text-[#0F241B]">
                     <div>
                         <p class="font-medium text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">Tell us about
@@ -143,13 +146,13 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="mt-8 lg:mt-0" id="booking">
                         <form>
                             <div class="sm:col-span-8">
                                 <div class="mt-2">
                                     <input type="text" required id="userName" name="userName" placeholder="Your Name? *"
                                         autocomplete="given-name"
-                                        class="block w-full border-b py-3.5 px-2 text-[#79747E] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
+                                        class="block w-full border-b py-3.5 px-2 text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
                                 <div id="nameError" class="error-message text-red-500"></div>
                             </div>
@@ -157,7 +160,7 @@
                                 <div class="mt-2">
                                     <input type="text" required id="title" name="title" placeholder="Your Title? * "
                                         autocomplete="given-name"
-                                        class="block w-full border-b py-3.5 px-2 text-[#79747E] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
+                                        class="block w-full border-b py-3.5 px-2 text-text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
                                 <div id="nameError" class="error-message text-red-500"></div>
                             </div>
@@ -165,7 +168,7 @@
                                 <div class="mt-2">
                                     <input type="text" required id="email" name="email" placeholder="Your work email? *"
                                         autocomplete="given-name"
-                                        class="block w-full border-b py-3.5 px-2 text-[#79747E] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
+                                        class="block w-full border-b py-3.5 px-2 text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
                                 <div id="nameError" class="error-message text-red-500"></div>
                             </div>
@@ -173,7 +176,7 @@
                                 <div class="mt-2">
                                     <input type="text" required id="link" name="link" placeholder="Company Website"
                                         autocomplete="given-name"
-                                        class="block w-full border-b py-3.5 px-2 text-[#79747E] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
+                                        class="block w-full border-b py-3.5 px-2 text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
                                 <div id="nameError" class="error-message text-red-500"></div>
                             </div>
@@ -182,7 +185,7 @@
                                     <textarea id="other" required
                                         placeholder="Briefly describe your current software challenges/need/ideas*"
                                         name="other" rows="4"
-                                        class="block w-full rounded-md border-b py-1.5 px-1.5 text-[#79747E]  placeholder:text-[#79747E] sm:text-medium sm:leading-6"></textarea>
+                                        class="block w-full rounded-md border-b py-1.5 px-1.5 text-[#0F241B]  placeholder:text-[#79747E] sm:text-medium sm:leading-6"></textarea>
                                 </div>
                                 <div id="nameError" class="error-message text-red-500"></div>
                             </div>
@@ -192,7 +195,7 @@
                                     <textarea id="other" required
                                         placeholder="What outcomes do you hope to achieve with the software solutions?*"
                                         name="other" rows="4"
-                                        class="block w-full rounded-md border-b py-1.5 px-1.5 text-[#79747E]  placeholder:text-[#79747E] sm:text-medium sm:leading-6"></textarea>
+                                        class="block w-full rounded-md border-b py-1.5 px-1.5 text-[#0F241B]  placeholder:text-[#79747E] sm:text-medium sm:leading-6"></textarea>
                                 </div>
                                 <div id="nameError" class="error-message text-red-500"></div>
                             </div>
@@ -202,7 +205,7 @@
                                     Submit</button>
                             </div>
                             <p class="text-center py-4 text-[#303030]">By submitting this form you agree to our <a
-                                    class="underline text-[#307457]">privacy policy</a>
+                                    href="./privacy-policy.html" class="underline text-[#307457]">privacy policy</a>
                             </p>
                         </form>
                     </div>
