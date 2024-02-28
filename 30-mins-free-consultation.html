@@ -300,8 +300,14 @@
         if (!validateEmail(email)) {
             document.getElementById("emailError").textContent = "Please enter a valid email address!";
             return;
+        } else {
+            document.getElementById("emailError").textContent = "";
         }
-        document.getElementById("emailError").textContent = "";
+
+        if (email.includes("@gmail") || email.includes("@yahoo")) {
+            document.getElementById("emailError").textContent = "Please provide a valid company email address.";
+            return;
+        }
 
         var params = {
             userName: userName,
