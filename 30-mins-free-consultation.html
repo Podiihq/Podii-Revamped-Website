@@ -30,6 +30,21 @@
 
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("lead_capture_form").submit();
+        }
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("XjRZqYS3oc_wCjcIe");
+        })();
+    </script>
+
+
     <link rel="stylesheet" href="./main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,14 +53,14 @@
 
 <body style="font-family: 'Epilogue'; scroll-behavior: smooth;">
     <div>
-        <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 mt-8 pt-8">
+        <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 mt-8 lg:pt-8">
             <div>
                 <a class="flex justify-center lg:justify-start" href="/"><img src="../assets/updated/logo.png" alt=""
                         class="w-24 lg:w-36"></a>
             </div>
             <div class="grid lg:grid-cols-2 py-8 lg:pt-20 items-center">
                 <div>
-                    <h1 class="text-4xl lg:text-6xl font-semibold text-[#50423C] text-center lg:text-left"
+                    <h1 class="text-3xl lg:text-6xl font-semibold text-[#50423C] text-center lg:text-left"
                         style="font-family: 'Montserrat';">
                         Free software consultation for 30 mins within 30 days!
                     </h1>
@@ -66,7 +81,8 @@
                 <div class="grid lg:grid-cols-2 gap-10 items-center">
                     <img src="./assets/consutation/consult2.svg" alt="" class="place-self-center hidden lg:block">
                     <div>
-                        <p class="font-medium text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">We are the
+                        <p class="font-medium text-3xl lg:text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">We
+                            are the
                             tech-pros, we got you for <span class="text-[#FF5E0E]">free</span> if you are:</p>
 
                         <div class="inline-flex gap-2 mt-4">
@@ -89,7 +105,7 @@
 
         <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 mt-8 lg:py-16">
             <div>
-                <p class="font-medium text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">
+                <p class="font-medium text-3xl lg:text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">
                     Offer expiring in:
                 </p>
                 <div class=" py-6 lg:py-12">
@@ -124,30 +140,31 @@
             <div class="pt-6 lg:pt-16">
                 <div class="grid lg:grid-cols-2 text-[#0F241B]">
                     <div>
-                        <p class="font-medium text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">Tell us about
+                        <p class="font-medium text-3xl lg:text-4xl text-[#0F241B]" style="font-family: 'Montserrat';">
+                            Tell us about
                             your needs, goals or frustrations. </p>
                         <p class="text-xl py-4 text-regular">Our experts will help you;</p>
 
-                        <div class="inline-flex gap-2 mt-4">
+                        <div class="inline-flex items-center gap-2 mt-4">
                             <img src="./assets/consutation/light.svg" alt="">
                             <p class="text-xl">Identify software challenges and opportunities.</p>
                         </div>
-                        <div class="inline-flex gap-2 mt-2">
+                        <div class="inline-flex gap-2 mt-2 items-center">
                             <img src="./assets/consutation/light.svg" alt="">
                             <p class="text-xl">Explore custom solutions and innovative ideas.</p>
                         </div>
-                        <div class="inline-flex gap-2 mt-2">
+                        <div class="inline-flex gap-2 mt-2 items-center">
                             <img src="./assets/consutation/light.svg" alt="">
                             <p class="text-xl">Gain expert insights and actionable recommendations.</p>
                         </div>
-                        <div class="inline-flex gap-2 mt-2">
+                        <div class="inline-flex gap-2 mt-2 items-center">
                             <img src="./assets/consutation/light.svg" alt="">
                             <p class="text-xl">Move forward with confidence and clarity.</p>
                         </div>
                     </div>
 
                     <div class="mt-8 lg:mt-0" id="booking">
-                        <form>
+                        <form id="lead_capture_form">
                             <div class="sm:col-span-8">
                                 <div class="mt-2">
                                     <input type="text" required id="userName" name="userName" placeholder="Your Name? *"
@@ -162,7 +179,7 @@
                                         autocomplete="given-name"
                                         class="block w-full border-b py-3.5 px-2 text-text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
-                                <div id="nameError" class="error-message text-red-500"></div>
+                                <div id="titleError" class="error-message text-red-500"></div>
                             </div>
                             <div class="sm:col-span-8 py-2">
                                 <div class="mt-2">
@@ -170,7 +187,7 @@
                                         autocomplete="given-name"
                                         class="block w-full border-b py-3.5 px-2 text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
-                                <div id="nameError" class="error-message text-red-500"></div>
+                                <div id="emailError" class="error-message text-red-500"></div>
                             </div>
                             <div class="sm:col-span-8 py-2">
                                 <div class="mt-2">
@@ -178,31 +195,39 @@
                                         autocomplete="given-name"
                                         class="block w-full border-b py-3.5 px-2 text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
-                                <div id="nameError" class="error-message text-red-500"></div>
+                                <!-- <div id="nameError" class="error-message text-red-500"></div> -->
                             </div>
                             <div class="sm:col-span-8 py-2">
                                 <div class="mt-4">
-                                    <textarea id="other" required
+                                    <textarea id="challenges" required
                                         placeholder="Briefly describe your current software challenges/need/ideas*"
-                                        name="other" rows="4"
+                                        name="challenges" rows="4"
                                         class="block w-full rounded-md border-b py-1.5 px-1.5 text-[#0F241B]  placeholder:text-[#79747E] sm:text-medium sm:leading-6"></textarea>
                                 </div>
-                                <div id="nameError" class="error-message text-red-500"></div>
+                                <div id="challengesError" class="error-message text-red-500"></div>
                             </div>
 
                             <div class="sm:col-span-8 py-2">
                                 <div class="mt-2">
-                                    <textarea id="other" required
+                                    <textarea id="outcomes" required
                                         placeholder="What outcomes do you hope to achieve with the software solutions?*"
-                                        name="other" rows="4"
+                                        name="outcomes" rows="4"
                                         class="block w-full rounded-md border-b py-1.5 px-1.5 text-[#0F241B]  placeholder:text-[#79747E] sm:text-medium sm:leading-6"></textarea>
                                 </div>
-                                <div id="nameError" class="error-message text-red-500"></div>
+                                <div id="outcomesError" class="error-message text-red-500"></div>
                             </div>
                             <div class="mt-8 flex justify-center lg:justify-start" style="font-family: 'Montserrat';">
-                                <button
-                                    class="w-full py-4 px-8 bg-[#FF5E0E] hover:bg-orange-600 text-white rounded-full text-md lg:text-lg font-bold uppercase">
-                                    Submit</button>
+                                <button type="submit" id="loaderButton" onclick="sendMail(); return false;"
+                                    data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
+                                    class="g-recaptcha-response w-full relative inline-flex items-center justify-center py-4 px-8 bg-[#FF5E0E] hover:bg-orange-600 text-white rounded-full text-md lg:text-lg font-bold uppercase">
+                                    <span id="buttonText"> Submit</span>
+                                    <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
+                                        <div
+                                            class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-white">
+                                        </div>
+                                    </div>
+
+                                </button>
                             </div>
                             <p class="text-center py-4 text-[#303030]">By submitting this form you agree to our <a
                                     href="./privacy-policy.html" class="underline text-[#307457]">privacy policy</a>
@@ -217,8 +242,113 @@
 </body>
 
 <script>
-    const $ = elem => document.querySelector(elem);
+    function validateEmail(email) {
+        const re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
 
+    function sendMail() {
+        // Get input field values
+        var userName = document.getElementById("userName").value.trim();
+        var title = document.getElementById("title").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var link = document.getElementById("link").value.trim();
+        var challenges = document.getElementById("challenges").value.trim();
+        var outcomes = document.getElementById("outcomes").value.trim();
+
+
+        var error = false;
+
+        if (userName === "") {
+            document.getElementById("nameError").textContent = "Name is a required field.";
+            error = true;
+        } else {
+            document.getElementById("nameError").textContent = "";
+        }
+        if (title === "") {
+            document.getElementById("titleError").textContent = "Title is a required field.";
+            error = true;
+        } else {
+            document.getElementById("titleError").textContent = "";
+        }
+
+        if (email === "") {
+            document.getElementById("emailError").textContent = "Email is a required field.";
+            error = true;
+        } else {
+            document.getElementById("emailError").textContent = "";
+        }
+        if (challenges === "") {
+            document.getElementById("challengesError").textContent = "This is a required field";
+            error = true;
+        } else {
+            document.getElementById("challengesError").textContent = "";
+        }
+        if (outcomes === "") {
+            document.getElementById("outcomesError").textContent = "This is a required field";
+            error = true;
+        } else {
+            document.getElementById("outcomesError").textContent = "";
+        }
+
+
+        if (error) {
+            return;
+        }
+
+
+        if (!validateEmail(email)) {
+            document.getElementById("emailError").textContent = "Please enter a valid email address!";
+            return;
+        }
+        document.getElementById("emailError").textContent = "";
+
+        var params = {
+            userName: userName,
+            title: title,
+            email: email,
+            link: link,
+            outcomes: outcomes,
+            challenges: challenges
+        };
+
+        const serviceID = "service_hnbwkwm";
+        const templateID = "template_fw7vb7g";
+
+        emailjs.send(serviceID, templateID, params)
+            .then(res => {
+                // Clear the input fields and display success message
+                document.getElementById("userName").value = "";
+                document.getElementById("title").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("link").value = "";
+                document.getElementById("challenges").value = "";
+                document.getElementById("outcomes").value = "";
+                window.location.href = 'booking-success.html';
+            })
+            .catch(err => console.log(err));
+    }
+
+
+    const loaderButton = document.getElementById('loaderButton');
+    const loader = document.getElementById('loader');
+    const buttonText = document.getElementById('buttonText');
+    // const textInput = document.getElementById('email')
+
+    loaderButton.addEventListener('click', function () {
+        loader.classList.remove('hidden');
+        buttonText.classList.add('hidden');
+
+        // Simulating an asynchronous action
+        setTimeout(function () {
+            loader.classList.add('hidden');
+            buttonText.classList.remove('hidden');
+        }, 2000);
+    });
+</script>
+
+<script>
+    const $ = elem => document.querySelector(elem);
     const countdown = function (_config) {
         const tarDate = $(_config.target).getAttribute('data-date').split('-');
         const day = parseInt(tarDate[0]);
