@@ -23,7 +23,7 @@ ul.transition li{
 } */
 
 
-.my-btns:hover{
+.my-btns:hover {
     background-color: #FF5E0E;
     color: white;
     transition: ease-out 500ms;
@@ -31,4 +31,4 @@ ul.transition li{
 
 .section {
     height: 100vh;
-  }
+}
