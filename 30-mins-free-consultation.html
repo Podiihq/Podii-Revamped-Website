@@ -193,11 +193,11 @@
                             </div>
                             <div class="sm:col-span-8 py-2">
                                 <div class="mt-2">
-                                    <input type="text" required id="link" name="link" placeholder="Company Website"
+                                    <input type="text" required id="link" name="link" placeholder="Company Website (https://www.example.com)"
                                         autocomplete="given-name"
                                         class="block w-full border-b py-3.5 px-2 text-[#0F241B] sm:text-medium sm:leading-6 placeholder:text-[#79747E]">
                                 </div>
-                                <!-- <div id="nameError" class="error-message text-red-500"></div> -->
+                                <div id="linkError" class="error-message text-red-500"></div>
                             </div>
                             <div class="sm:col-span-8 py-2">
                                 <div class="mt-4">
@@ -249,6 +249,12 @@
         return re.test(email);
     }
 
+    function validateWebsiteLink(websiteLink) {
+    // Regular expression for validating website URLs
+    var urlRegex = /^(https?:\/\/)?([\w\-]+\.)+[a-zA-Z]{2,}(\/\S*)?$/;
+    return urlRegex.test(websiteLink);
+    }
+
     function sendMail() {
         // Get input field values
         var userName = document.getElementById("userName").value.trim();
@@ -291,6 +297,13 @@
             error = true;
         } else {
             document.getElementById("outcomesError").textContent = "";
+        }
+
+        if (!validateWebsiteLink(link)) {
+            document.getElementById("linkError").textContent = "Enter a valid Website Link";
+            error = true;
+        } else {
+            document.getElementById("linkError").textContent = "";
         }
 
 
