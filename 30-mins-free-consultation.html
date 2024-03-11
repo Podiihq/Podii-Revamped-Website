@@ -110,25 +110,24 @@
                     Offer expiring in:
                 </p>
                 <div class=" py-6 lg:py-12">
-                    <!-- <div class="countdown grid grid-cols-3 gap-4" data-date="3-3-2024" data-time="23:00"> -->
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="countdown grid grid-cols-3 gap-4" data-date="10-4-2024" data-time="23:00"> <!-- end Date 19/4/2024-->
                         <div class="day flex flex-col items-center border border-[#E3E0E0]">
                             <span class="num text-5xl lg:text-7xl font-bold py-8 text-[#FF5E0E]"
-                                style="font-family: 'Epilogue';">30</span>
+                                style="font-family: 'Epilogue';"></span>
                             <span class="word bg-[#FF5E0E] w-full text-center py-2 text-white font-semibold"
-                                style="font-family: 'Montserrat';">Days</span>
+                                style="font-family: 'Montserrat';"></span>
                         </div>
                         <div class="hour flex flex-col items-center border border-[#E3E0E0]">
                             <span class="num text-5xl lg:text-7xl font-bold py-8 text-[#F49C1F]"
-                                style="font-family: 'Epilogue';">24</span>
+                                style="font-family: 'Epilogue';"></span>
                             <span class="word w-full text-center py-2 text-white bg-[#F49C1F] font-semibold"
-                                style="font-family: 'Montserrat';">Hours</span>
+                                style="font-family: 'Montserrat';"></span>
                         </div>
                         <div class="min flex flex-col items-center border border-[#E3E0E0]">
                             <span class="num text-5xl lg:text-7xl font-bold py-8 text-[#94A545]"
-                                style="font-family: 'Epilogue';">59</span>
+                                style="font-family: 'Epilogue';"></span>
                             <span class="word w-full text-center py-2 text-white bg-[#94A545] font-semibold"
-                                style="font-family: 'Montserrat';">Mins</span>
+                                style="font-family: 'Montserrat';"></span>
                         </div>
                         <!-- <div class="sec flex flex-col items-center border border-[#E3E0E0]">
                             <span class="num text-7xl font-bold px-20 py-8 text-black"
@@ -137,7 +136,9 @@
                         </div> -->
                     </div>
                 </div>
-            </div>
+                
+                </div>
+            
 
             <div class="pt-6 lg:pt-16">
                 <div class="grid lg:grid-cols-2 text-[#0F241B]">
@@ -405,7 +406,7 @@
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // If the count down is over, write some text 
             if (distance < 0) {
@@ -416,7 +417,7 @@
                 $(_config.target + ' .day .num').innerHTML = addZero(days);
                 $(_config.target + ' .hour .num').innerHTML = addZero(hours);
                 $(_config.target + ' .min .num').innerHTML = addZero(minutes);
-                // $(_config.target + ' .sec .num').innerHTML = addZero(seconds);
+                $(_config.target + ' .sec .num').innerHTML = addZero(seconds);
             }
         }
 
@@ -430,7 +431,7 @@
         dayWord: ' Days',
         hourWord: ' Hours',
         minWord: ' Minutes',
-        // secWord: ' secs'
+        secWord: ' secs'
     });
 
 </script>
