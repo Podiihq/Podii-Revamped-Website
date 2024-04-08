@@ -103,7 +103,7 @@
 
 
   <nav class="fixed top-0 z-50 w-full flex flex-wrap items-center justify-between" id="header">
-    <div class="bg-[#FF5E0E] w-full" id="banner">
+    <!-- <div class="bg-[#FF5E0E] w-full" id="banner">
       <div class="container lg:px-4 lg:mx-auto w-full">
         <div class="lg:flex justify-between w-full py-4 items-center px-4">
           <p class="lg:text-xl font-semibold text-white text-sm" style="font-family: 'Montserrat', sans-serif;">
@@ -120,7 +120,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="container lg:px-4 lg:mx-auto flex flex-wrap items-center justify-between pt-4 ">
       <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start px-2">
         <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
@@ -136,22 +136,22 @@
         id="example-collapse-navbar">
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
           <li class="my-4">
-            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl" href="#">
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-lg" href="#">
               <span class="ml-2 text-[#FF5E0E]">Home</span></a>
             <div class="h-2 rounded w-7 flex flex-grow items-center justify-start ml-10 bg-[#FF5E0E]"></div>
           </li>
           <li class="my-4">
-            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-lg"
               href="./services.html">
               <span class="inline-block ml-2">Services</span></a>
           </li>
           <li class="my-4">
-            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-lg"
               href="./portfolio.html">
               <span class="inline-block ml-2 ">Portfolio</span></a>
           </li>
           <li class="my-4 lg:hidden">
-            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-xl"
+            <a class="lg:text-black lg:hover:text-gray-300 text-gray-800 px-8 py-4 lg:py-2 text-lg"
               href="./contact-us.html">
               <span class="inline-block ml-2 ">Contact us</span></a>
           </li>
@@ -159,7 +159,7 @@
       </div>
       <div class="hidden lg:block" style="font-family: 'Montserrat';">
         <a href="./contact-us.html"
-          class="py-4 px-8 bg-[#FF5E0E] hover:bg-orange-600 text-white rounded-full text-lg font-bold uppercase">Get in
+          class="py-4 px-8 border-2 border-[#FF5E0E] hover:bg-orange-600 text-[#FF5E0E] hover:text-white rounded-full text-lg font-bold uppercase">Get in
           Touch</a>
       </div>
     </div>
@@ -168,17 +168,17 @@
 
     <!-- Landing Section -->
 
-    <section class="px-4 pt-48 pb-10 container mx-auto lg:px-8 lg:pt-32 mt-8">
+    <section class="px-4 pt-16 pb-10 container mx-auto lg:px-8 mt-8">
       <div class="grid lg:grid-cols-2 items-center lg:mt-32 md:mt-4 items-center">
             <div class="">
-              <h1 class="mb-4 lg:mb-0 font-sans text-4xl lg:text-[64px] font-semibold text-[#023844]"
+              <h1 class="mb-4 lg:mb-0 font-sans text-4xl lg:text-[52px] font-semibold text-[#023844]"
                 style="font-family: Montserrat; line-height: normal;">
-                Turning your <span class="text-[#FF5E0E]">vision</span> into digital <span class="text-[#FF5E0E]"> brilliance.</span> 
+                Creating your <span class="text-[#FF5E0E]">vision</span><br> with innovative  <span class="text-[#FF5E0E]"> Software.</span> 
               </h1>
             </div>
             <div>
               <p class="text-lg lg:text-2xl text-gray-700 mt-2 font-light">
-                We create exceptional digital experiences with attentive collaboration, valuing your budget to bring your unique vision to life
+                We deliver exceptional digital solutions on time and foster collaboration to ensure your organization's success.
               </p>
             </div>
       </div>
@@ -187,7 +187,9 @@
     <section>
       <div class="px-4 lg:pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8">
         <div class="flex w-full gap-10">
-          <img src="./assets/new-home/Group-1.png" alt="" class="w-full">
+          <img src="./assets/new-home/Group-1.png" alt="" class="w-full hidden md:block">
+          <img src="./assets/new-home/hero-mobile.png" alt="" class="w-full md:hidden">
+          <!-- <img src="./assets/new-home/hero-test.png" alt="" class="w-full"> -->
           
         </div>
       </div>
@@ -212,7 +214,7 @@
       <div class="py-4 mx-auto container mx-auto lg:px-8 lg:px-8 lg:pb-8 lg:mt-8">
         <div>
           <div class="grid lg:grid-cols-3 gap-4 lg:gap-6">
-            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px] shadow-sm ">
+            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px]">
               <img src="./assets/updated/service/web-icon.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">
                 Web Development</p>
@@ -224,7 +226,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px] shadow-sm ">
+            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px]">
               <img src="./assets/updated/service/mobile-icon.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Mobile Apps</p>
               <p class="text-lg lg:text-xl font-light">We craft mobile apps that run seamlessly on any
@@ -236,7 +238,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px] shadow-sm ">
+            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px]">
               <img src="./assets/updated/service/custom-icon.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Custom Software</p>
               <p class="text-lg lg:text-xl font-light">We create software solutions to fit you perfectly—bet no one else in the world has one quite like it.</p>
@@ -247,7 +249,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px] shadow-sm ">
+            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px]">
               <img src="./assets/updated/service/design.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">UX/UI Design</p>
               <p class="text-lg lg:text-xl font-light">
@@ -260,7 +262,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px] shadow-sm ">
+            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px]">
               <img src="./assets/updated/service/testing.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Testing & QA</p>
               <p class="text-lg lg:text-xl font-light">
@@ -273,7 +275,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px] shadow-sm ">
+            <div class="item border px-6 py-8 rounded-lg border-[#E3E0E0] border-[0.3px]">
               <img src="./assets/updated/service/cloud.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Cloud Computing</p>
               <p class="text-lg lg:text-xl font-light">
@@ -323,7 +325,7 @@
       <section class="px-4 py-8 mx-auto container mx-auto md:px-24 lg:px-8 lg:py-16" id="">
           <div class="grid lg:grid-cols-2">
             <div class="place-self-center">
-              <p style="font-family: 'Montserrat';" class="text-3xl lg:text-[40px] font-semibold mb-4 lg:mb-0 text-[#303030]">Why <span class="text-[#FF5E0E]">Partner</span> With Us?</p>
+              <p style="font-family: 'Montserrat';" class="text-3xl lg:text-[40px] font-semibold mb-4 lg:mb-10 text-[#303030]">Why <span class="text-[#FF5E0E]">Partner</span> With Us?</p>
               <p class="text-lg lg:text-xl mt-6 text-[#140C00]">Unique selling point goes here.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
               <div class="flex mt-3">
                 <img src="./assets/new-home/tick.svg" alt="">
@@ -561,7 +563,7 @@
                 </li>
                 <li>
                   <a href="#"
-                    class="font-light transition-colors duration-300 hover:text-deep-purple-accent-200">podii@podiihq.com</a>
+                    class="font-light transition-colors duration-300 hover:text-deep-purple-accent-200">podii(at)podiihq.com</a>
                 </li>
                 <li>
                   <a href="#"
