@@ -15,7 +15,7 @@
 
       <!-- Tailwind css cdn -->
       <script src="https://cdn.tailwindcss.com"></script>
-    
+
       <!-- Google fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +23,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Forum&family=Jura:wght@300;500&display=swap" rel="stylesheet">
 
       <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -89,7 +89,7 @@
 
   <section class="lg:pt-8 text-[#0F241B]">
     <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-8 pt-8 lg:pt-32">
-          <div class="max-w-4xl mb-6 mt-16 md:mt-4 md:text-left"> 
+          <div class="max-w-4xl mb-6 mt-16 md:mt-4 md:text-left">
             <h2 class="mb-3 lg:mb-8 font-sans text-3xl lg:text-[48px] font-semibold tracking-wide sm:leading-none text-[#307457]" style="font-family: 'Montserrat', sans-serif;">
                 Privacy policy
             </h2>
@@ -103,7 +103,7 @@
 
             <p class="font-semibold text-xl mt-6">Cookies and Tracking</p>
             <p class="text-xl">We use cookies and similar tracking technologies to enhance your experience on our Website and for analytical purposes. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies</p>
-          
+
             <p class="font-semibold text-xl mt-6">How We Use Your Information</p>
             <p class="text-xl">We may use the information we collect for the following purposes:</p>
             <ul class="mt-2">
@@ -127,9 +127,9 @@
 
             <p class="font-semibold text-xl mt-6">Changes to this Privacy Policy</p>
             <p class="text-xl">We may update this Privacy Policy to reflect changes in our practices or for other operational, legal, or regulatory reasons.</p>
-        
+
             <p class="font-semibold text-xl mt-6">Contact Us</p>
-            <p class="text-xl">If you have any questions, concerns, or requests regarding this Privacy Policy or our data handling practices, please contact us at: <span class="underline font-semibold text-[#307457]">podii@podiihq.com</span> 
+            <p class="text-xl">If you have any questions, concerns, or requests regarding this Privacy Policy or our data handling practices, please contact us at: <span class="underline font-semibold text-[#307457]">podii@podiihq.com</span>
             </p>
         </div>
     </div>
@@ -138,7 +138,7 @@
 
   <div class="bg-white">
   <section class="px-4 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20 mt-8 lg:mt-16">
-    
+
     </section>
   </div>
 
@@ -175,7 +175,7 @@
             <p class="tracking-wide uppercase font-semibold" style="color: #FFF5F0;">Contact</p>
             <ul class="mt-4 space-y-2" style="color: #FFF5F0;">
               <li>
-                <a href="#" class="font-light transition-colors duration-300 hover:text-deep-purple-accent-200">+254 572041 122</a>
+                <a href="#" class="font-light transition-colors duration-300 hover:text-deep-purple-accent-200">0733 000003</a>
               </li>
               <li>
                 <a href="#" class="font-light transition-colors duration-300 hover:text-deep-purple-accent-200">podii@podiihq.com</a>
@@ -183,7 +183,7 @@
               <li>
                 <a href="#" class="font-light transition-colors duration-300 hover:text-deep-purple-accent-200" >Lutheran Kisumu, Kenya</a>
               </li>
-              
+
             </ul>
           </div>
           <div>
@@ -207,7 +207,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class=" pb-10 border-t border-gray-800">
       </div>
     </div>
@@ -228,11 +228,11 @@
     var navaction = document.getElementById("navAction");
     var brandname = document.getElementById("brandname");
     var toToggle = document.querySelectorAll(".toggleColour");
-  
+
     document.addEventListener("scroll", function () {
       /*Apply classes for slide in bar*/
       scrollpos = window.scrollY;
-  
+
       if (scrollpos > 10) {
         header.classList.add("bg-white");
         navaction.classList.remove("bg-red");
@@ -258,7 +258,7 @@
           toToggle[i].classList.add("text-white");
           toToggle[i].classList.remove("text-gray-800");
         }
-  
+
         header.classList.remove("shadow");
         navcontent.classList.remove("bg-white");
         navcontent.classList.add("bg-gray-100");
@@ -272,22 +272,22 @@
     document.addEventListener('DOMContentLoaded', function () {
       const dropdownButton = document.getElementById('dropdown-button');
       const dropdownMenu = document.getElementById('dropdown-menu');
-  
+
       dropdownButton.addEventListener('click', function (e) {
       e.stopPropagation(); // Prevent the click event from propagating to the document
       dropdownMenu.classList.toggle('hidden');
       });
-  
+
       // Close the dropdown when clicking outside of it
       document.addEventListener('click', function () {
       dropdownMenu.classList.add('hidden');
       });
-  
+
       // Prevent closing the dropdown when clicking inside it
       dropdownMenu.addEventListener('click', function (e) {
       e.stopPropagation();
       });
-  
+
       // Handle item selection
       dropdownMenu.addEventListener('click', function (e) {
       if (e.target && e.target.nodeName === 'A') {
