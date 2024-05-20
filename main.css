@@ -32,3 +32,56 @@ ul.transition li{
 .section {
     height: 100vh;
 }
+
+
+
+/* .my_marquee img {
+    animation: move-rtl 6000ms linear infinite;
+}
+
+@keyframes move-rtl {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+} */
+
+/* .marquee-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-image {
+    width: 200px;
+    margin: 0 10px;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee.paused {
+    animation-play-state: paused;
+} */
+.marquee {
+    position: relative;
+}
+
+.marquee img {
+    position: absolute;
+    object-fit: cover;
+}

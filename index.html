@@ -127,7 +127,7 @@
         <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-black"
           href="/"><img src="./assets/updated/logo.png" alt="" class="w-24 lg:w-36"></a>
         <button
-          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          class="z-10 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
           type="button" onclick="toggleNavbar('example-collapse-navbar')">
           <i class="text-[#FF5E0E] fas fa-bars"></i>
         </button>
@@ -169,16 +169,16 @@
 
     <!-- Landing Section -->
 
-    <section class="px-4 pt-20 pb-10 container mx-auto lg:px-8 mt-8">
-      <div class="grid lg:grid-cols-2 items-center lg:mt-32 md:mt-4 items-center">
+    <section class="px-4 pt-20 lg:pt-4 pb-10 container mx-auto lg:px-8 mt-8">
+      <div class="items-center lg:mt-32 md:mt-4 items-center">
             <div class="">
-              <h1 class="mb-4 lg:mb-0 font-sans text-4xl lg:text-[52px] font-semibold text-[#023844]"
+              <h1 class="mb-4 lg:mb-0 font-sans text-4xl lg:text-[52px] font-semibold text-[#303030] text-center"
                 style="font-family: Montserrat; line-height: normal;">
                 Creating your <span class="text-[#FF5E0E]">vision</span><br> with innovative  <span class="text-[#FF5E0E]"> Software.</span>
               </h1>
             </div>
-            <div>
-              <p class="text-lg lg:text-2xl text-gray-700 mt-2 font-light">
+            <div class="mx-auto lg:w-1/2">
+              <p class="text-lg lg:text-2xl text-gray-700 mt-2 font-light text-center">
                 We deliver exceptional digital solutions on time and foster collaboration to ensure your organization's success.
               </p>
             </div>
@@ -186,12 +186,56 @@
 
     </section>
     <section>
-      <div class="px-4 lg:pt-[50px] lg:pb-[100px] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8">
-        <div class="flex w-full gap-10">
+      <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl">
+        <!-- <div class="flex w-full gap-10">
           <img src="./assets/new-home/hero.png" alt="" class="w-full hidden md:block">
           <img src="./assets/new-home/hero-mobile.png" alt="" class="w-full md:hidden">
-          <!-- <img src="./assets/new-home/hero-test.png" alt="" class="w-full"> -->
-        </div>
+        </div> -->
+          <div class="marquee cursor-pointer h-[200px] lg:h-[300px] relative overflow-x-hidden">
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/1.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/2.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/smart-farm.html">
+              <img src="./assets/new-home/update01/3.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/smart-farm.html">
+              <img src="./assets/new-home/update01/4.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/5.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/6.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="">
+              <img src="./assets/new-home/update01/7.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/1.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/2.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/smart-farm.html">
+              <img src="./assets/new-home/update01/3.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/smart-farm.html">
+              <img src="./assets/new-home/update01/4.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/5.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="./case-study/vibrant.html">
+              <img src="./assets/new-home/update01/6.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            <a href="">
+              <img src="./assets/new-home/update01/7.svg" alt="" class="h-[200px] lg:h-[300px]">
+            </a>
+            
+          </div>
       </div>
     </section>
 
@@ -514,6 +558,7 @@
     });
   });
 </script>
+
 
 <script>
   function toggleNavbar(collapseID) {
