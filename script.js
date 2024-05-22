@@ -24,10 +24,12 @@ $('.owl-carousel').owlCarousel({
 
 
 
+// Hero Marquee
+
 const off = 10;
 let l = off;
 const marqueeElements = Array.from(document.querySelectorAll('.marquee img'));
-const speed = 1;
+const speed = 0.5;
 const stack = [];
 let pause = false;
 
