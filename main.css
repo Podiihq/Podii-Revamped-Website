@@ -9,13 +9,31 @@
 }
 
 /* Hero Marquee */
-.marquee {
+/* .marquee {
     position: relative;
 }
 
-.marquee img {
+.marquee a {
     position: absolute;
     object-fit: cover;
     transition: transform 0.3s ease;
 
+} */
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee a {
+    display: inline-block;
+    position: absolute;
+    transition: none !important;
+    /* Remove all transition effects */
+}
+
+.overlay {
+    transition: none !important;
+    /* Remove all transition effects */
 }
