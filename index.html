@@ -49,10 +49,10 @@
     content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80">
   <meta property="og:url" content="https://podiihq.com/">
 
-  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
   <!-- Tailwind cdn -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="./src/output.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -172,7 +172,7 @@
     <!-- Landing Section -->
 
     <section class="px-4 pt-20 lg:pt-4 pb-10 container mx-auto lg:px-8 mt-8">
-      <div class="items-center lg:mt-32 md:mt-4 items-center">
+      <div class="items-center lg:mt-32 md:mt-4">
             <div class="">
               <h1 class="mb-4 lg:mb-0 font-sans text-4xl lg:text-[52px] font-semibold text-[#303030] text-center"
                 style="font-family: Montserrat; line-height: normal;">
@@ -249,7 +249,7 @@
     <section class="my-[50px] lg:my-[100px] px-4 lg:px-0" id="services">
       <div class="lg:flex items-center justify-between container mx-auto lg:px-8 md:px-8">
           <h2
-            class="text-left text-[28px] lg:text-[40px] text-[#303030] font-medium leading-none text-[#023844] font-semibold"
+            class="text-left text-[28px] lg:text-[40px] leading-none text-[#023844] font-semibold"
             style="font-family: 'Montserrat', sans-serif;">
             Our <span class="text-[#FF5E0E]">Services</span>  and <span class="text-[#FF5E0E]"> Capabilities</span>
           </h2>
@@ -260,10 +260,10 @@
             </a>
           </div>
       </div>
-      <div class="py-4 mx-auto container mx-auto lg:px-8 lg:px-8 lg:pb-8 lg:pt-[30px]">
+      <div class="py-4 mx-auto container lg:px-8 lg:pb-8 lg:pt-[30px]">
         <div>
           <div class="grid lg:grid-cols-3 gap-4 lg:gap-6">
-            <div class="item border px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
+            <div class="item px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
               <img src="./assets/updated/service/web-icon.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">
                 Web Development</p>
@@ -275,7 +275,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
+            <div class="item  px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
               <img src="./assets/updated/service/mobile-icon.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Mobile Apps</p>
               <p class="text-lg lg:text-xl font-light">We craft mobile apps that run seamlessly on any
@@ -287,7 +287,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
+            <div class="item  px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
               <img src="./assets/updated/service/custom-icon.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Custom Software</p>
               <p class="text-lg lg:text-xl font-light">We create software solutions to fit you perfectly—bet no one else in the world has one quite like it.</p>
@@ -298,7 +298,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
+            <div class="item px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
               <img src="./assets/updated/service/design.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">UX/UI Design</p>
               <p class="text-lg lg:text-xl font-light">
@@ -311,7 +311,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
+            <div class="item  px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
               <img src="./assets/updated/service/testing.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Testing & QA</p>
               <p class="text-lg lg:text-xl font-light">
@@ -324,7 +324,7 @@
                 </a>
               </div>
             </div>
-            <div class="item border px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
+            <div class="item px-6 py-8 rounded-lg border-[#F4FBF8] border-[2px]">
               <img src="./assets/updated/service/cloud.svg" alt="" class="w-12 h-12">
               <p class="font-medium text-xl py-3 lg:py-6" style="font-family: 'Montserrat';">Cloud Computing</p>
               <p class="text-lg lg:text-xl font-light">
@@ -344,12 +344,12 @@
 
 
     <div class="bg-[#F4FBF8]">
-      <section class="px-4 py-8 mx-auto container mx-auto md:px-24 lg:px-8 lg:py-[100px]" id="work">
+      <section class="px-4 py-8 mx-auto container md:px-24 lg:px-8 lg:py-[100px]" id="work">
         <div class="lg:flex justify-between lg:mb-[30px]">
           <h3 style="font-family: 'Montserrat';" class="text-3xl lg:text-[40px] font-semibold mb-4 lg:mb-0 text-[#303030]" style="font-family: 'Montserrat';">
             See our <span class="text-[#FF5E0E]">work</span>
           </h3>
-          <a href="" class="flex items-center gap-4 text-[#307457] hover:text-orange-600 py-4 lg:py-0 hidden lg:block">
+          <a href="" class="lg:flex items-center gap-4 text-[#307457] hover:text-orange-600 py-4 lg:py-0 hidden">
             <span class="text-xl">DISCOVER ALL</span>
             <i class="fa-solid fa-arrow-right text-xl"></i>
           </a>
@@ -372,7 +372,7 @@
     </div>
 
 
-      <section class="px-4 py-8 mx-auto container mx-auto md:px-24 lg:px-8 lg:py-[100px]" id="">
+      <section class="px-4 py-8 mx-auto container md:px-24 lg:px-8 lg:py-[100px]" id="">
           <div class="grid lg:grid-cols-2">
             <div class="place-self-center">
               <p style="font-family: 'Montserrat';" class="text-3xl lg:text-[40px] font-semibold mb-4 lg:mb-10 text-[#303030]">Why <span class="text-[#FF5E0E]">Partner</span> With Us?</p>
@@ -393,7 +393,7 @@
           </div>
       </section>
 
-    <section class="px-4 py-8 container mx-auto lg:px-8 lg:px-8 lg:py-[100px]">
+    <section class="px-4 py-8 container mx-auto lg:px-8 lg:py-[100px]">
       <p class="text-3xl lg:text-[40px] font-semibold lg:mb-0 text-[#303030]" style="font-family: 'Montserrat';">What our  <span class="text-[#FF5E0E]">clients </span> Say?</p>
       <div class="grid lg:grid-cols-2 mt-8 lg:mt-[30px] gap-2 lg:gap-10">
         <div class="border py-12 px-6 rounded-xl">
@@ -440,7 +440,7 @@
         </h2>
         <div class="flex flex-col items-center md:flex-row lg:pt-8 ">
           <a href="./contact-us.html"
-            class="text-white rounded-full px-8 bg-[#FF5E0E] hover:bg-[#307457] inline-flex items-center justify-left w-full h-14 mb-3 font-medium tracking-wide text-black my-btns">
+            class="text-white rounded-full px-8 bg-[#FF5E0E] hover:bg-[#307457] inline-flex items-center justify-left w-full h-14 mb-3 font-medium tracking-wide my-btns">
             <span class="mr-4 uppercase font-bold text-[16px]" style="font-family: 'Montserrat', sans-serif;">Talk to
               Us</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -452,7 +452,7 @@
 
   <footer>
     <div class="bg-[#0F241B]">
-      <div class="px-4 pt-16 container mx-auto lg:px-8 md:px-24 lg:px-8">
+      <div class="px-4 pt-16 container mx-auto lg:px-8 md:px-24">
         <div class="mb-8">
           <div class="grid grid-cols-2 gap-10 row-gap-10 md:grid-cols-4">
             <div class="hidden lg:block">

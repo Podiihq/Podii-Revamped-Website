@@ -42,6 +42,7 @@
 
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../src/output.css" rel="stylesheet">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,7 +140,7 @@
         <section class="mt-16">
           <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-8 lg:pt-32">
             <div class="flex items-center justify-center lg:flex-row">
-              <div class="mb-4 lg:mb-10 lg:max-w-2xl lg:pr-5 lg:mb-0">
+              <div class="mb-4 lg:max-w-2xl lg:pr-5 lg:mb-0">
                 <div class="max-w-2xl mb-6 mt-16 md:mt-4 text-center md:text-left">
                   <h2 class="text-center mb-8 font-sans text-3xl lg:text-[48px] font-semibold tracking-wide sm:leading-none text-[#307457]" style="font-family: 'Montserrat', sans-serif;">
                     Tectona MEL system
@@ -195,7 +196,7 @@
 
 
         <section>
-            <div class="lg:px-4 py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
+            <div class="py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
                 <div class="px-4 lg:px-20">
                     <h3 class="text-base lg:text-[20px] font-medium uppercase pb-3 text-[#307457]" style="font-family: 'Montserrat';">About  tectona mel</h3>
                     <p class="text-base lg:text-[20px] lg:leading-8">Tectona, an impact investment firm supporting emerging market enterprises, faced hurdles in labor-intensive, error-prone manual data analysis, affecting project management efficiency. To combat these issues, they initiated the transformative MEL Platform development for automated, standardized data analysis, revolutionizing project management.</p>
@@ -224,7 +225,7 @@
         </section>
 
         <section>
-            <div class="lg:px-4 lg:py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
+            <div class="lg:py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
                 <div class="flex justify-center">
                     <div class="grid  grid-cols-3 lg:grid-cols-7 gap-x-20 gap-y-10 lg:gap-36">
                         <img src="../assets/updated/stack/elixir.svg" alt="">
@@ -241,7 +242,7 @@
         </section>
 
         <section class="bg-white relative">
-            <div class="lg:px-4 py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8 ">
+            <div class="py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8 ">
                 <div class="px-4 lg:px-20 mt-8">
                     <h3 class="text-base lg:text-[20px] font-medium uppercase pb-3 text-[#307457] mb-2" style="font-family: 'Montserrat';">IMPACT</h3>
                     <p class="text-base lg:text-[20px] lg:leading-8">The introduction of the MEL Platform has significantly enhanced efficiency and resulted in substantial time and resource savings. Tectona can now make well-informed investment decisions by precisely measuring the impact of their investments, ensuring resources are effectively allocated.
@@ -255,7 +256,7 @@
             <div class="px-4 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-8 relative z-10">
               <section class="flex justify-center items-center">
                 <div class="w-full">
-                  <div class="px-4 bg-white p-10 lg:p-20 border border-[#307457] border-2 rounded-3xl">
+                  <div class="px-4 bg-white p-10 lg:p-20 border-[#307457] border-2 rounded-3xl">
                     <div>
                       <h1 class="text-2xl lg:text-[32px] text-left font-medium" style="font-family: 'Montserrat';">Let your ideas shine too!</h1>
                     </div>
@@ -304,9 +305,9 @@
                           </div>
                         </div>
                         <button type="submit" id="loaderButton" onclick="sendMail(); return false;" data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
-                          class="g-recaptcha-response w-full relative text-white inline-flex items-center justify-center w-full h-12 lg:h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-[#FF5E0E] hover:bg-[#307457]">
+                          class="g-recaptcha-response relative text-white inline-flex items-center justify-center w-full h-12 lg:h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-[#FF5E0E] hover:bg-[#307457]">
                               <span id="buttonText"> Talk to Us</span>
-                              <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
+                              <div id="loader" class="absolute inset-0 items-center justify-center hidden">
                                 <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
                               </div>
                         </button>
@@ -322,7 +323,7 @@
 
 
            <!-- Success Modal -->
-           <div id="successModal" class="fixed inset-0 flex items-center justify-center hidden z-50">
+           <div id="successModal" class="fixed inset-0 items-center justify-center hidden z-50">
             <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
             <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
               <div class="p-8">
@@ -345,7 +346,7 @@
           </div>
 
           <!-- Success Modal -->
-          <div id="errorModal" class="fixed inset-0 flex items-center justify-center hidden z-50">
+          <div id="errorModal" class="fixed inset-0 items-center justify-center hidden z-50">
             <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
             <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
               <div class="p-8">

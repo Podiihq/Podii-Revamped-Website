@@ -45,6 +45,7 @@
 
   <!-- Tailwind css cdn -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./src/output.css" rel="stylesheet">
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,7 +135,7 @@
     <section class="lg:pt-8 ">
       <div class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-8 lg:pt-32">
         <div class="flex items-center justify-center lg:flex-row">
-          <div class="mb-4 lg:mb-10 lg:max-w-2xl lg:pr-5 lg:mb-0">
+          <div class="mb-4  lg:max-w-2xl lg:pr-5 lg:mb-0">
             <div class="max-w-2xl mb-6 mt-16 md:mt-4 text-center md:text-left">
               <h2
                 class="text-center mb-8 font-sans text-3xl lg:text-[48px] font-semibold tracking-wide sm:leading-none text-[#307457]"
@@ -271,9 +272,9 @@
                   <div class="l:px-8 col-span-8">
                     <button type="submit" id="loaderButton" onclick="sendMail(); return false;"
                       data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
-                      class="g-recaptcha-response w-full relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-[#FF5E0E] hover:bg-[#307457]">
+                      class="g-recaptcha-response  relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-[#FF5E0E] hover:bg-[#307457]">
                       <span id="buttonText"> Talk to Us</span>
-                      <div id="loader" class="absolute inset-0 flex items-center justify-center hidden">
+                      <div id="loader" class="absolute inset-0 flex items-center justify-center ">
                         <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
                       </div>
                     </button>
@@ -284,7 +285,7 @@
 
 
             <!-- Success Modal -->
-            <div id="successModal" class="fixed inset-0 flex items-center justify-center hidden">
+            <div id="successModal" class="fixed inset-0 items-center justify-center hidden">
               <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
               <div
                 class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
@@ -311,7 +312,7 @@
             </div>
 
             <!-- Success Modal -->
-            <div id="errorModal" class="fixed inset-0 flex items-center justify-center hidden">
+            <div id="errorModal" class="fixed inset-0 items-center justify-center hidden">
               <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
               <div
                 class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-lg shadow-lg z-50 overflow-y-auto">
