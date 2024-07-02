@@ -274,7 +274,7 @@
                       data-sitekey="6Ld6XTwoAAAAAAYnXDhDopSZ8ViZpZPVAJioKZyP" data-callback="onSubmit"
                       class="g-recaptcha-response  relative text-white inline-flex items-center justify-center w-full h-16 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md  bg-[#FF5E0E] hover:bg-[#307457]">
                       <span id="buttonText"> Talk to Us</span>
-                      <div id="loader" class="absolute inset-0 flex items-center justify-center ">
+                      <div id="loader" class="absolute inset-0 items-center justify-center hidden">
                         <div class="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
                       </div>
                     </button>
@@ -561,6 +561,7 @@
 
     loaderButton.addEventListener('click', function () {
       loader.classList.remove('hidden');
+      loader.classList.add('flex')
       buttonText.classList.add('hidden');
 
       // Simulating an asynchronous action
