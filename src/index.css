@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Montreal-Medium';
+    src: url("./assets/fonts/montreal/NeueMontreal-Medium.woff2") format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montreal-Regular';
+    src: url("./assets/fonts/montreal/NeueMontreal-Regular.woff2") format('woff2');
+    font-display: swap;
+}
+
+* {
+    color: #303030;
+    font-family: "Montreal-Medium";
+}
+
+.mont-regular {
+    font-family: "Montreal-Regular";
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
