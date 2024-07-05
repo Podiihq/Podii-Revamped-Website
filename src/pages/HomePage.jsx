@@ -3,6 +3,8 @@ import Navbar from '../global-components/NavBar'
 import { MarqueeSection } from './components/MarqueeSection'
 import ServicesSection from './components/ServicesComponent'
 import WorkSection from './components/WorkComponent'
+import PartnerWithUsSection from './components/PartnerWithUsSection'
+import ClientTestimonialsSection from './components/TestimonialsSection'
 
 const HomePage = () => {
     return (
@@ -26,6 +28,8 @@ const HomePage = () => {
             <MarqueeSection />
             <ServicesSection />
             <WorkSection />
+            <PartnerWithUsSection />
+            <ClientTestimonialsSection />
         </div>
     )
 }
