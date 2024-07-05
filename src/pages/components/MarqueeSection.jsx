@@ -70,7 +70,7 @@ export const MarqueeSectionImage = ({ image }) => {
     return (
         <div className="relative group  cursor-pointer duration-300">
             <div
-                className="overlay w-full h-full bg-black bg-opacity-50 uppercase rounded-lg absolute inset-0 z-10 flex items-center justify-center transform opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                className="overlay w-full h-full bg-black bg-opacity-30 uppercase rounded-lg absolute inset-0 z-10 flex items-center justify-center transform opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-white">View Project</p>
             </div>
             <ImageComponent image={image} myClassName={"h-[200px] lg:min-h-[350px] object-cover"} />

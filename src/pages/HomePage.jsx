@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../global-components/NavBar'
 import { MarqueeSection } from './components/MarqueeSection'
 import ServicesSection from './components/ServicesComponent'
@@ -7,8 +7,24 @@ import PartnerWithUsSection from './components/PartnerWithUsSection'
 import ClientTestimonialsSection from './components/TestimonialsSection'
 import DiscoverSection from './components/DiscoverSection'
 import Footer from '../global-components/Footer'
+import Lenis from 'lenis'
 
 const HomePage = () => {
+    useEffect(() => {
+        const lenis = new Lenis();
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
     return (
         <div>
             <Navbar />

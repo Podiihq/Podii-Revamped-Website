@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../global-components/NavBar'
 import { ServicesComponent } from './components/ServiceComponent'
 import Footer from '../../global-components/Footer'
 import DiscoverSection from '../components/DiscoverSection'
+import Lenis from 'lenis'
 
 const ServicesPage = () => {
+    useEffect(() => {
+        const lenis = new Lenis();
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        return () => {
+            lenis.destroy();
+        };
+    }, []);
     return (
         <div className='bg-[#F4FBF8]'>
             <Navbar />
