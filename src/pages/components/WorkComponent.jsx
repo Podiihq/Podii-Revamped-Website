@@ -5,6 +5,7 @@ import Image2 from "../../assets/images/new-home/SmartFarm2 4.svg"
 import Image3 from "../../assets/images/new-home/Podii Website (13) 1.svg"
 import { GoArrowRight } from "react-icons/go";
 import { Link } from 'react-router-dom';
+import { ImageComponent } from './MarqueeSection';
 
 const WorkSection = () => {
     const works = [
@@ -40,7 +41,8 @@ const WorkSection = () => {
                 <div className="grid lg:grid-cols-3 gap-6">
                     {works.map((work, index) => (
                         <div key={index}>
-                            <img src={work.imgSrc} alt="" className="w-full object-cover mb-4" />
+                            <ImageComponent image={work.imgSrc} myClassName={"w-full object-cover mb-4"} />
+                            {/* <img src={work.imgSrc} alt="" className="" /> */}
                             <Link to={work.link} className="text-lg lg:text-2xl underline mont-regular">
                                 {work.description}
                             </Link>

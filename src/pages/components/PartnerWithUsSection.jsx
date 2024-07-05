@@ -1,6 +1,7 @@
 import React from 'react';
 import Image1 from "../../assets/images/new-home/why.svg"
 import Image2 from "../../assets/images/new-home/tick.svg"
+import { ImageComponent } from './MarqueeSection';
 
 const PartnerWithUsSection = () => {
     const reasons = [
@@ -23,7 +24,7 @@ const PartnerWithUsSection = () => {
                         </div>
                     ))}
                 </div>
-                <img src={Image1} alt="" className="w-full" />
+                <ImageComponent image={Image1} myClassName={"w-full"} />
             </div>
         </section>
     );
