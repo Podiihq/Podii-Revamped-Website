@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../global-components/NavBar'
 import { MarqueeSection } from './components/MarqueeSection'
+import ServicesSection from './components/ServicesComponent'
 
 const HomePage = () => {
     return (
         <div>
             <Navbar />
-            <section className="px-4 pt-20 lg:pt-4 pb-10 container mx-auto lg:px-8 mt-8">
+            <section className="px-4 pt-20 lg:pt-4 pb-10 container mx-auto lg:px-8 mt-8 text-[#303030]">
                 <div className="items-center lg:mt-32 md:mt-4">
                     <div>
                         <h1 className="mb-4 lg:mb-0 text-4xl lg:text-[56px] leading-tight text-center">
@@ -22,6 +23,7 @@ const HomePage = () => {
                 </div>
             </section>
             <MarqueeSection />
+            <ServicesSection />
         </div>
     )
 }

@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 z-50 w-full flex flex-wrap items-center justify-between ${scrollPos > 10 ? 'bg-white shadow' : ''}`}
+            className={`fixed top-0 z-50 w-full flex flex-wrap items-center justify-between ${scrollPos > 10 ? 'bg-white' : ''}`}
             id="header"
         >
             <div className="container lg:px-4 lg:mx-auto flex flex-wrap items-center justify-between pt-4">
