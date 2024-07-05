@@ -2,10 +2,12 @@ import { useRef, useState } from "react";
 
 import Icon1 from "../../../assets/images/updated/service/web-icon.svg"
 import Icon2 from "../../../assets/images/updated/service/mobile-icon.svg"
-import Icon3 from "../../../assets/images/updated/service/custom-icon.svg"
-import Icon4 from "../../../assets/images/updated/service/design.svg"
-import Icon5 from "../../../assets/images/updated/service/testing.svg"
-import Icon6 from "../../../assets/images/updated/service/cloud.svg"
+import Icon3 from "../../../assets/images/updated/service/design.svg"
+import Icon4 from "../../../assets/images/updated/service/testing.svg"
+import Icon5 from "../../../assets/images/updated/service/cloud.svg"
+import Icon6 from "../../../assets/images/updated/service/devops.svg"
+import Icon7 from "../../../assets/images/updated/service/database.svg"
+import Icon8 from "../../../assets/images/updated/service/custom-icon.svg"
 
 import Image1 from "../../../assets/images/services/Vibrant.svg"
 import Image2 from "../../../assets/images/services/SmartFarm.svg"
@@ -108,7 +110,75 @@ export const ServicesComponent = () => {
             projectName: "",
             link: "",
         },
-
+        {
+            title: "Testing & QA",
+            icon: <><img src={Icon4} alt="" className="w-15 h-15" /></>,
+            subTitle: "BULLETPROOF SOFTWARE",
+            description: <div>
+                <p className="mont-regular">We ensure your software operates flawlessly, just like your reliable morning alarm.</p>
+                <p className="mont-regular mt-4">Quality assurance is the backbone of successful software development. We leave no stone unturned in scrutinizing every component of your application, ensuring flawless functionality.</p>
+                <p className="mont-regular mt-4">Our meticulous testing processes guarantee that your software, developed with various ‘programming languages’, operates seamlessly, providing a reliable experience to your users.</p>
+            </div>,
+            projectImage: "",
+            projectDescription: "",
+            projectName: "",
+            link: "",
+        },
+        {
+            title: "Cloud computing",
+            icon: <><img src={Icon5} alt="" className="w-15 h-15" /></>,
+            subTitle: "EFFICIENT DATA MANAGEMENT",
+            description: <div>
+                <p className="mont-regular">We empower you with flexible and accessible data solutions. Have your data accessible from anywhere, just like your favorite e-book that you can read on any device.</p>
+                <p className="mont-regular mt-4">Empower your organization with flexible and scalable cloud computing solutions. Whether you need Software as a Service (SaaS), Platform as a Service (PaaS), or Infrastructure as a Service (IaaS), we're equipped to configure and manage cloud solutions tailored to your unique requirements. Harness the power of the cloud to streamline data storage and accessibility.</p>
+            </div>,
+            projectImage: "",
+            projectDescription: "",
+            projectName: "",
+            link: "",
+        },
+        {
+            title: "DevOps",
+            icon: <><img src={Icon6} alt="" className="w-15 h-15" /></>,
+            subTitle: "STREAMLINED SOFTWARE DELIVERY",
+            description: <div>
+                <p className="mont-regular">We accelerate software delivery and optimization. Our practices make sure your software reaches its destination faster and with fewer hiccups.</p>
+                <p className="mont-regular mt-4">Streamline your software development life cycle with our DevOps practices. We merge software development and IT operations to accelerate delivery, enhance software quality, and foster continuous improvement.</p>
+                <p className="mont-regular mt-4">Our integrated approach, aligned with Agile principles and ‘various programming languages’, optimizes your software development processes for efficiency and excellence.</p>
+                <p className="mont-regular"></p>
+            </div>,
+            projectImage: "",
+            projectDescription: "",
+            projectName: "",
+            link: "",
+        },
+        {
+            title: "Database Design",
+            icon: <><img src={Icon7} alt="" className="w-15 h-15" /></>,
+            subTitle: "SMART DATA ORGANIZATION",
+            description: <div>
+                <p className="mont-regular">We efficiently organize and manage your data, like a well-organized library. You can find any book (or data) you need in an instant.</p>
+                <p className="mont-regular mt-4">Effective database design is the backbone of a well-functioning application. Our database design services focus on creating efficient, scalable, and secure database systems. We employ data modeling, indexing, and query optimization, ensuring your application's data management, utilizing ‘various programming languages’, is robust and reliable.</p>
+                <p className="mont-regular"></p>
+            </div>,
+            projectImage: "",
+            projectDescription: "",
+            projectName: "",
+            link: "",
+        },
+        {
+            title: "Custom Offers",
+            icon: <><img src={Icon8} alt="" className="w-15 h-15" /></>,
+            subTitle: "YOUR UNIQUE SOFTWARE",
+            description: <div>
+                <p className="mont-regular ">We create software solutions to fit you perfectly—bet no one else in the world has one quite like it</p>
+                <p className="mont-regular mt-4">Recognizing the uniqueness of every business, we offer custom solutions tailored precisely to your needs. Our collaborative approach involves deeply understanding your business objectives, challenges, and vision. Based on this knowledge, we craft bespoke software solutions that address your specific requirements, whether you're launching a groundbreaking startup or optimizing an established enterprise.</p>
+            </div>,
+            projectImage: "",
+            projectDescription: "",
+            projectName: "",
+            link: "",
+        },
 
     ];
 

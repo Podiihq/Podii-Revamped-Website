@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from '../../global-components/NavBar'
 import { ServicesComponent } from './components/ServiceComponent'
+import Footer from '../../global-components/Footer'
+import DiscoverSection from '../components/DiscoverSection'
 
 const ServicesPage = () => {
     return (
@@ -25,11 +27,13 @@ const ServicesPage = () => {
                     </div>
                 </div>
             </section>
-            <div className='bg-white'>
+            <div className='bg-white pb-16'>
                 <div className='container mx-auto mt-5 pt-4 w-full'>
                     <ServicesComponent />
                 </div>
             </div>
+            <DiscoverSection />
+            <Footer />
         </div>
     )
 }
