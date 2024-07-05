@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../global-components/NavBar'
 import { MarqueeSection } from './components/MarqueeSection'
 import ServicesSection from './components/ServicesComponent'
+import WorkSection from './components/WorkComponent'
 
 const HomePage = () => {
     return (
@@ -24,6 +25,7 @@ const HomePage = () => {
             </section>
             <MarqueeSection />
             <ServicesSection />
+            <WorkSection />
         </div>
     )
 }

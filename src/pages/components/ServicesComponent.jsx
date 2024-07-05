@@ -52,9 +52,7 @@ const ServicesSection = () => {
     return (
         <section className="my-[50px] lg:my-[100px] px-4 lg:px-0 text-[#303030]" id="services">
             <div className="lg:flex items-center justify-between container mx-auto lg:px-8 md:px-8">
-                <h2
-                    className="text-left text-[28px] lg:text-[40px] leading-none font-semibold"
-                >
+                <h2 className="text-left text-[28px] lg:text-[40px] leading-none">
                     Our <span className="text-[#FF5E0E]">Services</span> and <span className="text-[#FF5E0E]">Capabilities</span>
                 </h2>
                 <div className="flex mt-4">
