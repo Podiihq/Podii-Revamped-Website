@@ -3,6 +3,7 @@ import Logo from "../assets/images/updated/footer_logo.svg"
 import image1 from "../assets/images/footer/Screenshot 2024-07-03 at 17.55.09.png"
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -20,16 +21,16 @@ const Footer = () => {
                                 <p className="tracking-wide font-semibold uppercase" style={{ color: '#FFF5F0' }}>Explore</p>
                                 <ul className="mt-4 space-y-2" style={{ color: '#FFF5F0' }}>
                                     <li>
-                                        <a href="./index.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Home</a>
+                                        <Link to="./index.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Home</Link>
                                     </li>
                                     <li>
-                                        <a href="./services.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Services</a>
+                                        <Link to="./services.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Services</Link>
                                     </li>
                                     <li>
-                                        <a href="./portfolio.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</a>
+                                        <Link to="./portfolio.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <a href="./contact-us.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</a>
+                                        <Link to="./contact-us.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -37,15 +38,13 @@ const Footer = () => {
                                 <p className="tracking-wide uppercase font-semibold" style={{ color: '#FFF5F0' }}>Contact</p>
                                 <ul className="mt-4 space-y-2" style={{ color: '#FFF5F0' }}>
                                     <li>
-                                        <a href="#" className="mont-regular transition-colors duration-300 hover:text-deep-purple-accent-200">0733 000003</a>
+                                        <p className="mont-regular transition-colors duration-300 hover:text-deep-purple-accent-200">0733 000003</p>
                                     </li>
                                     <li>
-                                        <a href="mailto:podii@podiihq.com">
-                                            <img src={image1} alt="" className="w-44" />
-                                        </a>
+                                        <img src={image1} alt="" className="w-44" />
                                     </li>
                                     <li>
-                                        <a href="#" className="mont-regular transition-colors duration-300 hover:text-deep-purple-accent-200">Lutheran Kisumu, Kenya</a>
+                                        <p className="mont-regular transition-colors duration-300 hover:text-deep-purple-accent-200">Lutheran Kisumu, Kenya</p>
                                     </li>
                                 </ul>
                             </div>
@@ -60,7 +59,7 @@ const Footer = () => {
                                     </a>
                                 </div>
                                 <div className="mt-4 text-[#FFF5F0]">
-                                    <a href="./privacy-policy.html" className="underline transition-colors duration-200 hover:text-orange-500">Privacy Policy</a>
+                                    <Link to="./privacy-policy.html" className="underline transition-colors duration-200 hover:text-orange-500">Privacy Policy</Link>
                                 </div>
                             </div>
                             <div className="lg:hidden">
