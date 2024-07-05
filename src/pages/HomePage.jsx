@@ -5,6 +5,8 @@ import ServicesSection from './components/ServicesComponent'
 import WorkSection from './components/WorkComponent'
 import PartnerWithUsSection from './components/PartnerWithUsSection'
 import ClientTestimonialsSection from './components/TestimonialsSection'
+import DiscoverSection from './components/DiscoverSection'
+import Footer from '../global-components/Footer'
 
 const HomePage = () => {
     return (
@@ -30,6 +32,8 @@ const HomePage = () => {
             <WorkSection />
             <PartnerWithUsSection />
             <ClientTestimonialsSection />
+            <DiscoverSection />
+            <Footer />
         </div>
     )
 }
