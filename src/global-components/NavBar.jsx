@@ -49,7 +49,7 @@ const Navbar = () => {
                         <li className="my-4">
                             <Link
                                 to="/"
-                                className={`lg:hover:text-gray-300 text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/') ? 'text-[#FF5E0E] mont-medium' : 'text-gray-800 '}`}
+                                className={`lg:hover:text-[#FF5E0E] text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/') ? 'text-[#FF5E0E] mont-medium' : 'text-[#303030] '}`}
                             >
                                 <span className="uppercase ml-2 lg:ml-0">Home</span>
                                 {isActive('/') && <div className="h-2 hidden lg:block bg-[#FF5E0E] absolute bottom-0 left-0 right-0 top-9 mx-4 rounded-lg"></div>}
@@ -58,7 +58,7 @@ const Navbar = () => {
                         <li className="my-4">
                             <Link
                                 to="/services"
-                                className={`uppercase lg:hover:text-gray-300 text-center text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/services') ? 'text-[#FF5E0E] mont-medium' : 'text-gray-800'}`}
+                                className={`uppercase lg:hover:text-[#FF5E0E] text-center text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/services') ? 'text-[#FF5E0E] mont-medium' : 'text-[#303030]'}`}
                             >
                                 <span className="inline-block ml-2 lg:ml-0">Services</span>
                                 {isActive('/services') && <div className="h-2 hidden lg:block bg-[#FF5E0E] absolute bottom-0 left-0 right-0 top-9 mx-4 rounded-lg"></div>}
@@ -67,7 +67,7 @@ const Navbar = () => {
                         <li className="my-4">
                             <Link
                                 to="/portfolio"
-                                className={`uppercase lg:hover:text-gray-300 text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/portfolio') ? 'text-[#FF5E0E] mont-medium' : 'text-gray-800'}`}
+                                className={`uppercase lg:hover:text-[#FF5E0E] text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/portfolio') ? 'text-[#FF5E0E] mont-medium' : 'text-[#303030]'}`}
                             >
                                 <span className="inline-block ml-2 lg:ml-0">Portfolio</span>
                                 {isActive('/portfolio') && <div className="h-1 hidden lg:block bg-[#FF5E0E] absolute bottom-0 left-0 right-0 top-9 mx-4 rounded-lg"></div>}
@@ -76,7 +76,7 @@ const Navbar = () => {
                         <li className="my-4 lg:hidden">
                             <Link
                                 to="/contact-us"
-                                className={`lg:hover:text-gray-300 text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/contact-us') ? 'text-[#FF5E0E] mont-medium' : 'text-gray-800'}`}
+                                className={`lg:hover:text-[#FF5E0E] text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/contact-us') ? 'text-[#FF5E0E] mont-medium' : 'text-[#303030]'}`}
                             >
                                 <span className="inline-block ml-2 lg:ml-0 uppercase">Contact us</span>
                                 {isActive('/contact-us') && <div className="h-1 hidden lg:block bg-[#FF5E0E] absolute bottom-0 left-0 top-9 right-0 mx-4"></div>}

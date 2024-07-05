@@ -18,7 +18,7 @@ const PartnerWithUsSection = () => {
                         Why <span className="text-[#FF5E0E]">Partner</span> With Us?
                     </p>
                     {reasons.map((reason, index) => (
-                        <div className="flex mt-3" key={index}>
+                        <div className="flex mt-3 lg:w-10/12" key={index}>
                             <img src={Image2} alt="" />
                             <p className="text-lg lg:text-xl text-[#0F241B] mont-regular">{reason}</p>
                         </div>
