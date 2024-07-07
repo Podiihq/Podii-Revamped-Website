@@ -21,16 +21,16 @@ const Footer = () => {
                                 <p className="tracking-wide font-semibold uppercase" style={{ color: '#FFF5F0' }}>Explore</p>
                                 <ul className="mt-4 space-y-2" style={{ color: '#FFF5F0' }}>
                                     <li>
-                                        <Link to="./index.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Home</Link>
+                                        <Link to="/" className="mont-regular transition-colors duration-200 hover:text-orange-500">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="./services.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Services</Link>
+                                        <Link to="/services" className="mont-regular transition-colors duration-200 hover:text-orange-500">Services</Link>
                                     </li>
                                     <li>
-                                        <Link to="./portfolio.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</Link>
+                                        <Link to="/portfolio" className="mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <Link to="./contact-us.html" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
+                                        <Link to="/contact-us" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
                                     </li>
                                 </ul>
                             </div>

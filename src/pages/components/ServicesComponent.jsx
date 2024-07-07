@@ -15,37 +15,37 @@ const ServicesSection = () => {
             imgSrc: Image1,
             title: 'Web Development',
             description: 'We tailor your web apps to your business needs, to make work easier for you.',
-            link: '#',
+            link: '/services',
         },
         {
             imgSrc: Image2,
             title: 'Mobile Apps',
             description: 'We craft mobile apps that run seamlessly on any device, delivering exceptional user experiences.',
-            link: '#',
+            link: '/services',
         },
         {
             imgSrc: Image3,
             title: 'Custom Software',
             description: 'We create software solutions to fit you perfectly—bet no one else in the world has one quite like it.',
-            link: '#',
+            link: '/services',
         },
         {
             imgSrc: Image4,
             title: 'UX/UI Design',
             description: 'We believe in crafting interfaces that not only look appealing but also function intuitively.',
-            link: '#',
+            link: '/services',
         },
         {
             imgSrc: Image5,
             title: 'Testing & QA',
             description: 'We ensure your software operates flawlessly, just like your reliable morning alarm.',
-            link: '#',
+            link: '/services',
         },
         {
             imgSrc: Image6,
             title: 'Cloud Computing',
             description: 'Have your data accessible from anywhere, like your favorite e-book, readable from any device.',
-            link: '#',
+            link: '/services',
         },
     ];
 
@@ -56,7 +56,7 @@ const ServicesSection = () => {
                     Our <span className="text-[#FF5E0E]">Services</span> and <span className="text-[#FF5E0E]">Capabilities</span>
                 </h2>
                 <div className="flex mt-4">
-                    <Link to="#" className="flex items-center gap-2 text-[#307457] hover:text-orange-600">
+                    <Link to="/services" className="flex items-center gap-2 text-[#307457] hover:text-orange-600">
                         <p className="hover:underline text-base lg:text-xl uppercase">More Services</p>
                         <GoArrowRight className='text-2xl' />
                     </Link>

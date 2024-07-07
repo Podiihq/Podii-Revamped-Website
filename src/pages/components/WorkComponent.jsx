@@ -33,7 +33,7 @@ const WorkSection = () => {
                     <h3 className="text-3xl lg:text-[40px] mb-4 lg:mb-0 text-[#303030]">
                         See our <span className="text-[#FF5E0E]">work</span>
                     </h3>
-                    <a href="#" className="lg:flex items-center gap-4 text-[#307457] hover:text-orange-600 py-4 lg:py-0 hidden">
+                    <a href="#" className="lg:flex items-center gap-2 text-[#307457] hover:text-orange-600 hover:underline py-4 lg:py-0 hidden">
                         <span className="text-xl">DISCOVER ALL</span>
                         <GoArrowRight className='text-2xl' />
                     </a>

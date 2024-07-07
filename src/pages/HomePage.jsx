@@ -32,7 +32,7 @@ const HomePage = () => {
                 <div className="items-center lg:mt-32 md:mt-4">
                     <div>
                         <h1 className="mb-4 lg:mb-0 text-4xl lg:text-[56px] leading-tight text-center">
-                            Creating your <span className="text-[#FF5E0E]">vision</span><br /> with innovative{' '}
+                            Creating your <span className="text-[#FF5E0E]">Vision</span><br /> with innovative{' '}
                             <span className="text-[#FF5E0E]">Software.</span>
                         </h1>
                     </div>
