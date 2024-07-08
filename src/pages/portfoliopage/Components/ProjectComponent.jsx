@@ -37,7 +37,7 @@ export const Projects = () => {
         <div className='grid lg:grid-cols-2 gap-10'>
             <ProjectComponent
                 image={Image1}
-                link={"#"}
+                link={"/smart-farm"}
                 description={"A mobile app allowing large-scale chicken farmers to digitize all farm records"}
                 title={"Smart farm"}
             />
