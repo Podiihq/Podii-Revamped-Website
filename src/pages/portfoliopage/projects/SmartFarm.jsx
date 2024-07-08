@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../../global-components/NavBar'
 
 import Icon1 from "../../../assets/images/updated/service/error.svg"
@@ -19,6 +19,8 @@ import Image2 from "../../../assets/images/updated/Heros/smart-farm.svg"
 
 import Lenis from 'lenis'
 import Footer from '../../../global-components/Footer'
+import { PortfolioImageComponent } from '../Components/ProjectComponent'
+import Skeleton from 'react-loading-skeleton'
 
 const SmartFarm = () => {
     useEffect(() => {
@@ -86,7 +88,7 @@ const SmartFarm = () => {
                                     </div>
                                 </div>
                             </div>
-                            <img src={Image1} alt="" className="w-full lg:h-[70%] ml-4 lg:ml-0" />
+                            <ProjectImageComponent image={Image1} alt="" myClassName="w-full lg:h-[600px] ml-4 lg:ml-0" />
                         </div>
                     </div>
                 </div>
@@ -106,8 +108,8 @@ const SmartFarm = () => {
             <section>
                 <div className="bg-white">
                     <div className="px-4 py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
-                        <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">
-                            <img src={Image2} alt="" className="w-[80%]" />
+                        <div className="grid lg:grid-cols-2 gap-10 lg:gap-4 items-center">
+                            <ProjectImageComponent image={Image2} alt="" myClassName="w-[80%]" />
                             <div>
                                 <div className="">
                                     <h3 className="text-base lg:text-[20px] font-medium uppercase pb-3 tracking-wide text-[#307457]">The Solution</h3>
@@ -150,3 +152,26 @@ const SmartFarm = () => {
 }
 
 export default SmartFarm
+
+
+
+
+export const ProjectImageComponent = ({ image, myClassName }) => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    const handleImageLoad = () => {
+        setIsLoading(false);
+    };
+
+
+    return (
+        <div>
+            {isLoading && <Skeleton baseColor="#F4FBF8" highlightColor="#d1dbd7" className="w-full h-[300px] lg:h-[500px]" />}
+            <img src={image}
+                alt=""
+                className={`${isLoading ? 'hidden' : ''} ${myClassName}`}
+                onLoad={handleImageLoad}
+            />
+        </div>
+    )
+}

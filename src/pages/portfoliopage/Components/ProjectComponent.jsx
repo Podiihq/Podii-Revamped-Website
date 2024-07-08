@@ -13,7 +13,7 @@ const ProjectComponent = ({ image, link, description, title }) => {
     return (
         <div>
             <div>
-                <PortfolioComponent image={image} alt="" myClassName="object-cover w-full" />
+                <PortfolioImageComponent image={image} alt="" myClassName="object-cover w-full" />
                 <p className="text-base lg:text-2xl font-light mt-4 mont-regular"><span className="font-semibold">{title} -</span> {description}</p>
                 <div className='flex'>
                     <Link to={link}
@@ -65,7 +65,7 @@ export const Projects = () => {
 
 
 
-export const PortfolioComponent = ({ image, myClassName }) => {
+export const PortfolioImageComponent = ({ image, myClassName }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     const handleImageLoad = () => {
