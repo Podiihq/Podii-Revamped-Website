@@ -95,7 +95,7 @@ export const ImageComponent = ({ image, myClassName }) => {
             <img src={image}
                 alt=""
                 className={`${isLoading ? 'hidden' : ''} ${myClassName}`}
-                onLoad={handleImageLoad}
+            // onLoad={handleImageLoad}
             />
         </div>
     )

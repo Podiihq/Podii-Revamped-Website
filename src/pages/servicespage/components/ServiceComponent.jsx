@@ -32,7 +32,7 @@ export const ServicesItem = ({ title, icon, projectImage, projectDescription, pr
                         </div>
                         <p className="text-2xl lg:text-[40px] font-semibold text-[#0F241B] w-full">{title}</p>
                     </div>
-                    <div className="leading-none text-xl text-right transform transition-transform duration-300">
+                    <div className="leading-none text-sm text-right transform transition-transform duration-300">
                         {isOpen ? <BiSolidUpArrow /> : <BiSolidDownArrow />}
                     </div>
                 </div>

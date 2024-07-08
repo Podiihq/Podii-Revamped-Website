@@ -70,7 +70,7 @@ const Navbar = () => {
                                 className={`uppercase lg:hover:text-[#FF5E0E] text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/portfolio') ? 'text-[#FF5E0E] mont-medium' : 'text-[#303030]'}`}
                             >
                                 <span className="inline-block ml-2 lg:ml-0">Portfolio</span>
-                                {isActive('/portfolio') && <div className="h-1 hidden lg:block bg-[#FF5E0E] absolute bottom-0 left-0 right-0 top-9 mx-4 rounded-lg"></div>}
+                                {isActive('/portfolio') && <div className="h-2 hidden lg:block bg-[#FF5E0E] absolute bottom-0 left-0 right-0 top-9 mx-4 rounded-lg"></div>}
                             </Link>
                         </li>
                         <li className="my-4 lg:hidden">

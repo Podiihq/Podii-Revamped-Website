@@ -34,9 +34,7 @@ const ClientTestimonialsSection = () => {
                         <div className="mt-4 flex">
                             <div className="flex gap-2 items-center">
                                 <div className="w-4 h-1 bg-[#307457]"></div>
-                                <p
-                                    className="text-md lg:text-xl"
-                                >
+                                <p className="text-md lg:text-xl">
                                     <span className="font-medium">{testimonial.name},</span> {testimonial.title}
                                 </p>
                             </div>
