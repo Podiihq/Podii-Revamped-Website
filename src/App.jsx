@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import ServicesPage from './pages/servicespage/ServicesPage';
 import PortfolioPage from './pages/portfoliopage/PortfolioPage';
 import SmartFarm from './pages/portfoliopage/projects/SmartFarm';
+import Vibrant from './pages/portfoliopage/projects/Vibrant';
 
 function App() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function App() {
 
         {/* Projects */}
         <Route path='/smart-farm' element={<SmartFarm />} />
+        <Route path='/vibrant' element={<Vibrant />} />
       </Routes>
     </>
   )

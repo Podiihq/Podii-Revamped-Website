@@ -43,7 +43,7 @@ export const Projects = () => {
             />
             <ProjectComponent
                 image={Image2}
-                link={"#"}
+                link={"/vibrant"}
                 description={"Enterprise resource managing system for an NGO in western Kenya"}
                 title={"ERP"}
             />
