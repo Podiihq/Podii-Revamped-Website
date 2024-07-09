@@ -49,7 +49,7 @@ export const Projects = () => {
             />
             <ProjectComponent
                 image={Image3}
-                link={"#"}
+                link={"/tectona"}
                 description={"A custom software platform transforming the project management"}
                 title={"Tectona MEL Platform"}
             />
