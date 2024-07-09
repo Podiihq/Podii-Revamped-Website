@@ -55,7 +55,7 @@ export const Projects = () => {
             />
             <ProjectComponent
                 image={Image4}
-                link={"#"}
+                link={"/qbq"}
                 description={"A real-time game, designed to educate players on cyber security while entertaining them."}
                 title={"QBQ"}
             />
