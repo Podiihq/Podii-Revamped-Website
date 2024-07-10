@@ -75,7 +75,7 @@ const Navbar = () => {
                         </li>
                         <li className="my-4 lg:hidden">
                             <Link
-                                to="/contact-us"
+                                to="/contact"
                                 className={`lg:hover:text-[#FF5E0E] text-lg px-2 mx-4 py-4 lg:py-2 relative mont-regular ${isActive('/contact-us') ? 'text-[#FF5E0E] mont-medium' : 'text-[#303030]'}`}
                             >
                                 <span className="inline-block ml-2 lg:ml-0 uppercase">Contact us</span>
@@ -85,7 +85,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="hidden lg:block">
-                    <Link to="/contact-us" className="py-4 px-8 border-2 border-[#FF5E0E] hover:bg-orange-600 text-[#FF5E0E] hover:text-white rounded-full text-lg uppercase">
+                    <Link to="/contact" className="py-4 px-8 border-2 border-[#FF5E0E] hover:bg-orange-600 text-[#FF5E0E] hover:text-white rounded-full text-lg uppercase">
                         Get in Touch
                     </Link>
                 </div>
