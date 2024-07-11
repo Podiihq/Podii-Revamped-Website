@@ -4,8 +4,24 @@ import Navbar from '../../global-components/NavBar'
 import Image1 from "../../assets/images/updated/success.svg"
 import Image2 from "../../assets/images/updated/Vector.svg"
 import Footer from '../../global-components/Footer'
+import Lenis from 'lenis'
 
 const Success = () => {
+    // useEffect(() => {
+    //     const lenis = new Lenis();
+    //     lenis.on('scroll', (e) => {
+    //         console.log(e);
+    //     });
+
+    //     function raf(time) {
+    //         lenis.raf(time);
+    //         requestAnimationFrame(raf);
+    //     }
+    //     requestAnimationFrame(raf);
+    //     return () => {
+    //         lenis.destroy();
+    //     };
+    // }, []);
     return (
         <div>
             <div className='bg-[#F4FBF8]'>

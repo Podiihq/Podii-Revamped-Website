@@ -20,6 +20,7 @@ import Image4 from "../../../assets/images/updated/Heros/tecktona3.svg"
 import { ProjectImageComponent } from './SmartFarm';
 import Footer from '../../../global-components/Footer';
 import ProjectComponent from '../Components/ProjectComponent';
+import ContactMiniForm from '../../../global-components/ContactMiniForm';
 
 const Vibrant = () => {
     useEffect(() => {
@@ -177,8 +178,13 @@ const Vibrant = () => {
                     </div>
                 </div>
             </section>
+            <section className='bg-white relative'>
+                <ContactMiniForm />
+                <div className="py-32 bg-[#F4FBF8] absolute bottom-0 w-full">
+                </div>
+            </section>
             <section className='px-4 py-8 container mx-auto  lg:px-8 lg:py-20'>
-                <div className='grid grid-cols-2 gap-10'>
+                <div className='grid lg:grid-cols-2 gap-10'>
                     <ProjectComponent
                         image={Image3}
                         link={"/smart-farm"}

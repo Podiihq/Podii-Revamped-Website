@@ -30,7 +30,7 @@ const Footer = () => {
                                         <Link to="/portfolio" className="mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <Link to="/contact-us" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
+                                        <Link to="/contact" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
                                     </li>
                                 </ul>
                             </div>
