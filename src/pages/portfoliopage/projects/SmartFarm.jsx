@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from '../../../global-components/NavBar'
 
 import Icon1 from "../../../assets/images/updated/service/error.svg"
@@ -24,10 +24,19 @@ import Footer from '../../../global-components/Footer'
 import ProjectComponent, { PortfolioImageComponent } from '../Components/ProjectComponent'
 import Skeleton from 'react-loading-skeleton'
 import ContactMiniForm from '../../../global-components/ContactMiniForm'
+import gsap from 'gsap'
+import { animateHeroTitle } from '../../../global-animations/animation'
 
 
 
 const SmartFarm = () => {
+    const heroRef = useRef(null);
+    const timeline = useRef(gsap.timeline());
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     useEffect(() => {
         const lenis = new Lenis();
         lenis.on('scroll', (e) => {
@@ -43,20 +52,31 @@ const SmartFarm = () => {
             lenis.destroy();
         };
     }, []);
+
+
+    useEffect(() => {
+        const context = gsap.context(() => {
+            const tl = timeline.current;
+
+            tl
+                .add(animateHeroTitle(), "=+10%")
+
+        }, heroRef);
+        return () => context.revert();
+    }, []);
     return (
-        <div className='bg-[#F4FBF8]'>
+        <div className='bg-[#F4FBF8]' ref={heroRef}>
             <Navbar />
             <section className='lg:pt-20 pt-10'>
                 <div className="px-4 lg:pb-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 text-[#303030]">
                     <div className="flex items-center justify-center lg:flex-row">
                         <div className="mb-4 lg:max-w-xl lg:pr-5 lg:mb-0">
                             <div className="max-w-xl mb-6 mt-16 md:mt-4 text-center md:text-left">
-                                <h2 className="text-center mb-8 text-4xl lg:text-[56px] sm:leading-none text-[#307457]"
-                                >
+                                <h2 className="text-center mb-8 text-4xl lg:text-[56px] sm:leading-none text-[#307457]" data-text-animation>
                                     Smart Farm
                                 </h2>
 
-                                <p className="text-center text-xl md:text-2xl mont-regular">
+                                <p className="text-center text-xl md:text-2xl mont-regular" data-text-animation>
                                     Smart farm is a mobile application designed to help large and small scale chicken farmers efficiently store data and get real time insights.
                                 </p>
                             </div>
@@ -70,21 +90,21 @@ const SmartFarm = () => {
                         <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center py-8 overflow-hidden">
                             <div className="ml-4 xl:ml-48">
                                 <div className="px-4 flex flex-col gap-10">
-                                    <div className="lg:flex gap-8 items-start">
+                                    <div className="lg:flex gap-8 items-start" data-text-animation>
                                         <img src={Icon1} alt="" className="w-10 h-10 lg:w-auto lg:h-auto" />
                                         <div className="mt-4 lg:mt-0">
                                             <p className="text-base lg:text-[24px] font-semibold">Challenge</p>
                                             <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">Outdated manual record-keeping, causing time inefficiency and restricted data accessibility in remote locations.</p>
                                         </div>
                                     </div>
-                                    <div className="lg:flex gap-8 items-start">
+                                    <div className="lg:flex gap-8 items-start" data-text-animation>
                                         <img src={Icon2} alt="" className="w-10 h-10 lg:w-auto lg:h-auto" />
                                         <div className="mt-4 lg:mt-0">
                                             <p className="text-base lg:text-[24px] font-semibold">Services</p>
                                             <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">Mobile development, web development, IoT development, DB design, Testing and QA.</p>
                                         </div>
                                     </div>
-                                    <div className="lg:flex gap-8 items-start">
+                                    <div className="lg:flex gap-8 items-start" data-text-animation>
                                         <img src={Icon3} alt="" className="w-10 h-10 lg:w-auto lg:h-auto" />
                                         <div className="mt-4 lg:mt-0">
                                             <p className="text-base lg:text-[24px] font-semibold">Solution</p>
@@ -93,7 +113,9 @@ const SmartFarm = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ProjectImageComponent image={Image1} alt="" myClassName="w-full lg:h-[600px] ml-4 lg:ml-0" />
+                            <div data-text-animation>
+                                <ProjectImageComponent image={Image1} alt="" myClassName="w-full lg:h-[600px] ml-4 lg:ml-0" />
+                            </div>
                         </div>
                     </div>
                 </div>

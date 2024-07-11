@@ -5,6 +5,10 @@ import Lenis from 'lenis';
 
 const PrivacyPolicy = () => {
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         const lenis = new Lenis();
         lenis.on('scroll', (e) => {
             console.log(e);

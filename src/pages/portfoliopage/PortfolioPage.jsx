@@ -5,10 +5,14 @@ import { Projects } from './Components/ProjectComponent';
 import Footer from '../../global-components/Footer';
 import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
+import DiscoverSection from '../components/DiscoverSection';
 
 const PortfolioPage = () => {
     const heroRef = useRef(null);
     const timeline = useRef(gsap.timeline());
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     useEffect(() => {
         const lenis = new Lenis();
@@ -57,9 +61,12 @@ const PortfolioPage = () => {
                         </div>
                     </div>
                 </section>
-                <section className='px-4 py-8 container mx-auto  lg:px-8 lg:py-20' data-text-animation>
-                    <Projects />
-                </section>
+                <div className='bg-white'>
+                    <section className='px-4 py-8 container mx-auto  lg:px-8 lg:py-20' data-text-animation>
+                        <Projects />
+                    </section>
+                </div>
+                <DiscoverSection />
                 <Footer />
             </div>
         </div>

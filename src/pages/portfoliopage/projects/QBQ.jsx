@@ -1,5 +1,5 @@
 import Lenis from 'lenis';
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Navbar from '../../../global-components/NavBar';
 
 import Icon1 from "../../../assets/images/updated/service/error.svg"
@@ -23,8 +23,17 @@ import { ProjectImageComponent } from './SmartFarm';
 import Footer from '../../../global-components/Footer';
 import ProjectComponent from '../Components/ProjectComponent';
 import ContactMiniForm from '../../../global-components/ContactMiniForm';
+import gsap from 'gsap';
+import { animateHeroTitle } from '../../../global-animations/animation';
 
 const QBQ = () => {
+    const heroRef = useRef(null);
+    const timeline = useRef(gsap.timeline());
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     useEffect(() => {
         const lenis = new Lenis();
         lenis.on('scroll', (e) => {
@@ -40,20 +49,31 @@ const QBQ = () => {
             lenis.destroy();
         };
     }, []);
+
+
+    useEffect(() => {
+        const context = gsap.context(() => {
+            const tl = timeline.current;
+
+            tl
+                .add(animateHeroTitle(), "=+10%")
+
+        }, heroRef);
+        return () => context.revert();
+    }, []);
     return (
-        <div className='bg-[#F4FBF8]'>
+        <div className='bg-[#F4FBF8]' ref={heroRef}>
             <Navbar />
             <section className='lg:pt-20 pt-10'>
                 <div className="px-4 lg:pb-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 text-[#303030]">
                     <div className="flex items-center justify-center lg:flex-row">
                         <div className="mb-4 lg:max-w-xl lg:pr-5 lg:mb-0">
                             <div className="max-w-xl mb-6 mt-16 md:mt-4 text-center md:text-left">
-                                <h2 className="text-center mb-8 text-4xl lg:text-[56px] sm:leading-none text-[#307457]"
-                                >
+                                <h2 className="text-center mb-8 text-4xl lg:text-[56px] sm:leading-none text-[#307457]" data-text-animation>
                                     Quad Block Quiz
                                 </h2>
 
-                                <p className="text-center text-xl md:text-2xl mont-regular">
+                                <p className="text-center text-xl md:text-2xl mont-regular" data-text-animation>
                                     A captivating game concept by Duncan Sparrel that we executed to teach cybersecurity in a fun and educational way.
                                 </p>
                             </div>
@@ -67,7 +87,7 @@ const QBQ = () => {
                         <div className="py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8">
                             <div className="ml-4">
                                 <div className="px-4 lg:flex justify-between text-center gap-10 lg:gap-20">
-                                    <div className="lg:flex gap-8 items-start">
+                                    <div className="lg:flex gap-8 items-start" data-text-animation>
                                         <div className="mt-4 lg:mt-0">
                                             <div className="flex justify-center mb-2">
                                                 <img src={Icon1} alt="" className="w-10 h-10 lg:w-auto lg:h-auto" />
@@ -76,7 +96,7 @@ const QBQ = () => {
                                             <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">We craft mobile apps that run seamlessly on any device, delivering exceptional user experiences.</p>
                                         </div>
                                     </div>
-                                    <div className="lg:flex gap-8 items-start">
+                                    <div className="lg:flex gap-8 items-start" data-text-animation>
                                         <div className="mt-4 lg:mt-0">
                                             <div className="flex justify-center mb-2">
                                                 <img src={Icon2} alt="" className="w-10 h-10 lg:w-auto lg:h-auto" />
@@ -85,7 +105,7 @@ const QBQ = () => {
                                             <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">Game Development, custom software development, DevOps, WebApp.</p>
                                         </div>
                                     </div>
-                                    <div className="lg:flex gap-8 items-start">
+                                    <div className="lg:flex gap-8 items-start" data-text-animation>
                                         <div className="mt-4 lg:mt-0">
                                             <div className="flex justify-center mb-2">
                                                 <img src={Icon3} alt="" className="w-10 h-10 lg:w-auto lg:h-auto" />
@@ -97,7 +117,7 @@ const QBQ = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='px-4 py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8'>
+                        <div className='px-4 py-6 lg:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 mt-8' data-text-animation>
                             <ProjectImageComponent image={Image1} alt="" myClassName="w-full h-full rounded-lg border-2 border-[#307457]" />
                         </div>
                     </div>

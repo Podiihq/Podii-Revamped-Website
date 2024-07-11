@@ -12,6 +12,10 @@ const ServicesPage = () => {
     const timeline = useRef(gsap.timeline());
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         const lenis = new Lenis();
         lenis.on('scroll', (e) => {
             console.log(e);
