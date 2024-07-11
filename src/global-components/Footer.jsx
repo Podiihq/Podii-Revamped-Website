@@ -59,7 +59,7 @@ const Footer = () => {
                                     </a>
                                 </div>
                                 <div className="mt-4 text-[#FFF5F0]">
-                                    <Link to="./privacy-policy.html" className="underline transition-colors duration-200 hover:text-orange-500">Privacy Policy</Link>
+                                    <Link to="/privacy-policy" className="underline transition-colors duration-200 hover:text-orange-500">Privacy Policy</Link>
                                 </div>
                             </div>
                             <div className="lg:hidden">

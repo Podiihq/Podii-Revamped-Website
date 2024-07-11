@@ -9,6 +9,7 @@ import Tectona from './pages/portfoliopage/projects/Tectona';
 import QBQ from './pages/portfoliopage/projects/QBQ';
 import ContactForm from './pages/contactpage/Contact';
 import Success from './pages/contactpage/Success';
+import PrivacyPolicy from './pages/contactpage/PrivacyPolicy';
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
         <Route path='/portfolio' element={<PortfolioPage />} />
         <Route path='/contact' element={<ContactForm />} />
         <Route path='/success' element={<Success />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
 
 
         {/* Projects */}
