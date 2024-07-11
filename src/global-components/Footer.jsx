@@ -19,18 +19,18 @@ const Footer = () => {
                             </div>
                             <div>
                                 <p className="tracking-wide font-semibold uppercase" style={{ color: '#FFF5F0' }}>Explore</p>
-                                <ul className="mt-4 space-y-2" style={{ color: '#FFF5F0' }}>
+                                <ul className="mt-4 space-y-1" style={{ color: '#FFF5F0' }}>
                                     <li>
-                                        <Link to="/" className="mont-regular transition-colors duration-200 hover:text-orange-500">Home</Link>
+                                        <Link to="/" className="text-lg mont-regular transition-colors duration-200 hover:text-orange-500">Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="/services" className="mont-regular transition-colors duration-200 hover:text-orange-500">Services</Link>
+                                        <Link to="/services" className="text-lg mont-regular transition-colors duration-200 hover:text-orange-500">Services</Link>
                                     </li>
                                     <li>
-                                        <Link to="/portfolio" className="mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</Link>
+                                        <Link to="/portfolio" className="text-lg mont-regular transition-colors duration-200 hover:text-orange-500">Portfolio</Link>
                                     </li>
                                     <li>
-                                        <Link to="/contact" className="mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
+                                        <Link to="/contact" className="text-lg mont-regular transition-colors duration-200 hover:text-orange-500">Contact Us</Link>
                                     </li>
                                 </ul>
                             </div>

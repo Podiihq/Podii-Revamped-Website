@@ -94,7 +94,7 @@ export const ServicesComponent = () => {
             projectImage: <ImageComponent image={Image1} alt="" myClassName={"lg:w-full rounded-lg w-24"} />,
             projectDescription: "Learn more about how we approach web development with the",
             projectName: "Vibrant Village case study",
-            link: "#",
+            link: "/vibrant",
         },
         {
             title: "Mobile Development",
@@ -108,7 +108,7 @@ export const ServicesComponent = () => {
             projectImage: <ImageComponent image={Image2} alt="" myClassName={"lg:w-full rounded-lg w-24"} />,
             projectDescription: "Learn more about how we do mobile development with the",
             projectName: "Smart Farm case study",
-            link: "#",
+            link: "/smart-farm",
         },
         {
             title: "UX/UI Design",
@@ -207,6 +207,7 @@ export const ServicesComponent = () => {
                     projectImage={item.projectImage}
                     projectDescription={item.projectDescription}
                     projectName={item.projectName}
+                    link={item.link}
                 />
             ))}
         </div>
