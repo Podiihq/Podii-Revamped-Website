@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Icon1 from "../../../assets/images/updated/service/web-icon.svg"
 import Icon2 from "../../../assets/images/updated/service/mobile-icon.svg"
@@ -16,14 +16,28 @@ import { BiSolidDownArrow } from "react-icons/bi";
 import { BiSolidUpArrow } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { ImageComponent } from "../../components/MarqueeSection";
+import { animateHeroTitle } from "../../../global-animations/animation";
+import gsap from "gsap";
 
 
 export const ServicesItem = ({ title, icon, projectImage, projectDescription, projectName, subTitle, description, link }) => {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
+    const heroRef = useRef(null);
+    const timeline = useRef(gsap.timeline());
+    useEffect(() => {
+        const context = gsap.context(() => {
+            const tl = timeline.current;
+
+            tl
+                .add(animateHeroTitle(), "=+10%")
+
+        }, heroRef);
+        return () => context.revert();
+    }, []);
 
     return (
-        <div className="w-full  hover:bg-[#F4FBF8] border-b">
+        <div ref={heroRef} className="w-full  hover:bg-[#F4FBF8] border-b" data-text-animation>
             <button className="w-full" onClick={() => setIsOpen(!isOpen)}>
                 <div className="flex justify-between items-center p-4 lg:p-6">
                     <div className="flex justify-center items-center gap-4">
