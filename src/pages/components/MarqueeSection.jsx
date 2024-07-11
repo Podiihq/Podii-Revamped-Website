@@ -15,39 +15,6 @@ import { Link } from "react-router-dom"
 
 
 export const MarqueeSection = () => {
-    // const [loading, setLoading] = useState(true);
-    // const [progress, setProgress] = useState(0);
-    // const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7];
-
-
-    // useEffect(() => {
-    //     const loadImages = async () => {
-    //         const promises = images.map((src, index) => {
-    //             return new Promise((resolve, reject) => {
-    //                 const img = new Image();
-    //                 img.src = src;
-    //                 img.onload = () => {
-    //                     setProgress(((index + 1) / images.length) * 100);
-    //                     resolve();
-    //                 };
-    //                 img.onerror = reject;
-    //             });
-    //         });
-
-    //         try {
-    //             await Promise.all(promises);
-    //             setLoading(false);
-    //         } catch (error) {
-    //             console.error('Failed to load images', error);
-    //         }
-    //     };
-
-    //     loadImages();
-    // }, [images]);
-
-    // if (loading) {
-    //     return <Loader progress={Math.round(progress)} />;
-    // }
     return (
         <section>
             <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl">
@@ -70,7 +37,7 @@ export const MarqueeSectionImage = ({ image, link }) => {
 
     return (
         <Link to={link}>
-            <div className="relative group  cursor-pointer duration-300 mx-1">
+            <div className="relative group cursor-pointer duration-300 mx-1">
                 <div
                     className="overlay w-full h-full bg-black bg-opacity-30 uppercase rounded-lg absolute inset-0 z-10 flex items-center justify-center transform opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-white">View Project</p>

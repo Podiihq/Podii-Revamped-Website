@@ -42,7 +42,6 @@ const WorkSection = () => {
                     {works.map((work, index) => (
                         <div key={index}>
                             <ImageComponent image={work.imgSrc} myClassName={"w-full object-cover mb-4"} />
-                            {/* <img src={work.imgSrc} alt="" className="" /> */}
                             <Link to={work.link} className="text-lg lg:text-2xl underline mont-regular">
                                 {work.description}
                             </Link>

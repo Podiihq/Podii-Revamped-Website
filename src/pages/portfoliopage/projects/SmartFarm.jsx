@@ -21,7 +21,7 @@ import Image4 from "../../../assets/images/updated/Heros/qbqthumb.svg"
 
 import Lenis from 'lenis'
 import Footer from '../../../global-components/Footer'
-import ProjectComponent, { PortfolioImageComponent } from '../Components/ProjectComponent'
+import ProjectComponent from '../Components/ProjectComponent'
 import Skeleton from 'react-loading-skeleton'
 import ContactMiniForm from '../../../global-components/ContactMiniForm'
 import gsap from 'gsap'

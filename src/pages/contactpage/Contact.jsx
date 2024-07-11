@@ -116,7 +116,6 @@ const ContactForm = () => {
                 publicKey: '_su5rzwBk-LUIbTdL'
             })
             .then((res) => {
-                // Clear the input fields and display success message
                 setFormData({
                     userName: '',
                     email: '',
@@ -126,7 +125,6 @@ const ContactForm = () => {
                     services: [],
                 });
                 setLoading(false);
-                // window.location.href = 'success.html';
                 navigate('/success');
             })
             .catch((err) => {

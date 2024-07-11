@@ -19,12 +19,10 @@
   display: inline-block;
   position: absolute;
   transition: none !important;
-  /* Remove all transition effects */
 }
 
 .overlay {
   transition: none !important;
-  /* Remove all transition effects */
 }
 
 .owl-carousel .item {

@@ -6,7 +6,6 @@ import Image1 from "../../../assets/images/updated/featured/1.svg"
 import Image2 from "../../../assets/images/updated/featured/2.svg"
 import Image3 from "../../../assets/images/updated/Heros/tecktona3.svg"
 import Image4 from "../../../assets/images/updated/Heros/qbqthumb.svg"
-import { ImageComponent } from '../../components/MarqueeSection'
 import Skeleton from 'react-loading-skeleton'
 
 const ProjectComponent = ({ image, link, description, title }) => {
@@ -22,7 +21,6 @@ const ProjectComponent = ({ image, link, description, title }) => {
                         <GoArrowRight className='text-2xl' />
                     </Link>
                 </div>
-
             </div>
         </div>
     )
