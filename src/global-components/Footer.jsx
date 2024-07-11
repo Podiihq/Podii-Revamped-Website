@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "../assets/images/updated/footer_logo.svg"
-import image1 from "../assets/images/footer/Screenshot 2024-07-03 at 17.55.09.png"
+import image1 from "../assets/images/footer/email.svg"
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
@@ -41,7 +41,7 @@ const Footer = () => {
                                         <p className="mont-regular transition-colors duration-300 hover:text-deep-purple-accent-200">0733 000003</p>
                                     </li>
                                     <li>
-                                        <img src={image1} alt="" className="w-44" />
+                                        <img src={image1} alt="" className="w-40" />
                                     </li>
                                     <li>
                                         <p className="mont-regular transition-colors duration-300 hover:text-deep-purple-accent-200">Lutheran Kisumu, Kenya</p>
