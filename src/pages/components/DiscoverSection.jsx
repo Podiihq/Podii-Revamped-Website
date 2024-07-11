@@ -14,7 +14,7 @@ const DiscoverSection = () => {
                 </h2>
                 <div className="flex flex-col items-center md:flex-row lg:pt-8">
                     <Link
-                        to="#"
+                        to="/contact"
                         className="text-white rounded-full px-8 bg-[#FF5E0E] hover:bg-[#307457] inline-flex items-center justify-left w-full h-14 mb-3 font-medium tracking-wide my-btns"
                     >
                         <span

@@ -10,6 +10,7 @@ import Image7 from "../../assets/images/new-home/update01/7.svg"
 import Marquee from "react-fast-marquee";
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { Link } from "react-router-dom"
 
 
 
@@ -51,13 +52,13 @@ export const MarqueeSection = () => {
         <section>
             <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl">
                 <Marquee speed={30} pauseOnHover>
-                    <MarqueeSectionImage image={Image1} />
-                    <MarqueeSectionImage image={Image2} />
-                    <MarqueeSectionImage image={Image3} />
-                    <MarqueeSectionImage image={Image4} />
-                    <MarqueeSectionImage image={Image5} />
-                    <MarqueeSectionImage image={Image6} />
-                    <MarqueeSectionImage image={Image7} />
+                    <MarqueeSectionImage image={Image1} link={"/vibrant"} />
+                    <MarqueeSectionImage image={Image2} link={"/vibrant"} />
+                    <MarqueeSectionImage image={Image3} link={"/smart-farm"} />
+                    <MarqueeSectionImage image={Image4} link={"/smart-farm"} />
+                    <MarqueeSectionImage image={Image5} link={"/vibrant"} />
+                    <MarqueeSectionImage image={Image6} link={"/vibrant"} />
+                    <MarqueeSectionImage image={Image7} link={"#"} />
                 </Marquee>
             </div>
         </section>
@@ -65,23 +66,24 @@ export const MarqueeSection = () => {
 };
 
 
-export const MarqueeSectionImage = ({ image }) => {
+export const MarqueeSectionImage = ({ image, link }) => {
 
     return (
-        <div className="relative group  cursor-pointer duration-300 mx-1">
-            <div
-                className="overlay w-full h-full bg-black bg-opacity-30 uppercase rounded-lg absolute inset-0 z-10 flex items-center justify-center transform opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white">View Project</p>
+        <Link to={link}>
+            <div className="relative group  cursor-pointer duration-300 mx-1">
+                <div
+                    className="overlay w-full h-full bg-black bg-opacity-30 uppercase rounded-lg absolute inset-0 z-10 flex items-center justify-center transform opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-white">View Project</p>
+                </div>
+                <ImageComponent image={image} myClassName={"h-[200px] lg:min-h-[350px] object-cover"} />
             </div>
-            <ImageComponent image={image} myClassName={"h-[200px] lg:min-h-[350px] object-cover"} />
-            {/* <img src={image} alt="" className="h-[200px] lg:min-h-[350px] object-cover" /> */}
-        </div>
+        </Link>
     );
 }
 
 
 
-export const ImageComponent = ({ image, myClassName }) => {
+export const ImageComponent = ({ image, myClassName, link }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     const handleImageLoad = () => {
