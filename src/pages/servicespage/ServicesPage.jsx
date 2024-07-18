@@ -6,7 +6,7 @@ import DiscoverSection from '../components/DiscoverSection'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { animateHeroTitle } from '../../global-animations/animation'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet'
 
 const ServicesPage = () => {
     const heroRef = useRef(null);
