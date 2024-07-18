@@ -6,6 +6,7 @@ import Footer from '../../global-components/Footer';
 import { useNavigate } from 'react-router';
 import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
+import { Helmet } from 'react-helmet';
 
 const ContactForm = () => {
     const heroRef = useRef(null);
@@ -135,6 +136,33 @@ const ContactForm = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Podii | Contact Us</title>
+                <meta property="og:url" content="https://podiihq.com/contact" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Partner with best Software Experts in Kenya" />
+                <meta property="og:description"
+                    content="Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!" />
+                <meta property="og:image"
+                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+
+                {/* {TWITTER} */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://podiihq.com/contact" />
+                <meta name="twitter:title" content="Partner with best Software Experts in Kenya" />
+                <meta name="twitter:description"
+                    content="Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!" />
+                <meta name="twitter:image"
+                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+
+                {/* Whatapp */}
+                <meta property="og:title" content="Partner with best Software Experts in Kenya" />
+                <meta property="og:description"
+                    content="Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!" />
+                <meta property="og:image"
+                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+                <meta property="og:url" content="https://podiihq.com/contact" />
+            </Helmet>
             <div className='bg-[#F4FBF8]' ref={heroRef}>
                 <Navbar />
                 <section className='pt-10 lg:pt-20'>

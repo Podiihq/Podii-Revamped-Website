@@ -10,6 +10,7 @@ import Footer from '../global-components/Footer'
 import Lenis from 'lenis'
 import { animateHeroTitle } from '../global-animations/animation'
 import gsap from 'gsap'
+import { Helmet } from 'react-helmet'
 
 const HomePage = () => {
     const heroRef = useRef(null);
@@ -47,35 +48,69 @@ const HomePage = () => {
         return () => context.revert();
     }, []);
     return (
-        <div ref={heroRef}>
-            <Navbar />
-            <section className="px-4 pt-20 lg:pt-4 pb-10 container mx-auto lg:px-8 mt-8 text-[#303030]">
-                <div className="items-center lg:mt-32 md:mt-4">
-                    <div>
-                        <h1 className="mb-4 lg:mb-0 text-4xl lg:text-[56px] leading-tight text-center" data-text-animation>
-                            Creating your <span className="text-[#FF5E0E]">Vision</span><br /> with innovative{' '}
-                            <span className="text-[#FF5E0E]">Software.</span>
-                        </h1>
+        <div>
+            <Helmet>
+                <title>Custom Software Development Company in Kenya</title>
+                <meta name="description"
+                    content="We are a software consulting company extending modern software, mobile, and web application development. " />
+
+                {/* Facebook */}
+                <meta property="og:url" content="https://podiihq.com/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Custom Software Development Company in Kenya" />
+                <meta property="og:description"
+                    content="Podii is a custom software development and consulting company. Find innovative and affordable tech solutions by our expert software developers. " />
+                <meta property="og:image"
+                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://podiihq.com/" />
+                <meta name="twitter:title" content="Custom Software Development Company in Kenya" />
+                <meta name="twitter:description"
+                    content="Podii is a custom software development and consulting company. Find innovative and affordable tech solutions by our expert software developers. " />
+                <meta name="twitter:image"
+                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+
+                {/* {Whatsapp} */}
+                <meta property="og:title" content="Custom Software Development Company in Kenya" />
+                <meta property="og:description"
+                    content="Podii is a custom software development and consulting company. Find innovative and affordable tech solutions by our expert software developers." />
+                <meta property="og:image"
+                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+                <meta property="og:url" content="https://podiihq.com/" />
+            </Helmet>
+            <div ref={heroRef}>
+                <Navbar />
+                <section className="px-4 pt-20 lg:pt-4 pb-10 container mx-auto lg:px-8 mt-8 text-[#303030]">
+                    <div className="items-center lg:mt-32 md:mt-4">
+                        <div>
+                            <h1 className="mb-4 lg:mb-0 text-4xl lg:text-[56px] leading-tight text-center" data-text-animation>
+                                Creating your <span className="text-[#FF5E0E]">Vision</span><br /> with innovative{' '}
+                                <span className="text-[#FF5E0E]">Software.</span>
+                            </h1>
+                        </div>
+                        <div className="mx-auto lg:w-1/2" data-text-animation>
+                            <p className="text-lg lg:text-2xl mt-2 text-center mont-regular">
+                                We deliver exceptional digital solutions on time and foster collaboration to ensure your organization's success.
+                            </p>
+                        </div>
                     </div>
-                    <div className="mx-auto lg:w-1/2" data-text-animation>
-                        <p className="text-lg lg:text-2xl mt-2 text-center mont-regular">
-                            We deliver exceptional digital solutions on time and foster collaboration to ensure your organization's success.
-                        </p>
-                    </div>
+                </section>
+                <div data-text-animation>
+                    <MarqueeSection />
                 </div>
-            </section>
-            <div data-text-animation>
-                <MarqueeSection />
+                <div data-text-animation>
+                    <ServicesSection />
+                </div>
+                <WorkSection />
+                <PartnerWithUsSection />
+                <ClientTestimonialsSection />
+                <DiscoverSection />
+                <Footer />
             </div>
-            <div data-text-animation>
-                <ServicesSection />
-            </div>
-            <WorkSection />
-            <PartnerWithUsSection />
-            <ClientTestimonialsSection />
-            <DiscoverSection />
-            <Footer />
         </div>
+
     )
 }
 
