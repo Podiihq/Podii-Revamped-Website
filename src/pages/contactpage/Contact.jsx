@@ -144,7 +144,7 @@ const ContactForm = () => {
                 <meta property="og:description"
                     content="Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!" />
                 <meta property="og:image"
-                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+                    content="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 
                 {/* {TWITTER} */}
                 <meta name="twitter:card" content="summary_large_image" />
@@ -153,14 +153,14 @@ const ContactForm = () => {
                 <meta name="twitter:description"
                     content="Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!" />
                 <meta name="twitter:image"
-                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+                    content="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 
                 {/* Whatapp */}
                 <meta property="og:title" content="Partner with best Software Experts in Kenya" />
                 <meta property="og:description"
                     content="Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!" />
                 <meta property="og:image"
-                    content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
+                    content="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                 <meta property="og:url" content="https://podiihq.com/contact" />
             </Helmet>
             <div className='bg-[#F4FBF8]' ref={heroRef}>
