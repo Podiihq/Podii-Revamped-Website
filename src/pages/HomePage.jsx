@@ -53,7 +53,7 @@ const HomePage = () => {
                 mainTitle={"Custom Software Development Company in Kenya"}
                 title={"Custom Software Development Company in Kenya"}
                 description={"Podii is a custom software development and consulting company. Find innovative and affordable tech solutions by our expert software developers."}
-                url={"https://podiihq.com/"}
+                url={"https://podiitest.netlify.app/"}
                 image={"https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"}
                 keywords={"Software Consulting, Cloud computing, UI/UX, Mobile Development, Web Development, DevOps, Podii, technology "}
             />

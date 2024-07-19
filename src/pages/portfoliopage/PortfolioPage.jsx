@@ -48,7 +48,7 @@ const PortfolioPage = () => {
                 mainTitle={"Podii | Portfolio"}
                 title={"Explore real-life brilliant software solutions"}
                 description={"See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions "}
-                url={"https://podiihq.com/portfolio"}
+                url={"https://podiitest.netlify.app/portfolio"}
                 image={"https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"}
                 keywords={"Portfolio, Projects, Mobile App, Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing, Quality Assurance "}
             />

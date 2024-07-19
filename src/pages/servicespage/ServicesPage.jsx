@@ -49,7 +49,7 @@ const ServicesPage = () => {
                 mainTitle={"Podii | Services"}
                 title={"Find Software Development Services for Businesses"}
                 description={"Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance"}
-                url={"https://podiihq.com/services"}
+                url={"https://podiitest.netlify.app/services"}
                 image={"https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"}
                 keywords={"Mobile App, Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing, Quality Assurance "}
             />
