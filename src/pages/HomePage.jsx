@@ -10,7 +10,6 @@ import Footer from '../global-components/Footer'
 import Lenis from 'lenis'
 import { animateHeroTitle } from '../global-animations/animation'
 import gsap from 'gsap'
-import { Helmet } from 'react-helmet-async'
 import SEO from '../global-components/SEO'
 
 const HomePage = () => {
@@ -51,6 +50,7 @@ const HomePage = () => {
     return (
         <div>
             <SEO
+                mainTitle={"Custom Software Development Company in Kenya"}
                 title={"Custom Software Development Company in Kenya"}
                 description={"Podii is a custom software development and consulting company. Find innovative and affordable tech solutions by our expert software developers."}
                 url={"https://podiihq.com/"}

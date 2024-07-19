@@ -6,7 +6,6 @@ import DiscoverSection from '../components/DiscoverSection'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { animateHeroTitle } from '../../global-animations/animation'
-import { Helmet } from 'react-helmet-async'
 import SEO from '../../global-components/SEO'
 
 const ServicesPage = () => {
@@ -47,6 +46,7 @@ const ServicesPage = () => {
     return (
         <div>
             <SEO
+                mainTitle={"Podii | Services"}
                 title={"Find Software Development Services for Businesses"}
                 description={"Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance"}
                 url={"https://podiihq.com/services"}

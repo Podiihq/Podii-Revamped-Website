@@ -6,7 +6,6 @@ import Footer from '../../global-components/Footer';
 import { useNavigate } from 'react-router';
 import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
-import { Helmet } from 'react-helmet-async';
 import SEO from '../../global-components/SEO';
 
 const ContactForm = () => {
@@ -138,6 +137,7 @@ const ContactForm = () => {
     return (
         <>
             <SEO
+                mainTitle={"Podii | Contact Us"}
                 title={"Partner with best Software Experts in Kenya"}
                 description={"Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!"}
                 url={"https://podiihq.com/contact"}

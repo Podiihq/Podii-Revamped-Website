@@ -15,9 +15,11 @@ import { HelmetProvider } from 'react-helmet-async';
 
 function App() {
   const location = useLocation();
+  const helmetContext = {};
+
   return (
     <>
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <Routes location={location} key={location.pathname}>
           <Route index element={<HomePage />} />
           <Route path='/services' element={<ServicesPage />} />

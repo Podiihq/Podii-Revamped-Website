@@ -1,10 +1,10 @@
 // SEO.js
 import { Helmet } from 'react-helmet-async';
 
-function SEO({ title, description, keywords, url, image }) {
+function SEO({ mainTitle, title, description, keywords, url, image }) {
     return (
         <Helmet>
-            <title>{title}</title>
+            <title>{mainTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
 

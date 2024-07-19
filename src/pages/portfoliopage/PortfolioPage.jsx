@@ -6,7 +6,6 @@ import Footer from '../../global-components/Footer';
 import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
 import DiscoverSection from '../components/DiscoverSection';
-import { Helmet } from 'react-helmet-async';
 import SEO from '../../global-components/SEO';
 
 const PortfolioPage = () => {
@@ -46,6 +45,7 @@ const PortfolioPage = () => {
     return (
         <div>
             <SEO
+                mainTitle={"Podii | Portfolio"}
                 title={"Explore real-life brilliant software solutions"}
                 description={"See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions "}
                 url={"https://podiihq.com/portfolio"}
