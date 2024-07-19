@@ -7,6 +7,7 @@ import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
 import DiscoverSection from '../components/DiscoverSection';
 import { Helmet } from 'react-helmet-async';
+import SEO from '../../global-components/SEO';
 
 const PortfolioPage = () => {
     const heroRef = useRef(null);
@@ -44,27 +45,13 @@ const PortfolioPage = () => {
     }, []);
     return (
         <div>
-            <Helmet>
-                <title>Podii | Portfolio</title>
-                <meta property="og:url" content="https://podiihq.com/portfolio" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Explore real-life brilliant software solutions" />
-                <meta property="og:description" content="See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions " />
-                <meta property="og:image" content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://podiihq.com/portfolio" />
-                <meta name="twitter:title" content="Explore real-life brilliant software solutions" />
-                <meta name="twitter:description" content="See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions " />
-                <meta name="twitter:image" content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
-
-                {/* wWhatsapp */}
-                <meta property="og:title" content="Explore real-life brilliant software solutions" />
-                <meta property="og:description" content="See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions" />
-                <meta property="og:image" content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
-                <meta property="og:url" content="https://podiihq.com/portfolio" />
-            </Helmet>
+            <SEO
+                title={"Explore real-life brilliant software solutions"}
+                description={"See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions "}
+                url={"https://podiihq.com/portfolio"}
+                image={"https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"}
+                keywords={"Portfolio, Projects, Mobile App, Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing, Quality Assurance "}
+            />
             <div ref={heroRef}>
                 <div className='bg-[#F4FBF8]'>
                     <Navbar />

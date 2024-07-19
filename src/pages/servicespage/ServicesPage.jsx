@@ -7,6 +7,7 @@ import Lenis from 'lenis'
 import gsap from 'gsap'
 import { animateHeroTitle } from '../../global-animations/animation'
 import { Helmet } from 'react-helmet-async'
+import SEO from '../../global-components/SEO'
 
 const ServicesPage = () => {
     const heroRef = useRef(null);
@@ -45,25 +46,13 @@ const ServicesPage = () => {
     }, []);
     return (
         <div>
-            <Helmet>
-                <title>Podii | Services</title>
-                <meta property="og:url" content="https://podiihq.com/services" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Find Software Development Services for Businesses" />
-                <meta property="og:description" content="Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance " />
-                <meta property="og:image" content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://podiihq.com/services" />
-                <meta name="twitter:title" content="Find Software Development Services for Businesses" />
-                <meta name="twitter:description" content="Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance" />
-                <meta name="twitter:image" content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
-
-                <meta property="og:title" content="Find Software Development Services for Businesses" />
-                <meta property="og:description" content="Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance" />
-                <meta property="og:image" content="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
-                <meta property="og:url" content="https://podiihq.com/services" />
-            </Helmet>
+            <SEO
+                title={"Find Software Development Services for Businesses"}
+                description={"Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance"}
+                url={"https://podiihq.com/services"}
+                image={"https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"}
+                keywords={"Mobile App, Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing, Quality Assurance "}
+            />
             <div className='bg-[#F4FBF8]' ref={heroRef}>
                 <Navbar />
                 <section className='lg:pt-20 pt-10'>

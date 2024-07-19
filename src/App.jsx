@@ -10,26 +10,30 @@ import QBQ from './pages/portfoliopage/projects/QBQ';
 import ContactForm from './pages/contactpage/Contact';
 import Success from './pages/contactpage/Success';
 import PrivacyPolicy from './pages/contactpage/PrivacyPolicy';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 function App() {
   const location = useLocation();
   return (
     <>
-      <Routes location={location} key={location.pathname}>
-        <Route index element={<HomePage />} />
-        <Route path='/services' element={<ServicesPage />} />
-        <Route path='/portfolio' element={<PortfolioPage />} />
-        <Route path='/contact' element={<ContactForm />} />
-        <Route path='/success' element={<Success />} />
-        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+      <HelmetProvider>
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<HomePage />} />
+          <Route path='/services' element={<ServicesPage />} />
+          <Route path='/portfolio' element={<PortfolioPage />} />
+          <Route path='/contact' element={<ContactForm />} />
+          <Route path='/success' element={<Success />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
 
+          {/* Projects */}
+          <Route path='/smart-farm' element={<SmartFarm />} />
+          <Route path='/vibrant' element={<Vibrant />} />
+          <Route path='/tectona' element={<Tectona />} />
+          <Route path='/qbq' element={<QBQ />} />
+        </Routes>
+      </HelmetProvider>
 
-        {/* Projects */}
-        <Route path='/smart-farm' element={<SmartFarm />} />
-        <Route path='/vibrant' element={<Vibrant />} />
-        <Route path='/tectona' element={<Tectona />} />
-        <Route path='/qbq' element={<QBQ />} />
-      </Routes>
     </>
   )
 }
