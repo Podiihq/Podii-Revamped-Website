@@ -12,10 +12,10 @@ import Success from './pages/contactpage/Success';
 import PrivacyPolicy from './pages/contactpage/PrivacyPolicy';
 import { HelmetProvider } from 'react-helmet-async';
 
+const helmetContext = {};
 
 function App() {
   const location = useLocation();
-  const helmetContext = {};
 
   return (
     <>
@@ -35,7 +35,6 @@ function App() {
           <Route path='/qbq' element={<QBQ />} />
         </Routes>
       </HelmetProvider>
-
     </>
   )
 }
