@@ -18,6 +18,7 @@ function SEO({ mainTitle, title, description, keywords, url, image }) {
             {/* Twitter Card Tags */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={title} />
+            <meta property="twitter:domain" content={url}></meta>
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
 
