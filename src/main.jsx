@@ -15,17 +15,14 @@
 //   </React.StrictMode>,
 // )
 
-// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App.jsx';
 import './index.css';
+import { hydrate } from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
+hydrate(
   <React.StrictMode>
     <HelmetProvider>
       <Router>
@@ -34,6 +31,6 @@ root.render(
         </Routes>
       </Router>
     </HelmetProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-

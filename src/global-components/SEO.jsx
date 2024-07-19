@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 function SEO({ mainTitle, title, description, keywords, url, image }) {
     return (
-        <Helmet prioritizeSeoTags="true">
+        <Helmet>
             <title>{mainTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
