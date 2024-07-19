@@ -6,7 +6,7 @@ import Footer from '../../global-components/Footer';
 import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
 import DiscoverSection from '../components/DiscoverSection';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const PortfolioPage = () => {
     const heroRef = useRef(null);

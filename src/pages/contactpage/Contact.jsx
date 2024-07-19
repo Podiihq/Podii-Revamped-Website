@@ -6,7 +6,7 @@ import Footer from '../../global-components/Footer';
 import { useNavigate } from 'react-router';
 import gsap from 'gsap';
 import { animateHeroTitle } from '../../global-animations/animation';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const ContactForm = () => {
     const heroRef = useRef(null);

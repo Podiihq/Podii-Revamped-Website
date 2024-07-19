@@ -10,7 +10,7 @@ import Footer from '../global-components/Footer'
 import Lenis from 'lenis'
 import { animateHeroTitle } from '../global-animations/animation'
 import gsap from 'gsap'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 const HomePage = () => {
     const heroRef = useRef(null);
