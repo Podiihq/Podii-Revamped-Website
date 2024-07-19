@@ -22,9 +22,11 @@ import App from './App.jsx';
 import './index.css';
 import { hydrate } from 'react-dom';
 
+const helmetContext = {};
+
 hydrate(
   <React.StrictMode>
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext} >
       <Router>
         <Routes>
           <Route path='/*' element={<App />} />
