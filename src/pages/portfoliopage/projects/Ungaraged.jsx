@@ -132,16 +132,16 @@ const Ungaraged = () => {
                                 <div className="">
                                     <h3 className="text-base lg:text-[20px] font-medium uppercase pb-3 tracking-wide text-[#307457]">The Solution</h3>
                                     <p className="text-base lg:text-[20px] lg:leading-8 mont-regular">To address these challenges, we implemented a comprehensive website for Ungaraged with:</p>
-                                    <p className="text-base lg:text-[20px] mt-8 lg:leading-8 mont-regular">
-                                        <span className="text-[#FF5E0E] font-semibold ">Service Information:</span>
+                                    <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">
+                                        <span className="text-[#FF5E0E] font-semibold ">Service Information: </span>
                                         We created a website featuring detailed information about Ungaraged’s tuning services, expertise, and contact details. This centralized platform allows potential customers to easily find and understand the full range of services offered, helping them make informed decisions.
                                     </p>
                                     <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">
-                                        <span className="text-[#FF5E0E] font-semibold ">FAQ Section:</span>
+                                        <span className="text-[#FF5E0E] font-semibold ">FAQ Section: </span>
                                         Developed an extensive FAQ section to address common questions about their services. This not only reduces repetitive inquiries but also empowers customers by providing them with quick answers to their most pressing questions.
                                     </p>
                                     <p className="text-base lg:text-[20px] mt-4 lg:leading-8 mont-regular">
-                                        <span className="text-[#FF5E0E] font-semibold ">Live Chat Integration:</span>
+                                        <span className="text-[#FF5E0E] font-semibold ">Live Chat Integration: </span>
                                         Implemented a live chat feature using tawk.to, enabling immediate customer support and feedback. This real-time interaction capability is crucial for a business like Ungaraged, where customers often have specific and technical questions that require prompt and accurate responses
                                     </p>
                                 </div>
