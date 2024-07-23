@@ -6,13 +6,14 @@ import Image1 from "../../../assets/images/updated/featured/1.svg"
 import Image2 from "../../../assets/images/updated/featured/2.svg"
 import Image3 from "../../../assets/images/updated/Heros/tecktona3.svg"
 import Image4 from "../../../assets/images/updated/Heros/qbqthumb.svg"
+import Image5 from "../../../assets/images/updated/Heros/ungaraged-thumbnail.png"
 import Skeleton from 'react-loading-skeleton'
 
 const ProjectComponent = ({ image, link, description, title }) => {
     return (
         <div>
             <div>
-                <PortfolioImageComponent image={image} alt="" myClassName="object-cover w-full" />
+                <PortfolioImageComponent image={image} alt="" myClassName="object-cover w-full rounded-xl" />
                 <p className="text-base lg:text-2xl font-light mt-4 mont-regular"><span className="font-semibold">{title} -</span> {description}</p>
                 <div className='flex'>
                     <Link to={link}
@@ -56,6 +57,12 @@ export const Projects = () => {
                 link={"/qbq"}
                 description={"A real-time game, designed to educate players on cyber security while entertaining them."}
                 title={"QBQ"}
+            />
+            <ProjectComponent
+                image={Image5}
+                link={"/ungaraged"}
+                description={" A user friendly website for car enthusiasts in Kenya to access car tuning services"}
+                title={"Ungaraged"}
             />
         </div>
     )

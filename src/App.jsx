@@ -11,6 +11,7 @@ import ContactForm from './pages/contactpage/Contact';
 import Success from './pages/contactpage/Success';
 import PrivacyPolicy from './pages/contactpage/PrivacyPolicy';
 import { HelmetProvider } from 'react-helmet-async';
+import Ungaraged from './pages/portfoliopage/projects/Ungaraged';
 
 function App() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function App() {
         <Route path='/vibrant' element={<Vibrant />} />
         <Route path='/tectona' element={<Tectona />} />
         <Route path='/qbq' element={<QBQ />} />
+        <Route path='/ungaraged' element={<Ungaraged />} />
       </Routes>
     </>
   )
