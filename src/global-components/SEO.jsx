@@ -1,5 +1,5 @@
 // SEO.js
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 function SEO({ mainTitle, title, description, keywords, url, image }) {
     return (
