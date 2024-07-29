@@ -46,7 +46,7 @@ const ServicesPage = () => {
     return (
         <div>
             <SEO
-                mainTitle={"Podii | Services"}
+                mainTitle={"Find Software Development Services for Businesses"}
                 title={"Find Software Development Services for Businesses"}
                 description={"Explore software development services in Mobile and Web Apps, DevOps, UX/UI Design, Database Design, Cloud Computing and Quality Assurance"}
                 url={"https://podiitest.netlify.app/services"}

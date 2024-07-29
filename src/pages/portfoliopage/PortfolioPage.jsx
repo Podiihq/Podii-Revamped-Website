@@ -45,7 +45,7 @@ const PortfolioPage = () => {
     return (
         <div>
             <SEO
-                mainTitle={"Podii | Portfolio"}
+                mainTitle={"Explore real-life brilliant software solutions"}
                 title={"Explore real-life brilliant software solutions"}
                 description={"See our technical expertise showcase by brilliant projects and how we empower businesses through tailor-made software solutions "}
                 url={"https://podiitest.netlify.app/portfolio"}

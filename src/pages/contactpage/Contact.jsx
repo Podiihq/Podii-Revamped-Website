@@ -137,7 +137,7 @@ const ContactForm = () => {
     return (
         <>
             <SEO
-                mainTitle={"Podii | Contact Us"}
+                mainTitle={"Partner with best Software Experts in Kenya"}
                 title={"Partner with best Software Experts in Kenya"}
                 description={"Ready to get your project started today? Let Podii, the best software experts in Kenya bring your unique vision to life and grow your business!"}
                 url={"https://podiihq.com/contact"}
