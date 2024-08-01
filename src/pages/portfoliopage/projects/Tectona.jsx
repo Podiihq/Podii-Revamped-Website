@@ -178,13 +178,13 @@ const Tectona = () => {
                 <div className='grid lg:grid-cols-2 gap-10'>
                     <ProjectComponent
                         image={Image3}
-                        link={"/smart-farm"}
+                        link={"/portfolio/smart-farm"}
                         description={"a mobile app allowing large-scale chicken farmers to digitize all farm records"}
                         title={"Smart Farm"}
                     />
                     <ProjectComponent
                         image={Image4}
-                        link={"/vibrant"}
+                        link={"/portfolio/vibrant"}
                         description={"Enterprise resource managing system for an NGO in western Kenya"}
                         title={"ERP"}
                     />

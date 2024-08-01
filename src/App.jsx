@@ -27,11 +27,11 @@ function App() {
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
 
         {/* Projects */}
-        <Route path='/smart-farm' element={<SmartFarm />} />
-        <Route path='/vibrant' element={<Vibrant />} />
-        <Route path='/tectona' element={<Tectona />} />
-        <Route path='/qbq' element={<QBQ />} />
-        <Route path='/ungaraged' element={<Ungaraged />} />
+        <Route path='/portfolio/smart-farm' element={<SmartFarm />} />
+        <Route path='/portfolio/vibrant' element={<Vibrant />} />
+        <Route path='/portfolio/tectona' element={<Tectona />} />
+        <Route path='/portfolio/qbq' element={<QBQ />} />
+        <Route path='/portfolio/ungaraged' element={<Ungaraged />} />
       </Routes>
     </>
   )

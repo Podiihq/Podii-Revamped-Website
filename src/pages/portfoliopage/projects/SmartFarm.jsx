@@ -182,13 +182,13 @@ const SmartFarm = () => {
                 <div className='grid lg:grid-cols-2 gap-10'>
                     <ProjectComponent
                         image={Image3}
-                        link={"/vibrant"}
+                        link={"/portfolio/vibrant"}
                         description={"Enterprise resource managing system for an NGO in western Kenya"}
                         title={"ERP"}
                     />
                     <ProjectComponent
                         image={Image4}
-                        link={"/qbq"}
+                        link={"/portfolio/qbq"}
                         description={"A real-time game, designed to educate players on cyber security while entertaining them."}
                         title={"QBQ"}
                     />

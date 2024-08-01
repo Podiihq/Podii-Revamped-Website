@@ -209,13 +209,13 @@ const Vibrant = () => {
                 <div className='grid lg:grid-cols-2 gap-10'>
                     <ProjectComponent
                         image={Image3}
-                        link={"/smart-farm"}
+                        link={"/portfolio/smart-farm"}
                         description={"a mobile app allowing large-scale chicken farmers to digitize all farm records"}
                         title={"Smart Farm"}
                     />
                     <ProjectComponent
                         image={Image4}
-                        link={"/tectona"}
+                        link={"/portfolio/tectona"}
                         description={"A custom software platform transforming the project management"}
                         title={"Tectona MEL Platfrom"}
                     />

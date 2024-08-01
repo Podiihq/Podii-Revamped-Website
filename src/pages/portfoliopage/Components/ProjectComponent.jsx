@@ -36,31 +36,31 @@ export const Projects = () => {
         <div className='grid lg:grid-cols-2 gap-10'>
             <ProjectComponent
                 image={Image1}
-                link={"/smart-farm"}
+                link={"/portfolio/smart-farm"}
                 description={"A mobile app allowing large-scale chicken farmers to digitize all farm records"}
                 title={"Smart farm"}
             />
             <ProjectComponent
                 image={Image2}
-                link={"/vibrant"}
+                link={"/portfolio/vibrant"}
                 description={"Enterprise resource managing system for an NGO in western Kenya"}
                 title={"ERP"}
             />
             <ProjectComponent
                 image={Image3}
-                link={"/tectona"}
+                link={"/portfolio/tectona"}
                 description={"A custom software platform transforming the project management"}
                 title={"Tectona MEL Platform"}
             />
             <ProjectComponent
                 image={Image4}
-                link={"/qbq"}
+                link={"/portfolio/qbq"}
                 description={"A real-time game, designed to educate players on cyber security while entertaining them."}
                 title={"QBQ"}
             />
             <ProjectComponent
                 image={Image5}
-                link={"/ungaraged"}
+                link={"/portfolio/ungaraged"}
                 description={" A user friendly website for car enthusiasts in Kenya to access car tuning services"}
                 title={"Ungaraged"}
             />

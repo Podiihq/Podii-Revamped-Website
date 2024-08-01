@@ -11,17 +11,17 @@ const WorkSection = () => {
     const works = [
         {
             imgSrc: Image1,
-            link: '#',
+            link: '/portfolio/vibrant',
             description: 'An Enterprise resource managing system.',
         },
         {
             imgSrc: Image2,
-            link: '#',
+            link: '/portfolio/tectona',
             description: 'A custom project management software.',
         },
         {
             imgSrc: Image3,
-            link: '#',
+            link: '/portfolio/qbq',
             description: 'An educative cyber security game.',
         },
     ];
