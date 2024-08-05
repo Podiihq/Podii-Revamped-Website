@@ -38,11 +38,10 @@ const Navbar = () => {
                         onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                         <IoMenu />
-                        {/* <p className='text-xl uppercase'>Menu</p> */}
                     </button>
                 </div>
                 <div
-                    className={`lg:flex flex-1 lg:flex-none items-center bg-[#fff] lg:bg-transparent lg:shadow-none ${navbarOpen ? 'block' : 'hidden'} h-screen lg:h-0 bg-[#F4FBF8]`}
+                    className={`lg:flex flex-1 lg:flex-none items-center bg-[#fff] lg:bg-transparent lg:shadow-none  ${navbarOpen ? 'block' : 'hidden'} h-screen lg:h-0 bg-[#F4FBF8]`}
                     id="example-collapse-navbar"
                 >
                     <ul className="flex flex-col lg:flex-row list-none">

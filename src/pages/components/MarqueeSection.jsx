@@ -19,13 +19,13 @@ export const MarqueeSection = () => {
         <section>
             <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl">
                 <Marquee speed={30} pauseOnHover>
-                    <MarqueeSectionImage image={Image1} link={"/vibrant"} />
-                    <MarqueeSectionImage image={Image2} link={"/vibrant"} />
-                    <MarqueeSectionImage image={Image3} link={"/smart-farm"} />
-                    <MarqueeSectionImage image={Image4} link={"/smart-farm"} />
-                    <MarqueeSectionImage image={Image5} link={"/vibrant"} />
-                    <MarqueeSectionImage image={Image6} link={"/vibrant"} />
-                    <MarqueeSectionImage image={Image7} link={"#"} />
+                    <MarqueeSectionImage image={Image1} link={"/portfolio/vibrant"} />
+                    <MarqueeSectionImage image={Image2} link={"/portfolio/vibrant"} />
+                    <MarqueeSectionImage image={Image3} link={"/portfolio/smart-farm"} />
+                    <MarqueeSectionImage image={Image4} link={"/portfolio/smart-farm"} />
+                    <MarqueeSectionImage image={Image5} link={"/portfolio/vibrant"} />
+                    <MarqueeSectionImage image={Image6} link={"/portfolio/vibrant"} />
+                    <MarqueeSectionImage image={Image7} link={"https://budgetnke.com/"} />
                 </Marquee>
             </div>
         </section>
