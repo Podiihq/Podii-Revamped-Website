@@ -1,0 +1,44 @@
+.my-hover-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.my-hover-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: black;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.my-hover-container:hover::after {
+    width: 100%;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+.my-hover-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.6s ease, right 0.4s ease;
+}
+
+.my-hover-container:hover::before {
+    transform: scaleX(1);
+    right: 0;
+    transition: transform 0.4s ease;
+}
+
+.my-hover-container:hover::after {
+    width: 100%;
+}
