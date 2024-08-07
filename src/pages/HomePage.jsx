@@ -11,6 +11,7 @@ import Lenis from 'lenis'
 import { animateHeroTitle } from '../global-animations/animation'
 import gsap from 'gsap'
 import SEO from '../global-components/SEO'
+import ClientLogos from './components/ClientLogos'
 
 const HomePage = () => {
     const heroRef = useRef(null);
@@ -84,6 +85,7 @@ const HomePage = () => {
                 <PartnerWithUsSection />
                 <ClientTestimonialsSection />
                 <DiscoverSection />
+                <ClientLogos />
                 <Footer />
             </div>
         </div>
