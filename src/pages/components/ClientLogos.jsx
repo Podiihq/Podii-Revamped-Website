@@ -13,6 +13,8 @@ import Image10 from "../../assets/images/logos/S Fractal Consulting.svg"
 import Image11 from "../../assets/images/logos/Sabatia Logo (1).svg"
 import Image12 from "../../assets/images/logos/Tectona Group Logo.svg"
 import Image13 from "../../assets/images/logos/Ungaranged Logo (1).svg"
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const ClientLogos = () => {
     const [showAll, setShowAll] = useState(false);
@@ -39,7 +41,8 @@ const ClientLogos = () => {
             <div className='relative'>
                 <div className={`grid grid-cols-2 lg:grid-cols-5 gap-x-4 gap-y-6 lg:gap-y-12 items-center transition-all duration-300 overflow-hidden ${showAll ? 'max-h-screen' : 'max-h-[200px]'}`}>
                     {logos.slice(0, showAll ? logos.length : 10).map((logo, index) => (
-                        <img src={logo} alt="" className='place-self-center' key={index} />
+                        // <img src={logo} alt="" className='place-self-center' key={index} />
+                        <LogoImageComponent image={logo} imageClassName={"place-self-center"} key={index} />
                     ))}
                 </div>
                 {!showAll ? (
@@ -61,3 +64,24 @@ const ClientLogos = () => {
 };
 
 export default ClientLogos
+
+
+export const LogoImageComponent = ({ image, imageClassName, link }) => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    const handleImageLoad = () => {
+        setIsLoading(false);
+    };
+
+
+    return (
+        <div>
+            {isLoading && <Skeleton baseColor="#F4FBF8" highlightColor="#d1dbd7" className="w-[100px] h-[100px] lg:w-[290px] lg:h-[150px]" />}
+            <img src={image}
+                alt=""
+                className={`${isLoading ? 'hidden' : ''} ${imageClassName}`}
+                onLoad={handleImageLoad}
+            />
+        </div>
+    )
+}
