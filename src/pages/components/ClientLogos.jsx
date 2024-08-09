@@ -39,7 +39,15 @@ const ClientLogos = () => {
                     Our <span className="text-[#FF5E0E]">Happy</span> customers.
                 </p>
             </div>
-            <div className='relative md:px-4 lg:px-10'>
+            <div className='relative md-px-4 lg:px-10 hidden lg:block'>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-6 lg:gap-y-12 items-center transition-all duration-300 overflow-hidden">
+                    {logos.map((logo, index) => (
+                        <LogoImageComponent image={logo} imageClassName={"place-self-center w-32 lg:w-auto mx-auto lg:mx-0"} key={index} />
+                    ))}
+                </div>
+                <div className='absolute inset-0 z-30 flex items-end justify-center bg-gradient-to-b from-transparent to-[#FFF]' />
+            </div>
+            <div className='relative md:px-4 lg:px-10 lg:hidden'>
                 <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-6 lg:gap-y-12 items-center transition-all duration-300 overflow-hidden ${showAll ? 'max-h-screen' : 'max-h-[200px]'}`}>
                     {logos.slice(0, showAll ? logos.length : 10).map((logo, index) => (
                         <LogoImageComponent image={logo} imageClassName={"place-self-center w-32 lg:w-auto mx-auto lg:mx-0"} key={index} />
