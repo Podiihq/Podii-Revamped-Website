@@ -39,15 +39,15 @@ const ClientLogos = () => {
                     Our <span className="text-[#FF5E0E]">Happy</span> customers.
                 </p>
             </div>
-            <div className='relative lg:px-10'>
-                <div className={`grid grid-cols-2 lg:grid-cols-5 gap-x-4 gap-y-6 lg:gap-y-12 items-center transition-all duration-300 overflow-hidden ${showAll ? 'max-h-screen' : 'max-h-[200px]'}`}>
+            <div className='relative md:px-4 lg:px-10'>
+                <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-6 lg:gap-y-12 items-center transition-all duration-300 overflow-hidden ${showAll ? 'max-h-screen' : 'max-h-[200px]'}`}>
                     {logos.slice(0, showAll ? logos.length : 10).map((logo, index) => (
-                        <LogoImageComponent image={logo} imageClassName={"place-self-center"} key={index} />
+                        <LogoImageComponent image={logo} imageClassName={"place-self-center w-32 lg:w-auto mx-auto lg:mx-0"} key={index} />
                     ))}
                 </div>
                 {!showAll ? (
                     <div className='absolute inset-0 z-30 flex items-end justify-center bg-gradient-to-b from-transparent to-[#FFF]'>
-                        <button onClick={handleLoadMore} className='mb-4 px-4 py-2 bg-[#FF5E0E] text-white rounded-full'>
+                        <button onClick={handleLoadMore} className=' mb-4 px-4 py-2 bg-[#FF5E0E] text-white rounded-full'>
                             See more
                         </button>
                     </div>
