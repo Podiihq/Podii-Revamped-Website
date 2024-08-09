@@ -55,13 +55,13 @@ const ClientLogos = () => {
                 </div>
                 {!showAll ? (
                     <div className='absolute inset-0 z-30 flex items-end justify-center bg-gradient-to-b from-transparent to-[#FFF]'>
-                        <button onClick={handleLoadMore} className=' mb-4 px-4 py-2 bg-[#FF5E0E] text-white rounded-full'>
+                        <button onClick={handleLoadMore} className=' mb-4 px-4 py-2 bg-[#949494] text-white rounded-full'>
                             See more
                         </button>
                     </div>
                 ) : (
                     <div className='absolute inset-0 z-30 flex items-end justify-center bg-gradient-to-b from-transparent to-[#FFF]'>
-                        <button onClick={handleHide} className='mb-4 px-4 py-2 bg-[#FF5E0E] text-white rounded-full'>
+                        <button onClick={handleHide} className='mb-4 px-4 py-2 bg-[#949494] text-white rounded-full'>
                             Hide
                         </button>
                     </div>
@@ -84,7 +84,7 @@ export const LogoImageComponent = ({ image, imageClassName }) => {
 
     return (
         <div>
-            {isLoading && <Skeleton baseColor="#F4FBF8" highlightColor="#d1dbd7" className="w-[100px] h-[100px] lg:w-[290px] lg:h-[150px]" />}
+            {isLoading && <Skeleton baseColor="#F4FBF8" highlightColor="#d1dbd7" className="w-[170px] h-[100px] lg:w-[250px] lg:h-[150px]" />}
             <img src={image}
                 alt=""
                 className={`${isLoading ? 'hidden' : ''} ${imageClassName}`}
