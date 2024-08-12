@@ -1,8 +1,39 @@
-# React + Vite
+# A Website Corridor Product
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visit https://websitecorridor.com/ to browse more Websites.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+### Follow these steps to get the project up and running on your local machine.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://yarnpkg.com/)
+
+## Getting Started
+
+### 1. Extract File
+
+Extract the zipfile provided after purchase.
+
+### 2. Install Dependencies
+Navigate to the project directory and install the required dependencies. You can use npm or Yarn.
+
+    `cd filename`
+
+then
+
+    `npm install`
+
+
+### 3. Start the Development Server
+
+    `npm run dev`
+
+
+
+
+## Visit https://websitecorridor.com/  to browse more Websites.
