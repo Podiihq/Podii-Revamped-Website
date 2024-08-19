@@ -18,7 +18,7 @@ const ClientTestimonialsSection = () => {
         {
             text: 'The team at Podii was efficient, effective, exceptional, and very helpful in turning my vision into reality - a game to teach supply chain cybersecurity. And not just in the fun stuff of creating, but also in the not-as-fun stuff like GitHub alerts, patches, and updating to stay current. This is particularly important with today\'s ever-increasing cyber threats.',
             name: 'Duncan Sparrell',
-            title: 'QBQ',
+            title: 'sFractal Consulting',
         },
 
     ];
